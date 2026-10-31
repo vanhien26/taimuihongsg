@@ -1,10 +1,10 @@
 'use client'
 
 import React, { useState } from 'react'
-import { AlertTriangle, CheckCircle2, Zap, Search, ShieldAlert, Layers, ArrowUpRight } from 'lucide-react'
+import { AlertTriangle, CheckCircle2, Zap, Search, ShieldAlert, Layers, ArrowUpRight, FileText, UserCheck, BookOpen, Share2 } from 'lucide-react'
 
 export default function StrategicAuditComparison() {
-  const [activeTab, setActiveTab] = useState<'audit' | 'vitals' | 'schema'>('audit')
+  const [activeTab, setActiveTab] = useState<'audit' | 'content' | 'vitals' | 'schema'>('audit')
 
   return (
     <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200/80 shadow-xl shadow-slate-100">
@@ -19,18 +19,26 @@ export default function StrategicAuditComparison() {
         </div>
 
         {/* Tab switcher */}
-        <div className="flex items-center bg-slate-100 p-1 rounded-xl text-xs font-bold">
+        <div className="flex items-center bg-slate-100 p-1 rounded-xl text-xs font-bold overflow-x-auto max-w-full">
           <button
             onClick={() => setActiveTab('audit')}
-            className={`px-3 py-1.5 rounded-lg transition-colors ${
+            className={`px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
               activeTab === 'audit' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            4 Lỗi Nghiêm Trọng
+            4 Lỗi Kỹ Thuật
+          </button>
+          <button
+            onClick={() => setActiveTab('content')}
+            className={`px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
+              activeTab === 'content' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            Audit Nội Dung Cũ
           </button>
           <button
             onClick={() => setActiveTab('vitals')}
-            className={`px-3 py-1.5 rounded-lg transition-colors ${
+            className={`px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
               activeTab === 'vitals' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -38,7 +46,7 @@ export default function StrategicAuditComparison() {
           </button>
           <button
             onClick={() => setActiveTab('schema')}
-            className={`px-3 py-1.5 rounded-lg transition-colors ${
+            className={`px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
               activeTab === 'schema' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -260,6 +268,208 @@ export default function StrategicAuditComparison() {
                   </span>
                   <span className="text-emerald-800 font-medium text-right text-[11px]">
                     Mỗi bác sĩ tự trỏ chính mình + Schema Physician E-E-A-T
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        )}
+
+        {/* TAB AUDIT NỘI DUNG CŨ */}
+        {activeTab === 'content' && (
+          <div className="space-y-6">
+            <div className="p-4 bg-amber-50/60 border border-amber-200/80 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-amber-950">
+              <div>
+                <strong className="text-amber-950 font-bold">Kiểm kê 2.212 bài viết & 49 trang tĩnh:</strong> Dữ liệu y khoa phong phú nhưng mắc 4 mô thức viết sai chuẩn SEO Y Tế (YMYL) và không phục vụ AI Search.
+              </div>
+              <span className="font-mono text-[10px] bg-amber-200/70 text-amber-900 px-2.5 py-1 rounded-lg font-bold shrink-0">
+                Data Scraping: 31/10/2026
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              
+              {/* Pattern 1: Thiếu Bác sĩ bảo chứng */}
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+                <div className="p-5 space-y-4">
+                  <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center font-bold text-xs">
+                        01
+                      </div>
+                      <h4 className="font-extrabold text-sm text-slate-900">
+                        Bài Y Khoa Đứng Tên Tài Khoản Marketing
+                      </h4>
+                    </div>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-800 uppercase tracking-wider">
+                      Vi phạm YMYL
+                    </span>
+                  </div>
+
+                  <div className="text-xs space-y-1">
+                    <span className="font-bold text-slate-900">Thực trạng bản cũ:</span>
+                    <p className="text-slate-600 leading-relaxed">
+                      Toàn bộ 204 bài viết bệnh học quan trọng (viêm tai, amidan, xoang) đều do tài khoản <code>TMH MKT</code> (Author ID: 116) đứng tên xuất bản, không có tên bác sĩ chuyên khoa phụ trách.
+                    </p>
+                  </div>
+
+                  <div className="p-3 bg-rose-50/70 border border-rose-100 rounded-xl text-xs space-y-1">
+                    <span className="font-bold text-rose-900 flex items-center gap-1">
+                      <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" />
+                      Tác hại đối với Bệnh viện:
+                    </span>
+                    <p className="text-rose-950/90 leading-relaxed text-[11px]">
+                      Google xếp y tế vào nhóm Your Money Your Life. Bài viết thiếu bác sĩ kiểm duyệt bị trừ điểm E-E-A-T nặng nề, giảm 50% khả năng hiển thị top đầu tìm kiếm.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
+                  <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    Chuẩn mới:
+                  </span>
+                  <span className="text-emerald-800 font-medium text-right text-[11px]">
+                    Thêm badge Bác sĩ thẩm định + Mã Schema <code>reviewedBy</code>
+                  </span>
+                </div>
+              </div>
+
+              {/* Pattern 2: Thiếu Direct-Answer cho AI */}
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+                <div className="p-5 space-y-4">
+                  <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xs">
+                        02
+                      </div>
+                      <h4 className="font-extrabold text-sm text-slate-900">
+                        Mở Bài Dài Dòng, Thiếu Khối Direct-Answer
+                      </h4>
+                    </div>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800 uppercase tracking-wider">
+                      Mất Lượt AI Trích Dẫn
+                    </span>
+                  </div>
+
+                  <div className="text-xs space-y-1">
+                    <span className="font-bold text-slate-900">Thực trạng bản cũ:</span>
+                    <p className="text-slate-600 leading-relaxed">
+                      Bài viết mở đầu bằng 200 - 300 từ kể chuyện dài dòng (*"Một đêm con khó ngủ, ba mẹ có thể mất cả ngày..."*), không có câu định nghĩa y khoa dứt khoát.
+                    </p>
+                  </div>
+
+                  <div className="p-3 bg-amber-50/70 border border-amber-100 rounded-xl text-xs space-y-1">
+                    <span className="font-bold text-amber-900 flex items-center gap-1">
+                      <ShieldAlert className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                      Tác hại đối với Bệnh viện:
+                    </span>
+                    <p className="text-amber-950/90 leading-relaxed text-[11px]">
+                      Các công cụ tìm kiếm AI (Google AI Overviews, SearchGPT, Perplexity) không thể bóc tách câu trả lời nhanh, nhường cơ hội trích dẫn cho đối thủ.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
+                  <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    Chuẩn mới:
+                  </span>
+                  <span className="text-emerald-800 font-medium text-right text-[11px]">
+                    Đặt khối <strong>Direct-Answer 45-60 từ</strong> ngay dưới tiêu đề
+                  </span>
+                </div>
+              </div>
+
+              {/* Pattern 3: Thin content tự triệt tiêu */}
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+                <div className="p-5 space-y-4">
+                  <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-xs">
+                        03
+                      </div>
+                      <h4 className="font-extrabold text-sm text-slate-900">
+                        1.517 Bài Hỏi Đáp Vụn Vặt "Tự Ăn Thịt Từ Khóa"
+                      </h4>
+                    </div>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800 uppercase tracking-wider">
+                      Thin Content
+                    </span>
+                  </div>
+
+                  <div className="text-xs space-y-1">
+                    <span className="font-bold text-slate-900">Thực trạng bản cũ:</span>
+                    <p className="text-slate-600 leading-relaxed">
+                      Tách lẻ hàng nghìn câu hỏi tư vấn 100 từ thành các trang riêng biệt. Hơn 80 bài cùng nói về "ù tai", hơn 120 bài về "viêm xoang" với nội dung tương tự.
+                    </p>
+                  </div>
+
+                  <div className="p-3 bg-purple-50/70 border border-purple-100 rounded-xl text-xs space-y-1">
+                    <span className="font-bold text-purple-900 flex items-center gap-1">
+                      <Layers className="w-3.5 h-3.5 text-purple-600 shrink-0" />
+                      Tác hại đối với Bệnh viện:
+                    </span>
+                    <p className="text-purple-950/90 leading-relaxed text-[11px]">
+                      Gây ra lỗi <em>Keyword Cannibalization</em> (các bài tự tranh giành thứ hạng lẫn nhau), làm loãng uy tín domain và bị Google đánh giá là nội dung mỏng.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
+                  <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    Chuẩn mới:
+                  </span>
+                  <span className="text-emerald-800 font-medium text-right text-[11px]">
+                    Gom vào <strong>6 Topic Clusters Silo</strong> kèm Accordion FAQ
+                  </span>
+                </div>
+              </div>
+
+              {/* Pattern 4: Rác shortcode WPBakery & Taxonomy sai */}
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+                <div className="p-5 space-y-4">
+                  <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center font-bold text-xs">
+                        04
+                      </div>
+                      <h4 className="font-extrabold text-sm text-slate-900">
+                        Nội Dung Nhúng Shortcode Rác & Danh Mục Lộn Xộn
+                      </h4>
+                    </div>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-brand-800 uppercase tracking-wider">
+                      Lỗi Hạ Tầng
+                    </span>
+                  </div>
+
+                  <div className="text-xs space-y-1">
+                    <span className="font-bold text-slate-900">Thực trạng bản cũ:</span>
+                    <p className="text-slate-600 leading-relaxed">
+                      Nội dung 49 trang dịch vụ bị bọc kín trong shortcode WPBakery (<code>[vc_row]</code>, <code>[vc_column]</code>). Danh mục phân loại theo độ tuổi (`18-25`, `Trên 40`) sinh ra archive rác.
+                    </p>
+                  </div>
+
+                  <div className="p-3 bg-blue-50/70 border border-blue-100 rounded-xl text-xs space-y-1">
+                    <span className="font-bold text-brand-900 flex items-center gap-1">
+                      <AlertTriangle className="w-3.5 h-3.5 text-brand-700 shrink-0" />
+                      Tác hại đối với Bệnh viện:
+                    </span>
+                    <p className="text-brand-950/90 leading-relaxed text-[11px]">
+                      Mã HTML phình to, tỷ lệ text thật / code chỉ đạt &lt; 8%. Bot tìm kiếm tốn tài nguyên cào dữ liệu (crawl budget) và dễ bỏ dở giữa chừng.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
+                  <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    Chuẩn mới:
+                  </span>
+                  <span className="text-emerald-800 font-medium text-right text-[11px]">
+                    Làm sạch HTML/Markdown thuần + Tái cấu trúc Taxonomy y khoa
                   </span>
                 </div>
               </div>
