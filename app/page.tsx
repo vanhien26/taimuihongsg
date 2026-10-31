@@ -12,12 +12,12 @@ const patientActions = [
 ]
 
 const specialties = [
-  { name: 'Tai và thính học', summary: 'Khám giảm thính lực, ù tai, chóng mặt và bệnh lý tai.', icon: Ear, booking: 'Tai - Thính học' },
-  { name: 'Mũi và xoang', summary: 'Khám nghẹt mũi, viêm xoang, dị ứng và bất thường vách ngăn.', icon: Wind, booking: 'Mũi - Xoang' },
-  { name: 'Họng và thanh quản', summary: 'Khám đau họng, khàn tiếng, amidan và các vấn đề thanh quản.', icon: Volume2, booking: 'Họng - Thanh quản' },
-  { name: 'Tai Mũi Họng trẻ em', summary: 'Thăm khám các bệnh lý Tai Mũi Họng thường gặp ở trẻ.', icon: Baby, booking: 'Tai Mũi Họng Nhi' },
-  { name: 'Đa ký giấc ngủ', summary: 'Đánh giá ngáy, gián đoạn giấc ngủ và rối loạn hô hấp khi ngủ.', icon: Moon, booking: 'Đo Đa ký giấc ngủ' },
-  { name: 'Phẫu thuật và nội trú', summary: 'Chăm sóc trước mổ, phẫu thuật và theo dõi nội trú.', icon: BedDouble, booking: 'Phẫu thuật và nội trú' },
+  { name: 'Tai và thính học', summary: 'Khám giảm thính lực, ù tai, chóng mặt và bệnh lý tai.', icon: Ear, booking: 'Tai - Thính học', href: '/chuyen-khoa#tai-thinh-hoc' },
+  { name: 'Mũi và xoang', summary: 'Khám nghẹt mũi, viêm xoang, dị ứng và bất thường vách ngăn.', icon: Wind, booking: 'Mũi - Xoang', href: '/chuyen-khoa#mui-xoang' },
+  { name: 'Họng và thanh quản', summary: 'Khám đau họng, khàn tiếng, amidan và các vấn đề thanh quản.', icon: Volume2, booking: 'Họng - Thanh quản', href: '/chuyen-khoa#hong-thanh-quan' },
+  { name: 'Tai Mũi Họng trẻ em', summary: 'Thăm khám các bệnh lý Tai Mũi Họng thường gặp ở trẻ.', icon: Baby, booking: 'Tai Mũi Họng Nhi', href: '/chuyen-khoa#tmh-nhi' },
+  { name: 'Đa ký giấc ngủ', summary: 'Đánh giá ngáy, gián đoạn giấc ngủ và rối loạn hô hấp khi ngủ.', icon: Moon, booking: 'Đo Đa ký giấc ngủ', href: '/chuyen-khoa/do-da-ky-giac-ngu' },
+  { name: 'Phẫu thuật và nội trú', summary: 'Chăm sóc trước mổ, phẫu thuật và theo dõi nội trú.', icon: BedDouble, booking: 'Phẫu thuật và nội trú', href: '/chuyen-khoa/khoa-phau-thuat-tai-mui-hong' },
 ]
 
 const doctors = [
@@ -31,9 +31,9 @@ export default function HomePage({ onOpenBooking }: PageProps) {
 
   return (
     <div className="bg-white text-slate-900">
-      <section className="border-b border-slate-200">
+      <section>
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-start lg:grid-cols-12">
-          <div className="px-4 py-12 sm:px-6 md:py-16 lg:col-span-7 lg:border-r lg:border-slate-200 lg:py-20 lg:pr-14">
+          <div className="px-4 py-12 sm:px-6 md:py-16 lg:col-span-7 lg:py-20 lg:pr-14">
             <p className="mb-5 text-sm font-semibold text-brand-800">Bệnh viện chuyên khoa Tai Mũi Họng tại TP.HCM</p>
             <h1 className="max-w-3xl text-4xl font-bold leading-[1.08] tracking-[-0.035em] text-slate-950 sm:text-5xl lg:text-6xl">
               Bệnh Viện Tai Mũi Họng Sài Gòn: thăm khám đúng chuyên khoa
@@ -79,8 +79,8 @@ export default function HomePage({ onOpenBooking }: PageProps) {
         </div>
       </section>
 
-      <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-200 md:grid-cols-4">
+      <section className="bg-white">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
           {[
             ['2', 'cơ sở khám'],
             ['80+', 'bác sĩ và chuyên gia'],
@@ -95,8 +95,8 @@ export default function HomePage({ onOpenBooking }: PageProps) {
         </div>
       </section>
 
-      <section className="border-b border-slate-200 bg-slate-950 text-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-slate-800 md:grid-cols-3 md:divide-x md:divide-y-0">
+      <section className="bg-slate-950 text-white">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-3">
           {patientActions.map((action) => {
             const Icon = action.icon
             return (
@@ -128,7 +128,7 @@ export default function HomePage({ onOpenBooking }: PageProps) {
                 <p className="mt-2 min-h-12 text-sm leading-6 text-slate-600">{specialty.summary}</p>
                 </div>
                 <div className="mt-5 flex items-center justify-between gap-4">
-                  <Link href="/chuyen-khoa" className="text-sm font-semibold text-brand-800 hover:underline">Tìm hiểu</Link>
+                  <Link href={specialty.href} className="text-sm font-semibold text-brand-800 hover:underline">Tìm hiểu</Link>
                   <button onClick={() => openBooking(specialty.booking)} className="min-h-10 rounded-lg border border-slate-300 px-3 text-sm font-semibold text-slate-800 transition-colors hover:border-brand-700 hover:text-brand-800">Đặt lịch</button>
                 </div>
               </article>
@@ -138,9 +138,9 @@ export default function HomePage({ onOpenBooking }: PageProps) {
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-slate-50">
+      <section className="bg-slate-50">
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-12">
-          <div className="px-4 py-14 sm:px-6 md:py-20 lg:col-span-5 lg:border-r lg:border-slate-200 lg:pr-14">
+          <div className="px-4 py-14 sm:px-6 md:py-20 lg:col-span-5 lg:pr-14">
             <p className="text-sm font-semibold text-brand-800">Khoa khám và nội soi</p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Khám cả ba vùng Tai, Mũi và Họng trong một lần tiếp nhận</h2>
             <p className="mt-5 leading-7 text-slate-600">Khoa hiện có 10 phòng khám nội soi, phục vụ nhu cầu khám chuyên sâu và ghi nhận hình ảnh hỗ trợ bác sĩ đánh giá tình trạng bệnh.</p>
@@ -151,17 +151,17 @@ export default function HomePage({ onOpenBooking }: PageProps) {
             <Link href="/chuyen-khoa/khoa-kham-noi-soi-tai-mui-hong" className="mt-7 inline-flex items-center gap-2 font-bold text-brand-800 hover:underline">Xem dịch vụ nội soi <ArrowRight className="h-4 w-4" /></Link>
           </div>
           <div className="grid grid-cols-1 lg:col-span-7 sm:grid-cols-2">
-            <div className="border-b border-slate-200 px-4 py-10 sm:border-r sm:px-8">
+            <div className="px-4 py-10 sm:px-8">
               <div className="text-4xl font-bold tracking-tight text-slate-950">10</div>
               <div className="mt-2 font-semibold text-slate-800">phòng khám nội soi</div>
               <p className="mt-3 text-sm leading-6 text-slate-600">Thiết bị được đầu tư từ Xion, Karl Storz và Olympus.</p>
             </div>
-            <div className="border-b border-slate-200 px-4 py-10 sm:px-8">
+            <div className="px-4 py-10 sm:px-8">
               <div className="text-4xl font-bold tracking-tight text-slate-950">400+</div>
               <div className="mt-2 font-semibold text-slate-800">lượt khách mỗi ngày</div>
               <p className="mt-3 text-sm leading-6 text-slate-600">Năng lực tiếp nhận theo thông tin đang công bố trên website bệnh viện.</p>
             </div>
-            <div className="border-b border-slate-200 px-4 py-10 sm:border-b-0 sm:border-r sm:px-8">
+            <div className="px-4 py-10 sm:px-8">
               <div className="font-bold text-slate-950">Nội soi NBI</div>
               <p className="mt-3 text-sm leading-6 text-slate-600">Hỗ trợ bác sĩ quan sát tổn thương tại vùng vòm họng, hốc mũi và thanh quản.</p>
             </div>
@@ -207,9 +207,9 @@ export default function HomePage({ onOpenBooking }: PageProps) {
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-slate-950 text-white">
+      <section className="bg-slate-950 text-white">
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-12">
-          <div className="px-4 py-14 sm:px-6 md:py-20 lg:col-span-5 lg:border-r lg:border-slate-800 lg:pr-14">
+          <div className="px-4 py-14 sm:px-6 md:py-20 lg:col-span-5 lg:pr-14">
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Chi phí khám nội soi tham khảo</h2>
             <p className="mt-5 leading-7 text-slate-400">Mức giá được tổng hợp từ website hiện tại. Chi phí thực tế có thể thay đổi theo chỉ định và thời điểm khám.</p>
             <div className="mt-8 flex items-start gap-3 border-t border-slate-800 pt-6">
@@ -262,7 +262,7 @@ export default function HomePage({ onOpenBooking }: PageProps) {
         </div>
       </section>
 
-      <section className="border-t border-slate-200 bg-slate-50">
+      <section className="bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div><h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Kiến thức sức khỏe mới</h2><p className="mt-3 max-w-2xl leading-7 text-slate-600">Thông tin giúp nhận biết dấu hiệu cần đi khám và chuẩn bị câu hỏi cho bác sĩ.</p></div>
@@ -284,7 +284,7 @@ export default function HomePage({ onOpenBooking }: PageProps) {
         </div>
       </section>
 
-      <section className="border-t border-slate-200 bg-slate-50">
+      <section className="bg-slate-50">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px bg-slate-200 md:grid-cols-4">
           {[['19 năm', 'hoạt động'], ['2 cơ sở', 'bệnh viện và phòng khám'], ['80+', 'bác sĩ và chuyên gia'], ['42.290', 'ca phẫu thuật thành công']].map(([value, label]) => (
             <div key={label} className="bg-slate-50 px-4 py-8 text-center sm:px-6"><div className="text-2xl font-bold text-slate-950 md:text-3xl">{value}</div><div className="mt-2 text-sm text-slate-600">{label}</div></div>
