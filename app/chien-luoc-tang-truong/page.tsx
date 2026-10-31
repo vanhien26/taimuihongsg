@@ -16,46 +16,54 @@ export default function ChienLuocPage() {
     {
       week: 1,
       title: 'Tuần 1-2: Xử Lý 4 Lỗi Kỹ Thuật Chặn Thu Thập (Critical Fixes)',
+      termsExplained: 'XML Sitemap (bản đồ trang), Redirect 301 (lệnh chuyển hướng vĩnh viễn), Soft 404 (lỗi trang chết ngụy tạo), Canonical (thẻ chỉ định bản gốc), Title Template (mẫu tiêu đề hiển thị trên Google).',
+      severity: 'Mức độ cấp bách: BÁO ĐỘNG ĐỎ. Đây là những "hòn đá tảng" chặn cửa robot tìm kiếm, khiến Google không thể cập nhật nội dung và liên tục phạt trang web.',
       tasks: [
-        'Khôi phục XML Sitemap chuẩn 200 OK tại /sitemap.xml, gỡ bỏ redirect 301 sang trang đặt hẹn.',
-        'Xóa wildcard redirect 404, trả mã HTTP 404/410 chuẩn mực để Google dọn dẹp các trang đã chết.',
-        'Sửa Canonical cho 5 hồ sơ Bác sĩ (BS. Thống, BS. Hà, BS. Vân, BS. Hưng, BS. Nhàn) tự trỏ về chính mình.',
-        'Cập nhật Title Template trên Rank Math: Loại bỏ đuôi "- PHÒNG KHÁM ĐA KHOA QUỐC TẾ SÀI GÒN", thay bằng "- BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN".'
+        'Khôi phục XML Sitemap chuẩn HTTP 200 OK tại /sitemap.xml, gỡ bỏ lệnh redirect 301 chuyển sang trang đặt hẹn.',
+        'Xóa bỏ cơ chế wildcard redirect 404 ép dồn trang, trả đúng mã HTTP 404/410 chuẩn mực để Google dọn dẹp các liên kết rác.',
+        'Sửa thẻ Canonical cho hồ sơ các Bác sĩ (BS. Thống, BS. Hà, BS. Vân, BS. Hưng, BS. Nhàn) tự trỏ về chính mình thay vì trỏ nhầm sang bác sĩ khác.',
+        'Cập nhật Title Template trên công cụ SEO: Loại bỏ hoàn toàn đuôi "- PHÒNG KHÁM ĐA KHOA QUỐC TẾ SÀI GÒN", thay bằng chuẩn "- BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN".'
       ],
-      impact: 'Google Bot thu thập lại toàn bộ 2.212 trang, chấm dứt tình trạng bị phạt Soft 404.'
+      impact: 'Khai thông đường dẫn cho Google Bot thu thập lại toàn bộ 2.212 trang bài viết, chấm dứt hoàn toàn án phạt kỹ thuật Soft 404.'
     },
     {
       week: 2,
       title: 'Tuần 3-4: Chuẩn Hóa Thực Thể Y Khoa (Medical Entity & E-E-A-T Schema)',
+      termsExplained: 'Medical Entity (hồ sơ định danh số của bệnh viện trên Google), Schema E-E-A-T (dữ liệu vi mô chứng minh Kinh nghiệm - Chuyên môn - Thẩm quyền - Đáng tin cậy), reviewedBy (chứng thực thẩm định bài viết bởi bác sĩ).',
+      severity: 'Mức độ nghiêm trọng: RẤT CAO. Ngành y tế bị Google xếp vào nhóm nhạy cảm YMYL. Nếu thông tin mơ hồ, website sẽ bị giáng cấp xếp hạng và mất niềm tin với người bệnh.',
       tasks: [
-        'Cập nhật Schema MedicalOrganization & Hospital: định danh chuyên khoa duy nhất Otolaryngologic.',
-        'Thêm khối "Thẩm định y khoa bởi Bác sĩ" và trường reviewedBy (schema MedicalWebPage) cho 204 bài bệnh học.',
-        'Tách bạch nội dung: Di dời 22 bài viết đa khoa (sởi, tay chân miệng, vú, gan) sang domain sighospital.vn bằng 301.',
-        'Xóa hoặc đặt 410 cho các trang thử nghiệm lộ URL: /dat-hen-kham-benh-old/, /giao-dien-website-moi/.'
+        'Cập nhật mã Schema MedicalOrganization & Hospital: định danh duy nhất chuyên khoa Tai Mũi Họng (Otolaryngologic), xóa bỏ nhãn Đa khoa.',
+        'Thêm khối "Thẩm định y khoa bởi Bác sĩ" và trường reviewedBy trong schema MedicalWebPage cho 204 bài bệnh học mũi nhọn.',
+        'Tách bạch nội dung: Chuyển hướng 301 di dời 22 bài viết đa khoa ngoài phạm vi (sởi, tay chân miệng, vú, gan) sang đúng domain phòng khám đa khoa sighospital.vn.',
+        'Dọn dẹp triệt để các trang nội bộ thử nghiệm bị lộ link: /dat-hen-kham-benh-old/, /giao-dien-website-moi/.'
       ],
-      impact: 'Định hình rõ nét Entity chuyên khoa Tai Mũi Họng trên Google Knowledge Graph.'
+      impact: 'Khẳng định vững chắc vị thế Bệnh viện Tai Mũi Họng đầu ngành trên cơ sở dữ liệu tri thức Google Knowledge Graph.'
     },
     {
       week: 3,
       title: 'Tuần 5-6: Tối Ưu Tốc Độ Core Web Vitals Đạt Chuẩn Xanh',
+      termsExplained: 'Core Web Vitals (bộ 3 chỉ số trải nghiệm người dùng của Google: LCP - tốc độ mở trang chính, CLS - độ giật khung hình, TTFB - tốc độ phản hồi của máy chủ), Edge CDN (mạng máy chủ đệm đặt sát vị trí người dùng).',
+      severity: 'Mức độ nghiêm trọng: CAO. Trang web tải chậm hơn 3 giây làm mất 50% bệnh nhân tiềm năng ngay từ giây đầu tiên và bị Google đánh tụt thứ hạng tìm kiếm trên di động.',
       tasks: [
-        'Bật nén tự động WebP/AVIF cho 9.198 ảnh media, giảm dung lượng ảnh bác sĩ từ 7.8MB xuống dưới 150KB.',
-        'Loại bỏ các file CSS và JS không dùng, chuyển jQuery ra khỏi <head> để giảm FCP dưới 1.2s.',
-        'Bật Cache Rules HTML trên Cloudflare Edge CDN để TTFB giảm từ 1.5s xuống dưới 0.2s.',
-        'Khắc phục CLS trang chủ từ 0.21 xuống 0 bằng cách cố định tỷ lệ aspect-ratio cho toàn bộ khung slider.'
+        'Bật công nghệ nén ảnh tự động chuẩn WebP/AVIF cho 9.198 ảnh media, nén dung lượng ảnh chân dung bác sĩ từ 7.8MB xuống dưới 150KB.',
+        'Tối ưu mã nguồn: Dọn dẹp các thư viện CSS/JS dư thừa, chuyển thư viện jQuery ra khỏi phần đầu trang (<head>) để chỉ số FCP dưới 1.2s.',
+        'Kích hoạt bộ đệm HTML tĩnh trên hệ thống máy chủ biên Cloudflare Edge CDN để chỉ số phản hồi máy chủ TTFB giảm từ 1.5s xuống dưới 0.2s.',
+        'Khắc phục triệt để lỗi giật màn hình CLS từ 0.21 xuống mức 0 tuyệt đối bằng cách cố định tỷ lệ khung hình cho toàn bộ banner và ảnh.'
       ],
-      impact: 'Trải nghiệm người dùng di động mượt mà, đạt chuẩn Google Core Web Vitals ngang tầm các bệnh viện hàng đầu.'
+      impact: 'Trang web mở tức thì trên điện thoại 4G/5G, đạt chuẩn kiểm định Core Web Vitals loại Xuất Sắc của Google.'
     },
     {
       week: 4,
-      title: 'Tuần 7-8: Kích Hoạt Chiến Lược GEO (Generative Engine Optimization)',
+      title: 'Tuần 7-8: Kích Hoạt Chiến Lược GEO (Tối Ưu Tìm Kiếm Bằng Trí Tuệ Nhân Tạo AI)',
+      termsExplained: 'GEO (Generative Engine Optimization - kỹ thuật giúp website được các công cụ AI như Google AI Overviews, Gemini, ChatGPT trích dẫn làm nguồn trả lời), Topic Clusters (mô hình gom cụm nội dung theo chuyên khoa trụ cột), Local 3-Pack (top 3 vị trí hiển thị bản đồ địa phương).',
+      severity: 'Cơ hội sống còn: Mang tính quyết định trong 2-3 năm tới. Người bệnh đang chuyển dần từ việc tự bấm link sang đọc câu trả lời do AI tóm tắt. Nếu không tối ưu GEO, website sẽ bị lãng quên.',
       tasks: [
-        'Gom 1.517 trang câu hỏi tư vấn ngắn thành 6 Topic Cluster Pillars chính kèm Accordion FAQ Schema.',
-        'Bổ sung khối "Direct Answer" 50 từ đầu mỗi bài dịch vụ mũi nhọn để AI Engine (Google AI, ChatGPT, Perplexity) trích xuất.',
-        'Tối ưu Local 3-Pack cho từ khóa khám tai mũi họng tại các quận trung tâm TP.HCM (Q1, Q3, Q4, Q7, Bình Thạnh).',
-        'Mở rộng hệ thống bài viết chuyên sâu về Đo đa ký giấc ngủ và phẫu thuật nội soi xoang FESS.'
+        'Gom 1.517 bài hỏi đáp manh mún thành 6 Topic Cluster Pillars (Chuyên đề trụ cột) có cấu trúc Silo chặt chẽ và tích hợp FAQ Schema.',
+        'Bổ sung khối "Direct Answer" (Câu trả lời lâm sàng súc tích 50 từ) ngay đầu mỗi bài viết dịch vụ để robot AI dễ dàng trích dẫn nguyên văn.',
+        'Tối ưu Local 3-Pack định vị Google Map cho các từ khóa khám tai mũi họng tại các quận trung tâm TP.HCM (Quận 1, Quận 3, Quận 4, Quận 7, Bình Thạnh).',
+        'Phát triển nội dung tương tác chuyên sâu về Đo đa ký giấc ngủ và phẫu thuật nội soi xoang FESS công nghệ cao.'
       ],
-      impact: 'Tăng trưởng 45% lượng traffic tìm kiếm tự nhiên và trở thành nguồn tin số 1 cho các công cụ AI tìm kiếm.'
+      impact: 'Tăng trưởng tối thiểu 45% lượng bệnh nhân tìm kiếm tự nhiên và trở thành bệnh viện số 1 được AI đề xuất cho người bệnh tại TP.HCM.'
     }
   ]
 
@@ -185,8 +193,18 @@ export default function ChienLuocPage() {
               <div className="bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-200 space-y-6">
                 <div>
                   <h4 className="text-xl font-black text-slate-900">{current.title}</h4>
-                  <div className="text-xs font-bold text-brand-700 mt-1">
+                  <div className="text-xs font-bold text-emerald-800 mt-1">
                     Mục tiêu tác động: {current.impact}
+                  </div>
+                </div>
+
+                {/* Khối định nghĩa thuật ngữ & Mức độ nghiêm trọng */}
+                <div className="p-4 bg-white rounded-xl border border-slate-200 text-xs space-y-2">
+                  <div className="text-slate-800 leading-relaxed">
+                    <strong className="text-slate-950 font-bold">Lý giải thuật ngữ:</strong> {current.termsExplained}
+                  </div>
+                  <div className="text-rose-900 font-semibold leading-relaxed">
+                    {current.severity}
                   </div>
                 </div>
 
