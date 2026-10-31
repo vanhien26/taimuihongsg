@@ -49,146 +49,218 @@ export default function StrategicAuditComparison() {
 
       <div className="pt-6">
         {activeTab === 'audit' && (
-          <div className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-6">
+            <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-700">
+              <div>
+                <strong className="text-slate-900 font-bold">Phương pháp đối soát:</strong> Kiểm thử trực tiếp trên mã nguồn và headers phản hồi của máy chủ sản xuất <code>taimuihongsg.com</code>.
+              </div>
+              <div className="flex items-center gap-3 shrink-0">
+                <span className="flex items-center gap-1.5 text-rose-700 font-bold">
+                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
+                  4 lỗi cản trở thu thập dữ liệu
+                </span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               
-              {/* Bug 1: Sitemap */}
-              <div className="p-5 rounded-2xl bg-rose-50/50 border border-rose-200/60 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between text-xs font-bold text-rose-700">
-                    <span className="flex items-center gap-1.5">
-                      <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0" />
-                      Lỗi 1: Sitemap XML Bị Chuyển Hướng 301
+              {/* Card 1: Sitemap */}
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+                <div className="p-5 space-y-4">
+                  {/* Header Card */}
+                  <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center font-bold text-xs">
+                        01
+                      </div>
+                      <h4 className="font-extrabold text-sm text-slate-900">
+                        Sitemap XML Bị Chuyển Hướng 301
+                      </h4>
+                    </div>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-800 uppercase tracking-wider">
+                      Báo động đỏ
                     </span>
-                    <span className="bg-rose-200/80 text-rose-900 px-2 py-0.5 rounded text-[10px] shrink-0">Cũ (WordPress)</span>
-                  </div>
-                  
-                  {/* Giải thích súc tích & Mức độ nghiêm trọng */}
-                  <div className="p-3 bg-white/90 rounded-xl border border-rose-100 text-xs space-y-1.5">
-                    <div className="text-slate-700 leading-relaxed">
-                      <strong className="text-rose-950 font-bold">Thuật ngữ:</strong> <code>XML Sitemap</code> là sơ đồ danh mục trang gửi cho Google; <code>Redirect 301</code> là lệnh tự chuyển hướng vĩnh viễn sang trang khác.
-                    </div>
-                    <div className="text-rose-900 text-[11px] font-semibold leading-relaxed">
-                      <span className="text-rose-600 font-bold">Mức độ nghiêm trọng:</span> Cực kỳ nguy hiểm. Google Bot bị đẩy sang trang đặt hẹn thay vì đọc danh mục bài, làm "mù" toàn bộ 2.212 trang y khoa và ngừng index bài mới.
-                    </div>
                   </div>
 
-                  <p className="text-xs text-rose-900/80 leading-relaxed">
-                    URL <code>/sitemap_index.xml</code> khai báo trong robots.txt trả mã 301 về trang đặt hẹn thay vì trả nội dung XML.
-                  </p>
+                  {/* Thuật ngữ & Giải thích */}
+                  <div className="text-xs space-y-1">
+                    <span className="font-bold text-slate-900">Bản chất kỹ thuật:</span>
+                    <p className="text-slate-600 leading-relaxed">
+                      <code>XML Sitemap</code> là sơ đồ dẫn đường cho robot tìm kiếm. Hiện tại URL <code>/sitemap_index.xml</code> lại trả mã <code>301 Redirect</code> đưa robot thẳng vào trang đặt hẹn.
+                    </p>
+                  </div>
+
+                  {/* Mức độ nghiêm trọng */}
+                  <div className="p-3 bg-rose-50/70 border border-rose-100 rounded-xl text-xs space-y-1">
+                    <span className="font-bold text-rose-900 flex items-center gap-1">
+                      <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" />
+                      Mức độ nghiêm trọng & Tác hại:
+                    </span>
+                    <p className="text-rose-950/90 leading-relaxed text-[11px]">
+                      Google Bot bị "mù", không thể quét 2.212 bài viết y khoa và dịch vụ. Bài viết mới đăng tải không được lập chỉ mục (index), lãng phí tài nguyên nội dung.
+                    </p>
+                  </div>
                 </div>
-                
-                <div className="mt-3 pt-3 border-t border-rose-200/60 flex items-center justify-between text-xs font-bold text-emerald-800">
-                  <span className="flex items-center gap-1">
+
+                {/* Giải pháp */}
+                <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
+                  <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    Khắc phục Next.js:
+                    Khắc phục:
                   </span>
-                  <span className="text-right">Route <code>/sitemap.xml</code> trả HTTP 200 OK tự động</span>
+                  <span className="text-emerald-800 font-medium text-right text-[11px]">
+                    Route <code>/sitemap.xml</code> động chuẩn mã HTTP 200 OK
+                  </span>
                 </div>
               </div>
 
-              {/* Bug 2: 404 Wildcard */}
-              <div className="p-5 rounded-2xl bg-amber-50/50 border border-amber-200/60 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between text-xs font-bold text-amber-800">
-                    <span className="flex items-center gap-1.5">
-                      <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0" />
-                      Lỗi 2: Soft 404 Hàng Loạt (Wildcard Redirect)
+              {/* Card 2: Soft 404 */}
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+                <div className="p-5 space-y-4">
+                  {/* Header Card */}
+                  <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xs">
+                        02
+                      </div>
+                      <h4 className="font-extrabold text-sm text-slate-900">
+                        Lỗi Soft 404 Do Chuyển Hướng Ép Dồn
+                      </h4>
+                    </div>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800 uppercase tracking-wider">
+                      Cực kỳ rủi ro
                     </span>
-                    <span className="bg-amber-200/80 text-amber-900 px-2 py-0.5 rounded text-[10px] shrink-0">Cũ (WordPress)</span>
                   </div>
 
-                  {/* Giải thích súc tích & Mức độ nghiêm trọng */}
-                  <div className="p-3 bg-white/90 rounded-xl border border-amber-100 text-xs space-y-1.5">
-                    <div className="text-slate-700 leading-relaxed">
-                      <strong className="text-amber-950 font-bold">Thuật ngữ:</strong> <code>Soft 404</code> là lỗi trang chết nhưng web vẫn trả mã 200 hoặc ép chuyển hướng dồn toàn bộ link sai (Wildcard) về 1 trang đích.
-                    </div>
-                    <div className="text-amber-900 text-[11px] font-semibold leading-relaxed">
-                      <span className="text-amber-600 font-bold">Mức độ nghiêm trọng:</span> Nghiêm trọng cao. Google xem đây là hành vi spam đánh lừa, trừ điểm PageRank và làm rớt thứ hạng chính trang Đặt Lịch tiếp nhận chuyển hướng.
-                    </div>
+                  {/* Thuật ngữ & Giải thích */}
+                  <div className="text-xs space-y-1">
+                    <span className="font-bold text-slate-900">Bản chất kỹ thuật:</span>
+                    <p className="text-slate-600 leading-relaxed">
+                      <code>Soft 404</code> xảy ra khi trang đã xóa hoặc link gõ sai không báo mã 404 mà bị ép chuyển hướng (Wildcard Redirect) dồn hết về <code>/dat-hen-kham-benh/</code>.
+                    </p>
                   </div>
 
-                  <p className="text-xs text-amber-900/80 leading-relaxed">
-                    53 link chết và mọi URL gõ sai đều bị ép chuyển hướng về <code>/dat-hen-kham-benh/</code> gây lỗi Soft 404 diện rộng.
-                  </p>
+                  {/* Mức độ nghiêm trọng */}
+                  <div className="p-3 bg-amber-50/70 border border-amber-100 rounded-xl text-xs space-y-1">
+                    <span className="font-bold text-amber-900 flex items-center gap-1">
+                      <ShieldAlert className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                      Mức độ nghiêm trọng & Tác hại:
+                    </span>
+                    <p className="text-amber-950/90 leading-relaxed text-[11px]">
+                      Google coi đây là hành vi spam điều hướng. Trang nhận chuyển hướng (trang Đặt Hẹn) bị thuật toán đánh tụt điểm uy tín (PageRank) và giảm thứ hạng toàn diện.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="mt-3 pt-3 border-t border-amber-200/60 flex items-center justify-between text-xs font-bold text-emerald-800">
-                  <span className="flex items-center gap-1">
+                {/* Giải pháp */}
+                <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
+                  <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    Khắc phục Next.js:
+                    Khắc phục:
                   </span>
-                  <span className="text-right">Trả chuẩn mã HTTP 404 Not Found & gợi ý điều hướng</span>
+                  <span className="text-emerald-800 font-medium text-right text-[11px]">
+                    Trang <code>not-found.tsx</code> trả chuẩn mã HTTP 404 Not Found
+                  </span>
                 </div>
               </div>
 
-              {/* Bug 3: Schema Brand Mismatch */}
-              <div className="p-5 rounded-2xl bg-purple-50/50 border border-purple-200/60 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between text-xs font-bold text-purple-800">
-                    <span className="flex items-center gap-1.5">
-                      <Layers className="w-4 h-4 text-purple-600 shrink-0" />
-                      Lỗi 3: Xung Đột Thực Thể Thương Hiệu (Entity Conflict)
+              {/* Card 3: Entity Conflict */}
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+                <div className="p-5 space-y-4">
+                  {/* Header Card */}
+                  <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-xs">
+                        03
+                      </div>
+                      <h4 className="font-extrabold text-sm text-slate-900">
+                        Xung Đột Thực Thể Thương Hiệu (Entity)
+                      </h4>
+                    </div>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800 uppercase tracking-wider">
+                      Mất vị thế ngành
                     </span>
-                    <span className="bg-purple-200/80 text-purple-900 px-2 py-0.5 rounded text-[10px] shrink-0">Cũ (WordPress)</span>
                   </div>
 
-                  {/* Giải thích súc tích & Mức độ nghiêm trọng */}
-                  <div className="p-3 bg-white/90 rounded-xl border border-purple-100 text-xs space-y-1.5">
-                    <div className="text-slate-700 leading-relaxed">
-                      <strong className="text-purple-950 font-bold">Thuật ngữ:</strong> <code>Entity (Thực thể)</code> là hồ sơ nhận diện số để Google biết: website là Bệnh viện Tai Mũi Họng hay Phòng khám Đa khoa.
-                    </div>
-                    <div className="text-purple-900 text-[11px] font-semibold leading-relaxed">
-                      <span className="text-purple-600 font-bold">Mức độ nghiêm trọng:</span> Mất ưu thế xếp hạng Top 1. Google bị xung đột dữ liệu, làm giảm thẩm quyền chuyên khoa Tai Mũi Họng vào tay các bệnh viện khác.
-                    </div>
+                  {/* Thuật ngữ & Giải thích */}
+                  <div className="text-xs space-y-1">
+                    <span className="font-bold text-slate-900">Bản chất kỹ thuật:</span>
+                    <p className="text-slate-600 leading-relaxed">
+                      <code>Entity</code> là hồ sơ nhận diện số của thương hiệu. Schema ngầm và 1.269 bài viết lại khai báo là *"Bệnh viện Đa khoa Quốc tế Sài Gòn"* kèm các chuyên khoa Tim Mạch, Tiêu Hóa.
+                    </p>
                   </div>
 
-                  <p className="text-xs text-purple-900/80 leading-relaxed">
-                    Mã Schema và 1.269 bài viết ghi nhầm <em>"Bệnh viện Đa khoa Quốc tế Sài Gòn"</em> với chuyên khoa Tim mạch, Tiêu hóa.
-                  </p>
+                  {/* Mức độ nghiêm trọng */}
+                  <div className="p-3 bg-purple-50/70 border border-purple-100 rounded-xl text-xs space-y-1">
+                    <span className="font-bold text-purple-900 flex items-center gap-1">
+                      <Layers className="w-3.5 h-3.5 text-purple-600 shrink-0" />
+                      Mức độ nghiêm trọng & Tác hại:
+                    </span>
+                    <p className="text-purple-950/90 leading-relaxed text-[11px]">
+                      Google bị phân vân, không nhận định được đây là bệnh viện chuyên khoa Tai Mũi Họng đầu ngành, làm mất ưu thế cạnh tranh Top 1 vào tay các bệnh viện khác.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="mt-3 pt-3 border-t border-purple-200/60 flex items-center justify-between text-xs font-bold text-emerald-800">
-                  <span className="flex items-center gap-1">
+                {/* Giải pháp */}
+                <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
+                  <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    Khắc phục Next.js:
+                    Khắc phục:
                   </span>
-                  <span className="text-right">Đồng bộ 1 thực thể: Bệnh Viện Tai Mũi Họng Sài Gòn</span>
+                  <span className="text-emerald-800 font-medium text-right text-[11px]">
+                    Đồng bộ 1 thực thể: Bệnh Viện Tai Mũi Họng Sài Gòn
+                  </span>
                 </div>
               </div>
 
-              {/* Bug 4: Canonical Mismatch */}
-              <div className="p-5 rounded-2xl bg-blue-50/50 border border-blue-200/60 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between text-xs font-bold text-blue-800">
-                    <span className="flex items-center gap-1.5">
-                      <AlertTriangle className="w-4 h-4 text-blue-600 shrink-0" />
-                      Lỗi 4: Thẻ Canonical Bị Trỏ Nhầm Bác Sĩ
+              {/* Card 4: Canonical Mismatch */}
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+                <div className="p-5 space-y-4">
+                  {/* Header Card */}
+                  <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center font-bold text-xs">
+                        04
+                      </div>
+                      <h4 className="font-extrabold text-sm text-slate-900">
+                        Thẻ Canonical Trỏ Nhầm Bác Sĩ
+                      </h4>
+                    </div>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-brand-800 uppercase tracking-wider">
+                      Mất uy tín Bác Sĩ
                     </span>
-                    <span className="bg-blue-200/80 text-blue-900 px-2 py-0.5 rounded text-[10px] shrink-0">Cũ (WordPress)</span>
                   </div>
 
-                  {/* Giải thích súc tích & Mức độ nghiêm trọng */}
-                  <div className="p-3 bg-white/90 rounded-xl border border-blue-100 text-xs space-y-1.5">
-                    <div className="text-slate-700 leading-relaxed">
-                      <strong className="text-blue-950 font-bold">Thuật ngữ:</strong> <code>rel="canonical"</code> là thẻ báo cho Google biết trang nào là bản quyền gốc duy nhất cần được xếp hạng.
-                    </div>
-                    <div className="text-blue-900 text-[11px] font-semibold leading-relaxed">
-                      <span className="text-blue-600 font-bold">Mức độ nghiêm trọng:</span> Mất hiển thị tên Bác sĩ. Hồ sơ BS. Thống, BS. Hà bị coi là bản sao của bác sĩ khác và bị loại bỏ khỏi kết quả tìm kiếm Google.
-                    </div>
+                  {/* Thuật ngữ & Giải thích */}
+                  <div className="text-xs space-y-1">
+                    <span className="font-bold text-slate-900">Bản chất kỹ thuật:</span>
+                    <p className="text-slate-600 leading-relaxed">
+                      Thẻ <code>rel="canonical"</code> dùng để chỉ định trang gốc. Tuy nhiên hồ sơ của BS. Thống, BS. Hà lại bị cấu hình trỏ canonical sang BS. Thúy; các bác sĩ khác trỏ sang BS. Gia.
+                    </p>
                   </div>
 
-                  <p className="text-xs text-blue-900/80 leading-relaxed">
-                    Hồ sơ BS. Thống, BS. Hà trỏ canonical nhầm về BS. Thúy; nhiều bác sĩ khác trỏ về BS. Gia.
-                  </p>
+                  {/* Mức độ nghiêm trọng */}
+                  <div className="p-3 bg-blue-50/70 border border-blue-100 rounded-xl text-xs space-y-1">
+                    <span className="font-bold text-brand-900 flex items-center gap-1">
+                      <AlertTriangle className="w-3.5 h-3.5 text-brand-700 shrink-0" />
+                      Mức độ nghiêm trọng & Tác hại:
+                    </span>
+                    <p className="text-brand-950/90 leading-relaxed text-[11px]">
+                      Google coi hồ sơ của các bác sĩ giỏi chỉ là "bản sao" và loại bỏ hoàn toàn khỏi trang kết quả tìm kiếm khi bệnh nhân gõ tìm đích danh tên bác sĩ.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="mt-3 pt-3 border-t border-blue-200/60 flex items-center justify-between text-xs font-bold text-emerald-800">
-                  <span className="flex items-center gap-1">
+                {/* Giải pháp */}
+                <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
+                  <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    Khắc phục Next.js:
+                    Khắc phục:
                   </span>
-                  <span className="text-right">Mỗi bác sĩ tự trỏ chính mình + Physician Schema</span>
+                  <span className="text-emerald-800 font-medium text-right text-[11px]">
+                    Mỗi bác sĩ tự trỏ chính mình + Schema Physician E-E-A-T
+                  </span>
                 </div>
               </div>
 
