@@ -14,8 +14,7 @@ const DOCTORS = [
     specialty: 'Chuyên khoa Tai Mũi Họng & Phẫu thuật Đầu Cổ',
     exp: 'Hơn 30 năm kinh nghiệm',
     edu: 'Tiến sĩ Y học, Bác sĩ Chuyên khoa II Đại học Y Dược TP.HCM',
-    canonical: 'https://taimuihongsg.com/bac-si/ts-bs-ckii-hoang-luong/',
-    status: 'Đã chuẩn hóa Canonical riêng'
+    canonical: 'https://taimuihongsg.com/bac-si/ts-bs-ckii-hoang-luong/'
   },
   {
     name: 'BS.CKI Bùi Nguyên Thống',
@@ -23,8 +22,7 @@ const DOCTORS = [
     specialty: 'Nội soi NBI & Phẫu thuật Cắt Amidan Coblator',
     exp: 'Hơn 18 năm kinh nghiệm',
     edu: 'Bác sĩ Chuyên khoa I Tai Mũi Họng',
-    canonical: 'https://taimuihongsg.com/bac-si/bs-cki-bui-nguyen-thong/',
-    status: 'Đã sửa lỗi Canonical (trước đây trỏ nhầm sang BS Thúy)'
+    canonical: 'https://taimuihongsg.com/bac-si/bs-cki-bui-nguyen-thong/'
   },
   {
     name: 'BS.CKII Ngô Thanh Thúy',
@@ -32,8 +30,7 @@ const DOCTORS = [
     specialty: 'Khám & Điều trị bệnh lý Mũi Xoang, Tai Thính Học',
     exp: 'Hơn 22 năm kinh nghiệm',
     edu: 'Bác sĩ Chuyên khoa II Tai Mũi Họng',
-    canonical: 'https://taimuihongsg.com/bac-si/bs-ngo-thanh-thuy/',
-    status: 'Đã chuẩn hóa Canonical riêng'
+    canonical: 'https://taimuihongsg.com/bac-si/bs-ngo-thanh-thuy/'
   },
   {
     name: 'BS.CKII Từ Thị Thu Hà',
@@ -41,8 +38,7 @@ const DOCTORS = [
     specialty: 'Vi phẫu Tai & Phục hồi thính lực người cao tuổi',
     exp: 'Hơn 20 năm kinh nghiệm',
     edu: 'Bác sĩ Chuyên khoa II Tai Mũi Họng',
-    canonical: 'https://taimuihongsg.com/bac-si/bs-ckii-tu-thi-thu-ha/',
-    status: 'Đã sửa lỗi Canonical (trước đây trỏ nhầm sang BS Thúy)'
+    canonical: 'https://taimuihongsg.com/bac-si/bs-ckii-tu-thi-thu-ha/'
   },
   {
     name: 'BS.CKII Đỗ Kỳ Nhật',
@@ -50,8 +46,7 @@ const DOCTORS = [
     specialty: 'Chẩn đoán nội soi & Điều trị các khối u vùng Đầu Cổ',
     exp: 'Hơn 25 năm kinh nghiệm',
     edu: 'Bác sĩ Chuyên khoa II Tai Mũi Họng',
-    canonical: 'https://taimuihongsg.com/bac-si/bs-ckii-do-ky-nhat/',
-    status: 'Đã chuẩn hóa Canonical riêng'
+    canonical: 'https://taimuihongsg.com/bac-si/bs-ckii-do-ky-nhat/'
   },
   {
     name: 'ThS.BS CKII Trương Kim Tri',
@@ -59,8 +54,7 @@ const DOCTORS = [
     specialty: 'Phẫu thuật Chỉnh hình Vách ngăn & Nội soi Xoang FESS',
     exp: 'Hơn 16 năm kinh nghiệm',
     edu: 'Thạc sĩ Y học, Bác sĩ Chuyên khoa II',
-    canonical: 'https://taimuihongsg.com/bac-si/ths-bs-ckii-truong-kim-tri/',
-    status: 'Đã chuẩn hóa Canonical riêng'
+    canonical: 'https://taimuihongsg.com/bac-si/ths-bs-ckii-truong-kim-tri/'
   },
   {
     name: 'ThS.BS CKI Nguyễn Tất Cường',
@@ -68,8 +62,7 @@ const DOCTORS = [
     specialty: 'Điều trị viêm mũi họng, nạo VA & Thính học trẻ em',
     exp: 'Hơn 15 năm kinh nghiệm',
     edu: 'Thạc sĩ Y học, Bác sĩ Chuyên khoa I',
-    canonical: 'https://taimuihongsg.com/bac-si/ths-bs-cki-nguyen-tat-cuong/',
-    status: 'Đã chuẩn hóa Canonical riêng'
+    canonical: 'https://taimuihongsg.com/bac-si/ths-bs-cki-nguyen-tat-cuong/'
   },
   {
     name: 'BS.CKII Trần Cao Khoát',
@@ -77,8 +70,7 @@ const DOCTORS = [
     specialty: 'Phẫu thuật vi phẫu tai và điều trị chóng mặt tiền đình',
     exp: 'Hơn 24 năm kinh nghiệm',
     edu: 'Bác sĩ Chuyên khoa II Tai Mũi Họng',
-    canonical: 'https://taimuihongsg.com/bac-si/bs-ckii-tran-cao-khoat/',
-    status: 'Đã chuẩn hóa Canonical riêng'
+    canonical: 'https://taimuihongsg.com/bac-si/bs-ckii-tran-cao-khoat/'
   }
 ]
 
@@ -145,11 +137,6 @@ export default function BacSiPage({ onOpenBooking }: PageProps) {
                 <div className="text-[11px] text-slate-600 bg-slate-50 p-2.5 rounded-xl text-left space-y-1">
                   <div><strong>Kinh nghiệm:</strong> {doc.exp}</div>
                   <div><strong>Học vị:</strong> {doc.edu}</div>
-                </div>
-
-                <div className="text-[10px] text-emerald-800 bg-emerald-50/80 p-2 rounded-lg border border-emerald-200/60 flex items-center gap-1.5 justify-center">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                  <span>{doc.status}</span>
                 </div>
               </div>
 
