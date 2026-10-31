@@ -34,19 +34,18 @@ export default function HomePage({ onOpenBooking }: PageProps) {
       <section>
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-start lg:grid-cols-12">
           <div className="px-4 py-12 sm:px-6 md:py-16 lg:col-span-7 lg:py-20 lg:pr-14">
-            <p className="mb-5 text-sm font-semibold text-brand-800">Bệnh viện chuyên khoa Tai Mũi Họng tại TP.HCM</p>
             <h1 className="max-w-3xl text-4xl font-bold leading-[1.08] tracking-[-0.035em] text-slate-950 sm:text-5xl lg:text-6xl">
               Bệnh Viện Tai Mũi Họng Sài Gòn: thăm khám đúng chuyên khoa
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">Chủ động chọn bác sĩ, dịch vụ và lịch hẹn tại bệnh viện chuyên khoa Tai Mũi Họng tại TP.HCM.</p>
-            <ul className="mt-7 grid max-w-2xl gap-3 text-sm leading-6 text-slate-700 sm:grid-cols-3 sm:gap-4" aria-label="Điểm nổi bật của bệnh viện">
+            <ul className="mt-7 grid max-w-xl gap-3 text-sm leading-6 text-slate-700" aria-label="Điểm nổi bật của bệnh viện">
               {[
                 'Hơn 80 bác sĩ và chuyên gia Tai Mũi Họng',
                 '2 cơ sở khám tại TP.HCM',
                 'Hoạt động chuyên khoa từ năm 2007',
               ].map((usp) => (
-                <li key={usp} className="flex gap-2 font-semibold sm:block">
-                  <Check className="mt-1 h-4 w-4 shrink-0 text-brand-700 sm:mb-2" aria-hidden="true" />
+                <li key={usp} className="flex gap-2 font-semibold">
+                  <Check className="mt-1 h-4 w-4 shrink-0 text-brand-700" aria-hidden="true" />
                   <span>{usp}</span>
                 </li>
               ))}
@@ -284,10 +283,10 @@ export default function HomePage({ onOpenBooking }: PageProps) {
         </div>
       </section>
 
-      <section className="bg-slate-50">
+      <section className="bg-slate-50 pb-8">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px bg-slate-200 md:grid-cols-4">
           {[['19 năm', 'hoạt động'], ['2 cơ sở', 'bệnh viện và phòng khám'], ['80+', 'bác sĩ và chuyên gia'], ['42.290', 'ca phẫu thuật thành công']].map(([value, label]) => (
-            <div key={label} className="bg-slate-50 px-4 py-8 text-center sm:px-6"><div className="text-2xl font-bold text-slate-950 md:text-3xl">{value}</div><div className="mt-2 text-sm text-slate-600">{label}</div></div>
+            <div key={label} className="flex min-h-32 flex-col justify-center bg-slate-50 px-4 py-8 text-center sm:px-6"><div className="text-2xl font-bold text-slate-950 md:text-3xl">{value}</div><div className="mt-2 text-sm leading-5 text-slate-600">{label}</div></div>
           ))}
         </div>
       </section>

@@ -67,14 +67,9 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
       {/* Top emergency & info bar */}
       <div className="bg-navy-900 text-slate-200 text-xs py-2 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
-          <div className="flex items-center gap-4 flex-wrap">
-            <span className="flex items-center gap-1.5 text-emerald-400 font-medium">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              Khám Tai Mũi Họng chuyên khoa
-            </span>
-            <span className="hidden sm:inline text-slate-400">•</span>
-            <span className="flex items-center gap-1">
+        <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-2 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-wrap items-center justify-start gap-x-3 gap-y-1 text-left md:gap-4">
+            <span className="flex items-start gap-1 leading-4">
               <MapPin className="w-3.5 h-3.5 text-slate-400" />
               1 - 3 Trịnh Văn Cấn, P. Bến Thành, Quận 1, TP.HCM
             </span>
@@ -85,7 +80,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
             </span>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-start gap-3 md:justify-end">
             <Link
               href="/english"
               hrefLang="en"
@@ -107,25 +102,25 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
       </div>
 
       {/* Main navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div className="mx-auto flex max-w-7xl items-center gap-2 px-4 py-3 sm:px-6">
         <Link href="/" className="flex min-w-0 shrink-0 items-center gap-3 group">
           <div className="w-12 h-12 shrink-0 overflow-hidden rounded-lg bg-white border border-slate-200 flex items-center justify-center group-hover:border-brand-600 transition-colors">
             <img src="https://taimuihongsg.com/wp-content/uploads/2018/06/logo-taimuihongsg.jpg" alt="Logo Bệnh Viện Tai Mũi Họng Sài Gòn" className="h-full w-full object-contain" />
           </div>
           <div>
-            <div className="whitespace-nowrap text-base font-extrabold tracking-tight text-slate-900 group-hover:text-brand-700 transition-colors xl:text-lg">
+            <div className="max-w-[190px] text-base font-extrabold leading-tight tracking-tight text-slate-900 group-hover:text-brand-700 transition-colors sm:max-w-[230px] lg:max-w-none lg:whitespace-nowrap xl:text-lg">
               BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN
             </div>
-            <div className="whitespace-nowrap text-[10px] font-semibold tracking-[0.12em] text-slate-500 uppercase xl:text-[11px]">
+            <div className="max-w-[190px] text-[9px] font-semibold leading-4 tracking-[0.1em] text-slate-500 uppercase sm:max-w-[230px] lg:max-w-none lg:whitespace-nowrap xl:text-[11px]">
               Saigon ENT Specialist Hospital • Est. 2007
             </div>
           </div>
         </Link>
 
         {/* Desktop links */}
-        <nav className="hidden lg:flex items-center gap-0 text-sm font-semibold text-slate-700" aria-label="Điều hướng chính">
+        <nav className="hidden min-w-0 flex-1 items-center justify-end gap-0 text-sm font-semibold text-slate-700 lg:flex" aria-label="Điều hướng chính">
           {navGroups.map((group) => (
-            <div key={group.label} className="relative">
+            <div key={group.label} className="relative" onMouseEnter={() => setOpenMenu(group.label)} onMouseLeave={() => setOpenMenu(null)}>
               <button
                 type="button"
                 onClick={() => setOpenMenu(openMenu === group.label ? null : group.label)}
@@ -148,7 +143,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
           ))}
           <Link
             href="/tac-hai-khong-danh-rang-ban-dem" 
-            className="inline-flex whitespace-nowrap items-center gap-1.5 px-2 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition-all text-xs font-bold xl:px-3"
+            className="hidden whitespace-nowrap items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2 py-1 text-xs font-bold text-emerald-800 transition-all hover:bg-emerald-100 xl:inline-flex xl:px-3"
           >
             <Activity className="w-3.5 h-3.5 text-emerald-600" />
             Chuyên Đề Scrollytelling
@@ -156,10 +151,10 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         </nav>
 
         {/* Actions */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden shrink-0 items-center gap-3 sm:flex">
           <button
             onClick={onOpenBooking}
-            className="inline-flex whitespace-nowrap items-center gap-2 px-3 py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-sm hover:shadow-md transition-all active:scale-95 xl:px-5"
+            className="inline-flex whitespace-nowrap items-center gap-2 rounded-xl bg-brand-700 px-3 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-800 hover:shadow-md active:scale-95 xl:px-5"
           >
             <Calendar className="w-4 h-4" />
             Đặt Lịch Khám Ngay

@@ -94,7 +94,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgData) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+      <body className="min-h-screen flex flex-col overflow-x-hidden bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
         <ClientLayoutWrapper>
           {children}
         </ClientLayoutWrapper>
