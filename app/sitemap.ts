@@ -1,15 +1,34 @@
 import { MetadataRoute } from 'next'
+import { DOCTORS } from '@/data/doctors'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://taimuihongsg.com'
   const currentDate = new Date().toISOString()
 
-  return [
+  const coreRoutes: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/`,
       lastModified: currentDate,
       changeFrequency: 'daily',
       priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/doi-ngu-bac-si`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/thu-vien-kien-thuc-y-hoc`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/dat-hen-kham-benh`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/chuyen-khoa`,
@@ -18,53 +37,55 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/bac-si`,
+      url: `${baseUrl}/chuyen-khoa/khoa-kham-noi-soi-tai-mui-hong`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.8,
     },
     {
-      url: `${baseUrl}/kien-thuc`,
+      url: `${baseUrl}/chuyen-khoa/khoa-phau-thuat-tai-mui-hong`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/chuyen-khoa/khoa-noi-tru`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/do-da-ki-giac-ngu`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/tac-hai-khong-danh-rang-ban-dem`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/chien-luoc-tang-truong`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/web-plan`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    // Doctor Profiles (Self-referencing canonicals)
-    {
-      url: `${baseUrl}/bac-si/ts-bs-ckii-hoang-luong`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/bac-si/bs-cki-bui-nguyen-thong`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/bac-si/bs-ngo-thanh-thuy`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/bac-si/bs-ckii-tu-thi-thu-ha`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.7,
     },
   ]
+
+  const doctorRoutes: MetadataRoute.Sitemap = DOCTORS.map((doc) => ({
+    url: `${baseUrl}/bac-si/${doc.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }))
+
+  return [...coreRoutes, ...doctorRoutes]
 }

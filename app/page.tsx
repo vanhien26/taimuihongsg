@@ -6,9 +6,9 @@ import { ArrowRight, Baby, BedDouble, Calendar, Check, Clock, Ear, MapPin, Moon,
 interface PageProps { onOpenBooking?: (specialty?: string) => void }
 
 const patientActions = [
-  { title: 'Tìm bác sĩ', description: 'Xem chuyên môn và đội ngũ bác sĩ đang công tác tại bệnh viện.', href: '/bac-si', icon: Users },
+  { title: 'Tìm bác sĩ', description: 'Xem chuyên môn và đội ngũ bác sĩ đang công tác tại bệnh viện.', href: '/doi-ngu-bac-si', icon: Users },
   { title: 'Xem chuyên khoa', description: 'Chọn dịch vụ phù hợp với triệu chứng và nhu cầu điều trị.', href: '/chuyen-khoa', icon: Stethoscope },
-  { title: 'Hướng dẫn đi khám', description: 'Chuẩn bị thông tin cần thiết trước khi đến bệnh viện.', href: '/kien-thuc', icon: ShieldCheck },
+  { title: 'Hướng dẫn đi khám', description: 'Chuẩn bị thông tin cần thiết trước khi đến bệnh viện.', href: '/thu-vien-kien-thuc-y-hoc', icon: ShieldCheck },
 ]
 
 const specialties = [
@@ -16,7 +16,7 @@ const specialties = [
   { name: 'Mũi và xoang', summary: 'Khám nghẹt mũi, viêm xoang, dị ứng và bất thường vách ngăn.', icon: Wind, booking: 'Mũi - Xoang', href: '/chuyen-khoa#mui-xoang' },
   { name: 'Họng và thanh quản', summary: 'Khám đau họng, khàn tiếng, amidan và các vấn đề thanh quản.', icon: Volume2, booking: 'Họng - Thanh quản', href: '/chuyen-khoa#hong-thanh-quan' },
   { name: 'Tai Mũi Họng trẻ em', summary: 'Thăm khám các bệnh lý Tai Mũi Họng thường gặp ở trẻ.', icon: Baby, booking: 'Tai Mũi Họng Nhi', href: '/chuyen-khoa#tmh-nhi' },
-  { name: 'Đa ký giấc ngủ', summary: 'Đánh giá ngáy, gián đoạn giấc ngủ và rối loạn hô hấp khi ngủ.', icon: Moon, booking: 'Đo Đa ký giấc ngủ', href: '/chuyen-khoa/do-da-ky-giac-ngu' },
+  { name: 'Đa ký giấc ngủ', summary: 'Đánh giá ngáy, gián đoạn giấc ngủ và rối loạn hô hấp khi ngủ.', icon: Moon, booking: 'Đo Đa ký giấc ngủ', href: '/do-da-ki-giac-ngu' },
   { name: 'Phẫu thuật và nội trú', summary: 'Chăm sóc trước mổ, phẫu thuật và theo dõi nội trú.', icon: BedDouble, booking: 'Phẫu thuật và nội trú', href: '/chuyen-khoa/khoa-phau-thuat-tai-mui-hong' },
 ]
 
@@ -253,7 +253,7 @@ export default function HomePage({ onOpenBooking }: PageProps) {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
         <div className="flex flex-col justify-between gap-5 border-b border-slate-300 pb-7 sm:flex-row sm:items-end">
           <div><h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Đội ngũ bác sĩ</h2><p className="mt-3 text-slate-600">Thông tin bác sĩ được đối chiếu theo website hiện tại.</p></div>
-          <Link href="/bac-si" className="inline-flex items-center gap-2 font-semibold text-brand-800 hover:underline">Xem đội ngũ bác sĩ <ArrowRight className="h-4 w-4" /></Link>
+          <Link href="/doi-ngu-bac-si" className="inline-flex items-center gap-2 font-semibold text-brand-800 hover:underline">Xem đội ngũ bác sĩ <ArrowRight className="h-4 w-4" /></Link>
         </div>
         <div className="grid grid-cols-1 divide-y divide-slate-200 md:grid-cols-3 md:divide-x md:divide-y-0">
           {doctors.map((doctor) => (
@@ -266,7 +266,7 @@ export default function HomePage({ onOpenBooking }: PageProps) {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div><h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Kiến thức sức khỏe mới</h2><p className="mt-3 max-w-2xl leading-7 text-slate-600">Thông tin giúp nhận biết dấu hiệu cần đi khám và chuẩn bị câu hỏi cho bác sĩ.</p></div>
-            <Link href="/kien-thuc" className="inline-flex items-center gap-2 font-semibold text-brand-800 hover:underline">Xem thư viện kiến thức <ArrowRight className="h-4 w-4" /></Link>
+            <Link href="/thu-vien-kien-thuc-y-hoc" className="inline-flex items-center gap-2 font-semibold text-brand-800 hover:underline">Xem thư viện kiến thức <ArrowRight className="h-4 w-4" /></Link>
           </div>
           <div className="mt-10 grid grid-cols-1 border-t border-slate-300 md:grid-cols-3">
             {[
@@ -277,7 +277,7 @@ export default function HomePage({ onOpenBooking }: PageProps) {
               <article key={title} className="border-b border-slate-300 py-7 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0 md:last:pr-0">
                 <div className="flex items-center justify-between gap-4 text-xs font-semibold text-slate-500"><span>{category}</span><time>{date}</time></div>
                 <h3 className="mt-5 text-xl font-bold leading-7 text-slate-950">{title}</h3>
-                <Link href="/kien-thuc" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-800 hover:underline">Đọc bài viết <ArrowRight className="h-4 w-4" /></Link>
+                <Link href="/thu-vien-kien-thuc-y-hoc" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-800 hover:underline">Đọc bài viết <ArrowRight className="h-4 w-4" /></Link>
               </article>
             ))}
           </div>

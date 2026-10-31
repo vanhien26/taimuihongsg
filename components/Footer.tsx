@@ -25,11 +25,12 @@ export default function Footer() {
           <div className="space-y-3">
             <div className="font-bold text-white text-base">Chuyên Khoa Mũi Nhọn</div>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><Link href="/chuyen-khoa#mui-xoang" className="hover:text-emerald-400 transition-colors">Phẫu thuật Nội soi Xoang FESS & Vách ngăn</Link></li>
-              <li><Link href="/chuyen-khoa#hong-thanh-quan" className="hover:text-emerald-400 transition-colors">Cắt Amidan & Nạo VA bằng Coblator</Link></li>
-              <li><Link href="/chuyen-khoa#tai-thinh-hoc" className="hover:text-emerald-400 transition-colors">Vi phẫu Tai & Phục hồi thính lực</Link></li>
-              <li><Link href="/chuyen-khoa#ngu-ngay" className="hover:text-emerald-400 transition-colors">Đo Đa ký giấc ngủ & Trị ngáy OSAS</Link></li>
-              <li><Link href="/chuyen-khoa#tmh-nhi" className="hover:text-emerald-400 transition-colors">Trung tâm Tai Mũi Họng Nhi Khoa</Link></li>
+              <li><Link href="/chuyen-khoa/khoa-kham-noi-soi-tai-mui-hong" className="hover:text-emerald-400 transition-colors">Khoa Khám & Nội Soi Tai Mũi Họng</Link></li>
+              <li><Link href="/chuyen-khoa/khoa-phau-thuat-tai-mui-hong" className="hover:text-emerald-400 transition-colors">Khoa Phẫu Thuật Tai Mũi Họng</Link></li>
+              <li><Link href="/chuyen-khoa/khoa-noi-tru" className="hover:text-emerald-400 transition-colors">Khoa Nội Trú Tai Mũi Họng</Link></li>
+              <li><Link href="/do-da-ki-giac-ngu" className="hover:text-emerald-400 transition-colors">Đo Đa Ký Giấc Ngủ (OSAS)</Link></li>
+              <li><Link href="/doi-ngu-bac-si" className="hover:text-emerald-400 transition-colors">Đội Ngũ 18 Bác Sĩ Chuyên Khoa</Link></li>
+              <li><Link href="/thu-vien-kien-thuc-y-hoc" className="hover:text-emerald-400 transition-colors">Thư Viện Kiến Thức Y Học</Link></li>
             </ul>
           </div>
 

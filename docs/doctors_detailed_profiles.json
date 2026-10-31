@@ -1,0 +1,365 @@
+[
+  {
+    "name": "TS.BS.CKII. Hoàng Lương",
+    "role": "Bác sĩ Chuyên Gia - Nhà Sáng Lập BV • Ban Giám Đốc",
+    "specialty": "Chuyên khoa Tai Mũi Họng & Phẫu thuật Đầu Cổ",
+    "degree": "Tiến sĩ - Bác sĩ chuyên khoa II - Thầy thuốc ưu tú; Tốt nghiệp Đại học Y Dược TP. Hồ Chí Minh (1985)",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2016/06/1.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ts-bs-ckii-hoang-luong/",
+    "slug": "ts-bs-ckii-hoang-luong",
+    "subSpecialties": [
+      "Phẫu thuật Giải áp Thần kinh thị giác Điều trị mù sau chấn thương đầu mặt",
+      "Phẫu thuật Nội soi Mũi Xoang",
+      "Phẫu thuật Tai",
+      "Phẫu thuật Họng – Thanh quản",
+      "Phẫu thuật Thẩm mỹ"
+    ],
+    "cchn": "Số CCHN: 001078/HCM - CCHN",
+    "careerHistory": [
+      "Trợ lý Giám đốc Bệnh viện Tai Mũi Họng Sài Gòn – Phòng khám Đa khoa Quốc tế Sài Gòn",
+      "Phó Trưởng Cơ sở 2 phụ trách chuyên môn, Bệnh viện Đại học Y Dược – TP.HCM",
+      "Phó Khoa Điều dưỡng Kỹ thuật Y học – Đại học Y Dược – Tp.HCM",
+      "Phó Giám đốc Trung tâm đào tạo nhân lực y tế theo nhu cầu xã hội đại học Y Dược TP. Hồ Chí Minh",
+      "Giảng viên chính – Đại học Y Dược – Tp.HCM",
+      "Ủy viên Ban chấp hành Hội Tai Mũi Họng Việt Nam 2004 – 2011",
+      "Thầy Thuốc ưu tú",
+      "Giám đốc Bệnh viện Tai mũi họng Sài Gòn"
+    ]
+  },
+  {
+    "name": "BS.CKII. Đỗ Kỳ Nhật",
+    "role": "Bác sĩ Cao Cấp - Giám Đốc Bệnh Viện • Ban Giám Đốc",
+    "specialty": "Phẫu tích Xương Thái Dương & Phẫu thuật Cấy Điện Ốc Tai",
+    "degree": "Bác sĩ chuyên khoa II",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2018/05/7.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/bs-ckii-do-ky-nhat/",
+    "slug": "bs-ckii-do-ky-nhat",
+    "subSpecialties": [
+      "Phẫu thuật Tai , Mũi Họng , thanh quản và đầu cổ mặt",
+      "Phẫu thuật tạo hình thẩm mỹ tai mũi họng và cổ mặt"
+    ],
+    "cchn": "Số CCHN: 005011/HCM-CCHN",
+    "careerHistory": [
+      "Bệnh viện Tai Mũi Họng Sài Gòn - Giám đốc Bệnh viện",
+      "Bệnh viện Quận 5, TP.HCM - Phó Trưởng Khoa Tai Mũi Họng",
+      "Bệnh viện Chợ Rẫy",
+      "Bệnh viện Đại học Y dược Cơ sở 2",
+      "Bệnh viện Le Mans - Pháp.",
+      "Học tập, hội nghị nước ngoài",
+      "Pháp, Singapore, Philippines, Hàn quốc",
+      "Học tập"
+    ]
+  },
+  {
+    "name": "BS.CKII. Trịnh Thị Minh Hải",
+    "role": "Bác sĩ Cao Cấp - Giám Đốc Khối Đào Tạo Lâm Sàng",
+    "specialty": "Nội soi NBI tầm soát sớm ung thư vòm họng & thanh quản",
+    "degree": "Bác sĩ chuyên khoa II",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2018/05/19.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/bs-ckii-trinh-thi-minh-hai/",
+    "slug": "bs-ckii-trinh-thi-minh-hai",
+    "subSpecialties": [
+      "Nội soi NBI tầm soát ung thư Tai mũi họng.",
+      "Phẫu thuật nội soi mũi xoang"
+    ],
+    "cchn": "Số CCHN: 004929/HCM-CCHN",
+    "careerHistory": []
+  },
+  {
+    "name": "THS.BS.CKII Hoàng Long",
+    "role": "Bác sĩ Cao Cấp - Giám Đốc Khối Vận Hành Y Tế",
+    "specialty": "Chuyên khoa Tai Mũi Họng & Đo Đa Ký Giấc Ngủ (OSAS)",
+    "degree": "Thạc sĩ – Bác sĩ chuyên khoa II",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2018/05/Hinh-bac-si-co-ten-11.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ths-bs-ckii-hoang-long/",
+    "slug": "ths-bs-ckii-hoang-long",
+    "subSpecialties": [
+      "Điều trị và phẫu thuật ngủ ngáy – ngưng thở khi ngủ, nội soi gây ngủ (DISE), đa ký giấc ngủ"
+    ],
+    "cchn": "051063/HCM-CCHN",
+    "careerHistory": []
+  },
+  {
+    "name": "BS.CKII. Trần Cao Khoát",
+    "role": "Bác sĩ Cao Cấp • Khoa Tai Mũi Họng",
+    "specialty": "Vi phẫu Tai & Điều trị Chóng Mặt Tiền Đình",
+    "degree": "Tốt nghiệp Đại học Y Dược Thành phố Hồ Chí Minh (1995)",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2018/05/8.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/bs-ckii-tran-cao-khoat/",
+    "slug": "bs-ckii-tran-cao-khoat",
+    "subSpecialties": [
+      "Bác sĩ Chuyên khoa Cấp II – Tai Mũi Họng",
+      "Phẫu thuật các bệnh lý vùng TAI – MŨI – HỌNG và vùng Đầu – Mặt – Cổ",
+      "Chuyên gia lãnh vực: Ngủ ngáy – Đa ký Giấc ngủ – Hội chứng tắc nghẽn ngưng thở khi ngủ",
+      "Phẫu thuật điều trị Ngủ Ngáy & ngưng thở khi ngủ",
+      "Khám & điều trị: Chóng mặt – rối loạn tiền đình – mất thăng bằng"
+    ],
+    "cchn": "Số CCHN: 000133/HCM-CCHN",
+    "careerHistory": [
+      "1995 – 2008: Bác sĩ chuyên khoa Tai Mũi Họng – BV Nhân Dân Gia Định – Tp. HCM",
+      "2008 – 2015: Bác sĩ chuyên khoa Tai Mũi Họng – BV đa khoa Vạn Hạnh – Tp.HCM",
+      "Từ 2015 đến nay: Bác sĩ chuyên khoa TMH – BV Tai Mũi Họng Sài Gòn",
+      "Đào tạo chuyên ngành",
+      "2000: Bác sĩ Chuyên khoa cấp I Tai Mũi Họng",
+      "2005: Tu nghiệp chuyên sâu về bệnh lý mũi xoang và khứu giác tại University Southern California (Hoa Kỳ).",
+      "2005: Dự hội nghị Tai Mũi Họng thế giới tại Los Angeles – California",
+      "2006: Bác sĩ Chuyên khoa cấp II Tai Mũi Họng"
+    ]
+  },
+  {
+    "name": "BS.CKII. Vũ Văn Khánh",
+    "role": "Bác sĩ Cao Cấp • Khoa Tai Mũi Họng",
+    "specialty": "Khám & Điều trị Chuyên sâu bệnh lý Tai Mũi Họng",
+    "degree": "Tốt nghiệp Đại học Quân y – Bộ Quốc phòng (1983).",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2018/05/Hinh-bac-si-co-ten-12.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/bs-ckii-vu-van-khanh/",
+    "slug": "bs-ckii-vu-van-khanh",
+    "subSpecialties": [
+      "Khám và Điều trị các bệnh lý Tai Mũi Họng",
+      "Phẫu thuật nội soi Tai Mũi Họng",
+      "Thành viên các tổ chức chuyên môn",
+      "Thầy thuốc ưu tú 2008",
+      "2004 – 2011: Ủy viên BCH Hội TMH Việt Nam.",
+      "2013 -2018: Ủy viên BCH Hội TMH TPHCM và các tỉnh phía nam."
+    ],
+    "cchn": "Số CCHN: 0006277/BYT-CCHN",
+    "careerHistory": [
+      "2004 – 2011: Ủy Viên Ban chấp hành Hội Tai Mũi Họng Việt Nam",
+      "2013 – 2015: Trưởng Khoa Tai Mũi Họng Bệnh viện 30-4 Bộ Công An",
+      "Ủy viên Ban chấp hành Hội Tai Mũi Họng Tp.HCM và Các tỉnh phía Nam",
+      "Đào tạo chuyên ngành",
+      "1995: Bác sĩ chuyên khoa Cấp I chuyên ngành tai mũi họng",
+      "2003:  Bác sĩ chuyên khoa Cấp I chuyên ngành tai mũi họng",
+      "2011: Học ở Bệnh Viện Erasme ở Thủ đô Brusel(Vương quốc Bỉ)",
+      "Lĩnh vực chuyên sâu"
+    ]
+  },
+  {
+    "name": "THS.BS.CKII. Trương Kim Tri",
+    "role": "Bác sĩ Cao Cấp - Giám Đốc Phòng Khám Đa Khoa",
+    "specialty": "Chỉnh hình Vách Ngăn & Nội Soi Xoang FESS",
+    "degree": "Bác sĩ chuyên khoa II",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2018/05/Hinh-bac-si-co-ten-8.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ths-bs-ckii-truong-kim-tri/",
+    "slug": "ths-bs-ckii-truong-kim-tri",
+    "subSpecialties": [
+      "Tư vấn và điều trị các bệnh lý nghe kém nhẹ đến điếc nặng, sâu.",
+      "Phẫu thuật bệnh lý tai và xương chũm."
+    ],
+    "cchn": "Số CCHN: 000148/LĐ-CCHN",
+    "careerHistory": [
+      "Trưởng khoa Tai – Thính học, Bệnh viện Tai Mũi Họng Sài Gòn.",
+      "Phó trưởng khoa Nội trú , Bệnh viện Tai Mũi Họng Sài Gòn.",
+      "Bác sĩ điều trị Tai Mũi Họng – Bệnh viện Đa Khoa Lâm Đồng.",
+      "Học tập",
+      "ĐHYD Huế: Bác sĩ đa khoa (2000 - 2006)",
+      "ĐHYD Huế: Bác sĩ Nội trú (2007 - 2010)",
+      "ĐHYK Phạm Ngọc Thạch TPHCM: Bác sĩ chuyên khoa II Tai Mũi Họng (2016 - 2018",
+      "ĐHYD TP.HCM: Nghiên cứu sinh Tiến sĩ chuyên ngành Giải phẫu học (Đang thực hiện)"
+    ]
+  },
+  {
+    "name": "THS.BS.CKII. Trần Quý Ngọc",
+    "role": "Bác sĩ Cao Cấp - Trưởng Khoa Nội Trú",
+    "specialty": "Chuyên khoa Tai Mũi Họng & Phẫu thuật Đầu Cổ",
+    "degree": "Thạc sĩ – Bác sĩ chuyên khoa II",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2018/05/Hinh-bac-si-co-ten-7.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ths-bs-ckii-tran-quy-ngoc/",
+    "slug": "ths-bs-ckii-tran-quy-ngoc",
+    "subSpecialties": [
+      "Điều trị và phẫu thuật các bệnh lý mũi xoang - họng - thanh quản"
+    ],
+    "cchn": "Số CCHN: 000091/ HCM-CCHN",
+    "careerHistory": [
+      "Bác sĩ Điều trị Khoa Tai Mũi Họng – Bệnh viện Nguyễn Trãi Tp. HCM (2005 – 2013)",
+      "Học tập",
+      "Đại học Y khoa Phạm Ngọc Thạch - TPHCM: Bác sĩ đa khoa (1991-1997)",
+      "Đại học Y Dược TP. Hồ Chí Minh: Thạc sĩ tai mũi họng (2001-2003)",
+      "Đại học Y khoa Phạm Ngọc Thạch - TPHCM: Bác sĩ chuyên khoa II tai mũi họng (2016 - 2018)",
+      "Lĩnh vực chuyên sâu",
+      "Điều trị và phẫu thuật các bệnh lý mũi xoang - họng - thanh quản",
+      "Chứng chỉ đào tạo:"
+    ]
+  },
+  {
+    "name": "THS.BS. CKII. Đinh Tiến Trung",
+    "role": "Bác sĩ Cao Cấp • Khoa Tai Mũi Họng",
+    "specialty": "Chuyên khoa Tai Mũi Họng & Phẫu thuật Đầu Cổ",
+    "degree": "Tốt nghiệp Thạc sĩ Tai Mũi Họng - Đại học Y Dược Thành phố Hồ Chí Minh (2013).; Tốt nghiệp Bác sĩ đa khoa - Đại học Y Dược Thành phố Hồ Chí Minh (2009).",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2018/05/5.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ths-bs-ckii-dinh-tien-trung/",
+    "slug": "ths-bs-ckii-dinh-tien-trung",
+    "subSpecialties": [
+      "Bệnh lý Mũi xoang",
+      "Phẫu thuật nội soi Tai",
+      "Phẫu thuật Họng, Thanh quản và vùng Cổ",
+      "Thông thạo",
+      "Tiếng Anh.",
+      "Thành viên của tổ chức chuyên môn"
+    ],
+    "cchn": "Số CCHN: 0020279/HCM-CCHN",
+    "careerHistory": [
+      "2013 – 2014: Bác sĩ Bệnh viện Đại học Y Dược Tp. Hồ Chí Minh",
+      "Đào tạo chuyên ngành",
+      "Chứng chỉ Phẫu thuật Nội soi Tai và Xương thái dương - Cấy điện cực ốc tai - Bệnh viện Đa khoa Changi (CGH), Hội nghị Tai Mũi Họng và Đầu Mặt Cổ Asean, Singapore ( 25 – 29/08/2019 )",
+      "Chứng chỉ Phẫu thuật Đầu Mặt Cổ – Tổ chức APOST và Khoa Y Đại học Chulalongkorn ( Thái Lan ) ( 12 – 13/09/2018 )",
+      "Chứng chỉ Phẫu thuật Nội soi mũi xoang và Sàn sọ - Bệnh viện Đa khoa Singapore (SGH), Singapore ( 11 – 13/08/2018 )",
+      "Chứng chỉ Phẫu thuật Tai và Tai Thần kinh - Bệnh viện Đa khoa Singapore (SGH), Singapore ( 08 – 10/08/2018 )",
+      "Chứng chỉ Phẫu thuật Cấy điện cực ốc tai - Bệnh viện Đa khoa Singapore (SGH), Singapore ( 23 – 24/08/2017 )",
+      "Chứng chỉ Phẫu thuật Nội soi Tai - Bệnh viện Đa khoa Singapore (SGH), Singapore ( 21 – 22/08/2017 )"
+    ]
+  },
+  {
+    "name": "BS.CKII. Nguyễn Kim Phong",
+    "role": "Bác sĩ Cao Cấp • Khoa Tai Mũi Họng",
+    "specialty": "Tu nghiệp Mũi Xoang tại ĐH North Carolina (Hoa Kỳ)",
+    "degree": "Tốt nghiệp ĐH Y Dược TPHCM (1985).; 2000: Tu nghiệp về chuyên khoa mũi xoang tại trường ĐH Y khoa North Carolina.",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2018/05/13.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/bs-ckii-nguyen-kim-phong/",
+    "slug": "bs-ckii-nguyen-kim-phong",
+    "subSpecialties": [
+      "Nội soi tai mũi họng chẩn đoán (2016).",
+      "Thành viên của tổ chức chuyên môn",
+      "Hội viên hội TMH Châu Á từ năm 1996.",
+      "Hội viên hội TMH Mỹ từ năm 2000.",
+      "Nghiêu cứu / Sách đã viết / Các ấn bản",
+      "2008: Tham gia báo cáo bài Mucoceles, Paranasal sinusitis và làm Chairperson ở Hội nghị TMH ASEAN."
+    ],
+    "cchn": "Số CCHN: 0028535/HCM-CCHN",
+    "careerHistory": [
+      "BS TMH BV Đa Khoa An Giang (1985 – 1992)",
+      "BS TMH thuộc BV TMH TP.HCM (1992 – 2015)",
+      "BS TMH BV ĐK Sài Gòn (2015 - 2016)",
+      "Đào tạo chuyên ngành",
+      "1995: tốt nghiệp Bác sĩ CKI.",
+      "2003: Tốt nghiệp Bác sĩ CKII.",
+      "Lĩnh vực chuyên sâu",
+      "Nội soi tai mũi họng chẩn đoán (2016)."
+    ]
+  },
+  {
+    "name": "THS.BS. Trần Ngọc Quỳnh",
+    "role": "Bác sĩ Điều Trị • Khoa Tai Mũi Họng",
+    "specialty": "Chuyên khoa Tai Mũi Họng & Phẫu thuật Đầu Cổ",
+    "degree": "Thạc sĩ",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2018/10/Hinh-bac-si-co-ten-13.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ths-bs-tran-ngoc-quynh/",
+    "slug": "ths-bs-tran-ngoc-quynh",
+    "subSpecialties": [
+      "Điều trị và phẫu thuật các bệnh lý Họng – Thanh Quản, bệnh lý Mũi xoang"
+    ],
+    "cchn": "Số CCHN: 044048/HCM-CCHN",
+    "careerHistory": [
+      "Bác sĩ điều trị Bệnh Viện Tai Mũi Họng Sài Gòn.",
+      "Bác sĩ Phòng khám Tai Mũi Họng An Phúc - Đồng Nai.",
+      "Bác sĩ Phòng khám Tâm Trí (Sài Gòn).",
+      "Bác sĩ Phòng khám Sài Gòn - Kiến Tường (Long An).",
+      "Học tập",
+      "Đại học Y Dược TP. Hồ Chí Minh : Bác sĩ đa khoa (2007-2013)",
+      "Đại học Y Dược TP. Hồ Chí Minh: Thạc sĩ tai mũi họng (2014-2016)",
+      "Hiện đang theo học Chuyên Khoa 2 Tai Mũi Họng tại Trường Đại Học Y Khoa Phạm Ngọc Thạch"
+    ]
+  },
+  {
+    "name": "THS.BS.CKI. Trương Thế Anh",
+    "role": "Bác sĩ Điều Trị • Khoa Tai Mũi Họng",
+    "specialty": "Phẫu thuật Tạo hình, Tái tạo & Thẩm mỹ vùng Đầu Cổ",
+    "degree": "Thạc sĩ – Bác sĩ chuyên khoa I",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2018/12/16.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ths-bs-cki-truong-the-anh/",
+    "slug": "ths-bs-cki-truong-the-anh",
+    "subSpecialties": [
+      "Điều trị và phẫu thuật các bệnh lý mũi xoang - họng - thanh quản",
+      "Phẫu thuật tai",
+      "Phẫu thuật họng - thanh quản."
+    ],
+    "cchn": "Số CCHN: 007893/ĐL-CCHN",
+    "careerHistory": []
+  },
+  {
+    "name": "THS.BS.CKII Đặng Nhật Quỳnh Như",
+    "role": "Bác sĩ Điều Trị • Khoa Tai Mũi Họng",
+    "specialty": "Chuyên khoa Tai Mũi Họng & Thính Học Trẻ Em",
+    "degree": "Thạc sĩ – Bác sĩ chuyên khoa II",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2019/09/Hinh-bac-si-co-ten-4.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ths-bs-ckii-dang-nhat-quynh-nhu/",
+    "slug": "ths-bs-ckii-dang-nhat-quynh-nhu",
+    "subSpecialties": [
+      "Phẫu thuật nội soi mũi xoang"
+    ],
+    "cchn": ", hội nghị, báo cáo khoa học trong và ngoài nước",
+    "careerHistory": []
+  },
+  {
+    "name": "THS.BS.CKI. Trần Anh Thư",
+    "role": "Bác sĩ Điều Trị • Khoa Tai Mũi Họng",
+    "specialty": "Chuyên khoa Tai Mũi Họng & Phẫu thuật Đầu Cổ",
+    "degree": "Thạc sĩ – Bs CKI, Bác sĩ nội trú",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2019/09/9.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ths-bs-cki-tran-anh-thu/",
+    "slug": "ths-bs-cki-tran-anh-thu",
+    "subSpecialties": [
+      "điều trị đa tầng và phẫu thuật điều trị ngủ ngáy –  Hội chứng ngưng thở khi ngủ, đa ký giấc ngủ đầy đủ (PSG)."
+    ],
+    "cchn": "Số CCHN: 045744/HCM-CCHN",
+    "careerHistory": []
+  },
+  {
+    "name": "THS.BS. Đặng Diệu Linh",
+    "role": "Bác sĩ Điều Trị • Khoa Tai Mũi Họng",
+    "specialty": "Chuyên khoa Tai Mũi Họng & Phẫu thuật Đầu Cổ",
+    "degree": "Thạc sĩ - Bác sĩ",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2023/09/Hinh-bac-si-co-ten-3.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ths-bs-dang-dieu-linh/",
+    "slug": "ths-bs-dang-dieu-linh",
+    "subSpecialties": [
+      "Điều trị và phẫu thuật viêm mũi xoang, viêm mũi dị ứng",
+      "Phẫu thuật Tai.",
+      "Phẫu thuật nội soi mũi xoang."
+    ],
+    "cchn": ", hội nghị, báo cáo khoa học trong và ngoài nước:",
+    "careerHistory": []
+  },
+  {
+    "name": "THS.BS. Nguyễn Công Sơn",
+    "role": "Bác sĩ Điều Trị • Khoa Tai Mũi Họng",
+    "specialty": "Chuyên khoa Tai Mũi Họng & Phẫu thuật Đầu Cổ",
+    "degree": "Thạc sĩ – Bác sĩ",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2023/09/12.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ths-bs-nguyen-cong-son/",
+    "slug": "ths-bs-nguyen-cong-son",
+    "subSpecialties": [
+      "Quản lý các bệnh về họng, thanh quản bao gồm viêm amidan, viêm thanh quản, và các vấn đề về giọng nói và nuốt."
+    ],
+    "cchn": "055213/HCM-CCHN",
+    "careerHistory": []
+  },
+  {
+    "name": "ThS.BS.CKI Nguyễn Tất Cường",
+    "role": "Bác sĩ Điều Trị • Khoa Tai Mũi Họng",
+    "specialty": "Điều trị Viêm Mũi Họng, Nạo VA & Thính Học",
+    "degree": "Thạc sĩ – Bác sĩ chuyên khoa I",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2023/09/11.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ths-bs-cki-nguyen-tat-cuong/",
+    "slug": "ths-bs-cki-nguyen-tat-cuong",
+    "subSpecialties": [
+      "Điều trị bệnh lý họng - thanh quản, bệnh lý mũi xoang"
+    ],
+    "cchn": "057564/HCM-CCHN",
+    "careerHistory": []
+  },
+  {
+    "name": "THS.BS.CKII Hoàng Ngọc Đức",
+    "role": "Bác sĩ Cao Cấp • Khoa Tai Mũi Họng",
+    "specialty": "Chuyên khoa Tai Mũi Họng & Phẫu thuật Đầu Cổ",
+    "degree": "Thạc sĩ – Bác sĩ chuyên khoa II",
+    "image": "https://taimuihongsg.com/wp-content/uploads/2025/02/Hinh-bac-si-co-ten-1.png",
+    "profileUrl": "https://taimuihongsg.com/bac-si/ths-bs-ckii-hoang-ngoc-duc/",
+    "slug": "ths-bs-ckii-hoang-ngoc-duc",
+    "subSpecialties": [
+      "Điều trị và phẫu thuật nội soi mũi xoang, nội soi chỉnh hình vách ngăn mũi, chỉnh hình cuốn mũi dưới, nội soi cắt u, polyp mũi xoang. Phẫu thuật vá nhĩ nội soi, kính vi phẫu. Phẫu thuật ngủ ngáy – ngưng thở khi ngủ. Phẫu thuất soi treo thanh quản cắt polyp, hạt dây thanh, u nang rãnh lưỡi thanh thiệt. Phẫu thuật cắt Amiđan, nạo VA bằng Coblator…"
+    ],
+    "cchn": "Số CCHN: 001712/HCM-CCHN",
+    "careerHistory": []
+  }
+]
