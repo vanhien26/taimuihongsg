@@ -11,6 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'daily',
       priority: 1.0,
+      alternates: {
+        languages: {
+          vi: `${baseUrl}/`,
+          en: `${baseUrl}/english`,
+          'x-default': `${baseUrl}/`,
+        },
+      },
     },
     {
       url: `${baseUrl}/doi-ngu-bac-si`,
@@ -71,6 +78,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
+      alternates: {
+        languages: {
+          vi: `${baseUrl}/`,
+          en: `${baseUrl}/english`,
+          'x-default': `${baseUrl}/`,
+        },
+      },
     },
     {
       url: `${baseUrl}/chien-luoc-tang-truong`,

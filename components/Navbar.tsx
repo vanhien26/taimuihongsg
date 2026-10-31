@@ -88,6 +88,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
           <div className="flex items-center gap-3">
             <Link
               href="/english"
+              hrefLang="en"
               className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-white/10 hover:bg-white/20 text-white transition-colors border border-white/20"
             >
               <Globe className="w-3.5 h-3.5 text-sky-400" />

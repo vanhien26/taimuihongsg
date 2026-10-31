@@ -8,11 +8,22 @@ export const metadata: Metadata = {
   description: 'Leading Ear, Nose & Throat (ENT) Hospital in District 1, Ho Chi Minh City with English-speaking specialists, NBI endoscopy, international health insurance direct billing, and certified English medical reports.',
   alternates: {
     canonical: 'https://taimuihongsg.com/english/',
+    languages: {
+      'vi-VN': 'https://taimuihongsg.com/',
+      'en-US': 'https://taimuihongsg.com/english',
+      'vi': 'https://taimuihongsg.com/',
+      'en': 'https://taimuihongsg.com/english',
+      'x-default': 'https://taimuihongsg.com/',
+    },
   },
   openGraph: {
     title: 'Saigon ENT Hospital - English Services for Expats & Foreigners in Ho Chi Minh City',
     description: 'English-speaking ENT specialist hospital located in central District 1, HCMC. Advanced diagnostics, Coblation surgery, sleep apnea treatment, and global insurance support.',
     url: 'https://taimuihongsg.com/english/',
+    siteName: 'Saigon ENT Specialist Hospital',
+    locale: 'en_US',
+    alternateLocale: ['vi_VN'],
+    type: 'website',
   },
 }
 
@@ -97,8 +108,56 @@ export default function EnglishPortalPage() {
     'MSIG Insurance',
   ]
 
+  const englishSchema = {
+    '@context': 'https://schema.org',
+    '@type': ['Hospital', 'MedicalOrganization'],
+    'name': 'Saigon Ear Nose Throat (ENT) Hospital',
+    'alternateName': 'Bệnh Viện Tai Mũi Họng Sài Gòn',
+    'url': 'https://taimuihongsg.com/english',
+    'logo': 'https://taimuihongsg.com/wp-content/uploads/2018/06/logo-taimuihongsg.jpg',
+    'telephone': '+842838213456',
+    'medicalSpecialty': 'Otolaryngologic',
+    'availableLanguage': [
+      { '@type': 'Language', 'name': 'English' },
+      { '@type': 'Language', 'name': 'Vietnamese' }
+    ],
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': '1 - 3 Trinh Van Can Street',
+      'addressLocality': 'Ben Thanh Ward, District 1',
+      'addressRegion': 'Ho Chi Minh City',
+      'postalCode': '700000',
+      'addressCountry': 'VN'
+    },
+    'geo': {
+      '@type': 'GeoCoordinates',
+      'latitude': 10.7686,
+      'longitude': 106.6970
+    },
+    'openingHoursSpecification': [
+      {
+        '@type': 'OpeningHoursSpecification',
+        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        'opens': '07:30',
+        'closes': '19:45'
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        'dayOfWeek': 'Sunday',
+        'opens': '08:00',
+        'closes': '11:45'
+      }
+    ],
+    'paymentAccepted': ['Cash', 'Credit Card', 'Direct Billing Insurance'],
+    'currenciesAccepted': ['VND', 'USD']
+  }
+
   return (
     <div className="min-h-screen bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(englishSchema) }}
+      />
       {/* Language Bar Notification */}
       <div className="bg-navy-950 text-slate-300 py-2.5 px-4 text-xs border-b border-navy-800">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">

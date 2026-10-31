@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://taimuihongsg.com'),
   alternates: {
     canonical: 'https://taimuihongsg.com/',
+    languages: {
+      'vi-VN': 'https://taimuihongsg.com/',
+      'en-US': 'https://taimuihongsg.com/english',
+      'vi': 'https://taimuihongsg.com/',
+      'en': 'https://taimuihongsg.com/english',
+      'x-default': 'https://taimuihongsg.com/',
+    },
   },
   openGraph: {
     title: 'Bệnh Viện Tai Mũi Họng Sài Gòn',
@@ -18,6 +25,7 @@ export const metadata: Metadata = {
     url: 'https://taimuihongsg.com/',
     siteName: 'Bệnh Viện Tai Mũi Họng Sài Gòn',
     locale: 'vi_VN',
+    alternateLocale: ['en_US'],
     type: 'website',
   },
 }
