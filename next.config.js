@@ -23,6 +23,30 @@ const nextConfig = {
         source: '/chuyen-khoa/do-da-ky-giac-ngu',
         destination: '/do-da-ki-giac-ngu',
       },
+      {
+        source: '/foreign-patient-pathway',
+        destination: '/english',
+      },
+      {
+        source: '/ear-nose-throat-hospital-for-foreigners-in-ho-chi-minh-city',
+        destination: '/english',
+      },
+      {
+        source: '/ear-conditions-we-treat',
+        destination: '/english',
+      },
+      {
+        source: '/nose-conditions-we-treat',
+        destination: '/english',
+      },
+      {
+        source: '/throat-and-larynx-conditions-we-treat',
+        destination: '/english',
+      },
+      {
+        source: '/pediatric-ent-conditions-we-treat',
+        destination: '/english',
+      },
     ]
   },
 }

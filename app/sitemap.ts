@@ -67,6 +67,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/english`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/chien-luoc-tang-truong`,
       lastModified: currentDate,
       changeFrequency: 'monthly',

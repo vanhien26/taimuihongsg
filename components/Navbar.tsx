@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Phone, Calendar, Clock, MapPin, Menu, X, Activity, ChevronDown } from 'lucide-react'
+import { Phone, Calendar, Clock, MapPin, Menu, X, Activity, ChevronDown, Globe } from 'lucide-react'
 
 interface NavbarProps {
   onOpenBooking: () => void
@@ -86,6 +86,14 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
           </div>
 
           <div className="flex items-center gap-3">
+            <Link
+              href="/english"
+              className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-white/10 hover:bg-white/20 text-white transition-colors border border-white/20"
+            >
+              <Globe className="w-3.5 h-3.5 text-sky-400" />
+              English
+            </Link>
+            <span className="hidden sm:inline text-slate-500">•</span>
             <a 
               href="tel:02838213456" 
               className="font-bold text-white hover:text-emerald-400 flex items-center gap-1"
@@ -187,6 +195,17 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
           >
             <Activity className="w-4 h-4 text-emerald-600" />
             Chuyên Đề Scrollytelling
+          </Link>
+          <Link 
+            href="/english" 
+            onClick={() => setMobileMenuOpen(false)} 
+            className="flex items-center justify-between py-2 font-bold text-brand-800 hover:text-brand-900 border-t border-slate-100"
+          >
+            <span className="flex items-center gap-2">
+              <Globe className="w-4 h-4 text-brand-700" />
+              English Version (For Expats)
+            </span>
+            <span className="text-xs px-2 py-0.5 rounded bg-brand-50 text-brand-800 font-semibold">EN</span>
           </Link>
           <button
             onClick={() => {

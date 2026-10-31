@@ -88,6 +88,7 @@ export default function Footer() {
             © 2007 - 2026 Bệnh Viện Tai Mũi Họng Sài Gòn. Toàn bộ quyền được bảo lưu.
           </div>
           <div className="flex items-center gap-6">
+            <Link href="/english" className="text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1">English Portal (Expats)</Link>
             <Link href="/sitemap.xml" className="hover:text-slate-400">Sitemap XML (200 OK)</Link>
             <Link href="/chien-luoc-tang-truong" className="text-emerald-400 hover:text-emerald-300 font-medium">Báo cáo Kỹ thuật & Tăng trưởng GEO</Link>
           </div>
