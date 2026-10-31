@@ -26,7 +26,7 @@ export default function StrategicAuditComparison() {
               activeTab === 'audit' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            4 Lỗi Kỹ Thuật
+            5 Lỗi Kỹ Thuật & Quốc Tế
           </button>
           <button
             onClick={() => setActiveTab('content')}
@@ -65,7 +65,7 @@ export default function StrategicAuditComparison() {
               <div className="flex items-center gap-3 shrink-0">
                 <span className="flex items-center gap-1.5 text-rose-700 font-bold">
                   <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
-                  4 lỗi cản trở thu thập dữ liệu
+                  5 lỗi cản trở tăng trưởng & thu thập dữ liệu
                 </span>
               </div>
             </div>
@@ -272,6 +272,58 @@ export default function StrategicAuditComparison() {
                 </div>
               </div>
 
+              {/* Card 5: English Version & International Patients */}
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors md:col-span-2">
+                <div className="p-5 space-y-4">
+                  {/* Header Card */}
+                  <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-sky-50 text-sky-700 flex items-center justify-center font-bold text-xs">
+                        05
+                      </div>
+                      <h4 className="font-extrabold text-sm text-slate-900">
+                        Phân Hệ Tiếng Anh /english/ Lai Tạp & Đứt Gãy Luồng Chuyển Đổi Quốc Tế
+                      </h4>
+                    </div>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-sky-100 text-sky-800 uppercase tracking-wider">
+                      Mất Thị Phần Expat & Du Lịch Y Tế
+                    </span>
+                  </div>
+
+                  {/* Thuật ngữ & Giải thích */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div className="space-y-1">
+                      <span className="font-bold text-slate-900">Bản chất kỹ thuật trên web cũ:</span>
+                      <p className="text-slate-600 leading-relaxed">
+                        URL <code>/english/</code> thực chất chỉ là một danh mục bài viết sơ sài; toàn bộ menu điều hướng chính, thanh tiện ích và chân trang vẫn hiển thị 100% tiếng Việt ("Văn hóa doanh nghiệp", "Bác sĩ", "Chuyên khoa"...); không khai báo cặp thẻ ngôn ngữ quốc tế <code>hreflang="en"</code> và <code>hreflang="vi"</code>.
+                      </p>
+                    </div>
+
+                    {/* Mức độ nghiêm trọng */}
+                    <div className="p-3 bg-sky-50/70 border border-sky-100 rounded-xl space-y-1">
+                      <span className="font-bold text-sky-950 flex items-center gap-1">
+                        <AlertTriangle className="w-3.5 h-3.5 text-sky-700 shrink-0" />
+                        Tác hại đối với Bệnh viện:
+                      </span>
+                      <p className="text-sky-950/90 leading-relaxed text-[11px]">
+                        Đánh mất hoàn toàn cơ hội phục vụ tệp người nước ngoài sinh sống tại Quận 1, Thảo Điền, Phú Mỹ Hưng và khách du lịch y tế (Medical Tourism). Bệnh nhân quốc tế không thể tự định hướng, không thấy thông tin bảo lãnh bảo hiểm trực tiếp (Direct Billing) và không có luồng đặt hẹn tiếng Anh chuyên biệt.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Giải pháp */}
+                <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    Khắc phục (Rebuild Web):
+                  </span>
+                  <span className="text-emerald-800 font-medium text-[11px]">
+                    Xây dựng <strong>English Portal riêng biệt tại /english</strong>: Giao diện 100% tiếng Anh, quy trình Foreign Patient Pathway 5 bước, hỗ trợ Direct Billing 35+ hãng bảo hiểm toàn cầu và xuất hồ sơ y khoa bằng tiếng Anh trong 30 phút.
+                  </span>
+                </div>
+              </div>
+
             </div>
           </div>
         )}
@@ -281,7 +333,7 @@ export default function StrategicAuditComparison() {
           <div className="space-y-6">
             <div className="p-4 bg-amber-50/60 border border-amber-200/80 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-amber-950">
               <div>
-                <strong className="text-amber-950 font-bold">Kiểm kê 2.212 bài viết & 49 trang tĩnh:</strong> Dữ liệu y khoa phong phú nhưng mắc 4 mô thức viết sai chuẩn SEO Y Tế (YMYL) và không phục vụ AI Search.
+                <strong className="text-amber-950 font-bold">Kiểm kê 2.212 bài viết & 49 trang tĩnh:</strong> Dữ liệu y khoa phong phú nhưng mắc 5 mô thức viết sai chuẩn SEO Y Tế (YMYL) và không phục vụ AI Search.
               </div>
               <span className="font-mono text-[10px] bg-amber-200/70 text-amber-900 px-2.5 py-1 rounded-lg font-bold shrink-0">
                 Data Scraping: 31/10/2026
@@ -470,6 +522,54 @@ export default function StrategicAuditComparison() {
                   </span>
                   <span className="text-emerald-800 font-medium text-right text-[11px]">
                     Làm sạch HTML/Markdown thuần + Tái cấu trúc Taxonomy y khoa
+                  </span>
+                </div>
+              </div>
+
+              {/* Pattern 5: Bài viết tiếng Anh nghèo nàn, thiếu truy vấn thực tế */}
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors md:col-span-2">
+                <div className="p-5 space-y-4">
+                  <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-sky-50 text-sky-700 flex items-center justify-center font-bold text-xs">
+                        05
+                      </div>
+                      <h4 className="font-extrabold text-sm text-slate-900">
+                        Nội Dung Tiếng Anh Cũ Đơn Điệu, Thiếu Bộ Từ Khóa Cho Bệnh Nhân Ngoại Quốc
+                      </h4>
+                    </div>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-sky-100 text-sky-800 uppercase tracking-wider">
+                      Bỏ Ngỏ Thị Trường
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div className="space-y-1">
+                      <span className="font-bold text-slate-900">Thực trạng bản cũ:</span>
+                      <p className="text-slate-600 leading-relaxed">
+                        Chỉ có 9 bài viết tiếng Anh được biên dịch cơ học từ tiếng Việt, tiêu đề dài dòng (*"PROLONGED NASAL CONGESTION DURING A SHORT VISIT TO VIETNAM..."*), thiếu các từ khóa tìm kiếm thực tế của người nước ngoài như <em>"English speaking ENT doctor Saigon"</em>, <em>"Swimmer ear clinic District 1"</em>, <em>"Ear barotrauma flight Vietnam"</em>.
+                      </p>
+                    </div>
+
+                    <div className="p-3 bg-sky-50/70 border border-sky-100 rounded-xl space-y-1">
+                      <span className="font-bold text-sky-950 flex items-center gap-1">
+                        <AlertTriangle className="w-3.5 h-3.5 text-sky-700 shrink-0" />
+                        Tác hại đối với Bệnh viện:
+                      </span>
+                      <p className="text-sky-950/90 leading-relaxed text-[11px]">
+                        Không thể cạnh tranh với các phòng khám đa khoa quốc tế như FV, Raffles hay Family Medical Practice ở phân khúc khách du lịch và expat, dù Bệnh Viện Tai Mũi Họng Sài Gòn có cơ sở vật chất chuyên khoa và đội ngũ bác sĩ vượt trội hơn.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    Chuẩn mới:
+                  </span>
+                  <span className="text-emerald-800 font-medium text-[11px]">
+                    Xây dựng cụm bài viết chuyên sâu nhắm trúng Intent tìm kiếm của du khách & expat: Hướng dẫn lấy ráy tai bằng máy hút vi phẫu, cấp chứng chỉ Fit-to-fly sau khi bị chấn thương áp lực tai, và hồ sơ thanh toán bảo lãnh quốc tế.
                   </span>
                 </div>
               </div>

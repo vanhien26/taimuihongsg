@@ -110,7 +110,7 @@ export default function ChienLuocPage() {
             <div className="p-6 md:p-10 lg:col-span-5 lg:border-r border-slate-200">
               <div className="text-sm font-bold text-amber-700">Phần 1. Tình trạng website hiện tại</div>
               <h2 className="text-2xl md:text-3xl font-black text-slate-950 mt-3">Tài sản nội dung lớn nhưng hạ tầng tìm kiếm đang làm giảm hiệu quả khai thác</h2>
-              <p className="mt-4 text-sm leading-7 text-slate-600">Website tích lũy lượng lớn nội dung y khoa, hồ sơ bác sĩ và trang dịch vụ từ năm 2007. Tuy nhiên, lỗi sitemap, canonical, soft 404 và xung đột entity làm gián đoạn hành trình từ tìm kiếm đến đặt khám.</p>
+              <p className="mt-4 text-sm leading-7 text-slate-600">Website tích lũy lượng lớn nội dung y khoa, hồ sơ bác sĩ và trang dịch vụ từ năm 2007. Tuy nhiên, các lỗi sitemap, canonical trỏ nhầm, chuyển hướng soft 404, xung đột entity thương hiệu và phân hệ tiếng Anh bị lai tạp làm gián đoạn hành trình từ tìm kiếm đến đặt khám của cả bệnh nhân trong nước lẫn quốc tế.</p>
               <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 text-sm leading-6 text-amber-950">
                 Vấn đề cốt lõi không phải thiếu nội dung. Vấn đề là nội dung hiện có chưa được tổ chức và phân phối đúng để tạo ra lượt khám.
               </div>
@@ -133,9 +133,9 @@ export default function ChienLuocPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 border-t border-slate-200">
             {[
-              ['Business Flow', 'Tìm kiếm triệu chứng → đọc nội dung → xem dịch vụ hoặc bác sĩ → đặt hẹn → khám và điều trị.'],
-              ['Business Info', 'Hai cơ sở, hơn 80 bác sĩ và chuyên gia, khám ngoại trú, phẫu thuật, nội trú và dịch vụ chuyên sâu.'],
-              ['Revenue Stream', 'Khám chuyên khoa, nội soi, phẫu thuật, nội trú, đa ký giấc ngủ và các dịch vụ phát sinh theo chỉ định.'],
+              ['Business Flow', 'Tìm kiếm triệu chứng → đọc nội dung kiểm chứng → xem bác sĩ/chuyên khoa → đặt hẹn trực tuyến → khám và điều trị (kể cả bệnh nhân quốc tế).'],
+              ['Business Info', 'Hai cơ sở, hơn 80 bác sĩ và chuyên gia, khám ngoại trú, phẫu thuật, nội trú, đo đa ký giấc ngủ và phân hệ English Portal cho kiều bào/expat.'],
+              ['Revenue Stream', 'Khám chuyên khoa, nội soi NBI, phẫu thuật Coblator/FESS, nội trú VIP, đo đa ký giấc ngủ và bảo lãnh viện phí hơn 35 hãng bảo hiểm lớn.'],
             ].map(([title, description]) => (
               <div key={title} className="p-6 md:p-8 md:border-r last:border-r-0 border-slate-200">
                 <h3 className="font-black text-slate-950">{title}</h3>
