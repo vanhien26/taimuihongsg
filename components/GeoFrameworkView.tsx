@@ -22,71 +22,91 @@ export default function GeoFrameworkView() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         
         {/* Pillar 1 */}
-        <div className="bg-white/5 rounded-2xl p-5 border border-white/10 space-y-3">
-          <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-            <Cpu className="w-5 h-5" />
-          </div>
-          <h4 className="font-bold text-base text-white">1. Direct-Answer Blocks</h4>
-          
-          <div className="p-2.5 rounded-lg bg-black/40 border border-white/5 text-[11px] text-slate-300 space-y-1">
-            <div><strong className="text-emerald-400">Định nghĩa:</strong> Khối "câu trả lời trực diện" 45-60 từ đặt ngay đầu bài viết.</div>
-            <div className="text-amber-300"><strong>Nếu không làm:</strong> Robot AI (ChatGPT, Perplexity) sẽ bỏ qua bài viết của bệnh viện để trích dẫn nguồn từ Vinmec hay Medlatec.</div>
-          </div>
+        <div className="bg-white/5 rounded-2xl p-5 border border-white/10 flex flex-col justify-between space-y-4">
+          <div className="space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+              <Cpu className="w-5 h-5" />
+            </div>
+            <h4 className="font-bold text-base text-white">1. Direct-Answer Blocks</h4>
+            
+            <div className="p-2.5 rounded-lg bg-black/40 border border-white/5 text-[11px] text-slate-300 space-y-1">
+              <div><strong className="text-emerald-400">Định nghĩa:</strong> Đoạn tóm tắt trực diện 45-60 từ ở đầu bài.</div>
+              <div className="text-amber-300 text-[10px]"><strong>Hậu quả:</strong> AI sẽ bỏ qua web và trích dẫn từ đối thủ.</div>
+            </div>
 
-          <p className="text-xs text-slate-400 leading-relaxed">
-            Mỗi bài y khoa (như <em>mổ vách ngăn</em>, <em>cắt amidan Coblator</em>) mở đầu bằng 1 đoạn súc tích chuẩn định dạng để AI Crawler ưu tiên bốc vào hộp kết quả tóm tắt.
-          </p>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Mỗi bài y khoa mở đầu bằng 1 đoạn súc tích chuẩn định dạng để AI Crawler ưu tiên bốc vào hộp kết quả tóm tắt.
+            </p>
+          </div>
+          <div className="text-[11px] font-bold text-emerald-400 border-t border-white/10 pt-2">
+            Đích đến: Google AI Overviews & ChatGPT
+          </div>
         </div>
 
         {/* Pillar 2 */}
-        <div className="bg-white/5 rounded-2xl p-5 border border-white/10 space-y-3">
-          <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center">
-            <Award className="w-5 h-5" />
-          </div>
-          <h4 className="font-bold text-base text-white">2. Medical E-E-A-T</h4>
-          
-          <div className="p-2.5 rounded-lg bg-black/40 border border-white/5 text-[11px] text-slate-300 space-y-1">
-            <div><strong className="text-teal-400">Định nghĩa:</strong> Bộ chỉ số đo lường <em>Kinh nghiệm - Chuyên môn - Thẩm quyền - Đáng tin cậy</em> của bài viết y khoa.</div>
-            <div className="text-rose-300"><strong>Hậu quả hiện tại:</strong> 74 bài bệnh học cũ không ghi tên bác sĩ thẩm định bị Google xếp vào diện "thông tin thiếu kiểm chứng", hạn chế hiển thị.</div>
-          </div>
+        <div className="bg-white/5 rounded-2xl p-5 border border-white/10 flex flex-col justify-between space-y-4">
+          <div className="space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center">
+              <Award className="w-5 h-5" />
+            </div>
+            <h4 className="font-bold text-base text-white">2. Medical E-E-A-T</h4>
+            
+            <div className="p-2.5 rounded-lg bg-black/40 border border-white/5 text-[11px] text-slate-300 space-y-1">
+              <div><strong className="text-teal-400">Định nghĩa:</strong> Bộ chỉ số Thẩm quyền & Độ tin cậy y khoa.</div>
+              <div className="text-rose-300 text-[10px]"><strong>Hậu quả:</strong> 74 bài thiếu bác sĩ duyệt bị hạn chế hiển thị.</div>
+            </div>
 
-          <p className="text-xs text-slate-400 leading-relaxed">
-            Bổ sung trường mã <code>reviewedBy</code> trỏ đến hồ sơ Bác sĩ có số chứng chỉ hành nghề, biến mọi bài viết thành tài liệu y khoa chính thống.
-          </p>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Gắn mã <code>reviewedBy</code> trỏ đến hồ sơ Bác sĩ có chứng chỉ hành nghề, xác thực tính khoa học bài viết.
+            </p>
+          </div>
+          <div className="text-[11px] font-bold text-teal-400 border-t border-white/10 pt-2">
+            Đích đến: Chuẩn YMYL Google Search
+          </div>
         </div>
 
         {/* Pillar 3 */}
-        <div className="bg-white/5 rounded-2xl p-5 border border-white/10 space-y-3">
-          <div className="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
-            <Target className="w-5 h-5" />
-          </div>
-          <h4 className="font-bold text-base text-white">3. Local 3-Pack & GPS</h4>
-          
-          <div className="p-2.5 rounded-lg bg-black/40 border border-white/5 text-[11px] text-slate-300 space-y-1">
-            <div><strong className="text-blue-400">Định nghĩa:</strong> 3 vị trí danh giá nhất hiển thị kèm bản đồ Google Map khi người bệnh tìm kiếm gần cơ sở.</div>
-            <div className="text-amber-300"><strong>Rủi ro:</strong> Nếu chỉ giữ vững vị trí ở Quận 1, bệnh nhân tại Quận 3, Quận 4, Bình Thạnh sẽ bị các phòng khám tư khác hút mất.</div>
-          </div>
+        <div className="bg-white/5 rounded-2xl p-5 border border-white/10 flex flex-col justify-between space-y-4">
+          <div className="space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
+              <Target className="w-5 h-5" />
+            </div>
+            <h4 className="font-bold text-base text-white">3. Local 3-Pack & GPS</h4>
+            
+            <div className="p-2.5 rounded-lg bg-black/40 border border-white/5 text-[11px] text-slate-300 space-y-1">
+              <div><strong className="text-blue-400">Định nghĩa:</strong> 3 vị trí danh giá nhất trên bản đồ Google Map.</div>
+              <div className="text-amber-300 text-[10px]"><strong>Hậu quả:</strong> Mất bệnh nhân lân cận (Q3, Q4, Q7, Bình Thạnh).</div>
+            </div>
 
-          <p className="text-xs text-slate-400 leading-relaxed">
-            Mở rộng từ khóa bán kính 5km: Bình Thạnh, Q3, Q4, Q7 với tọa độ GeoCoordinates đồng bộ, gia tăng bệnh nhân đến khám trực tiếp.
-          </p>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Mở rộng từ khóa bán kính 5km với tọa độ GeoCoordinates đồng bộ, gia tăng bệnh nhân đến khám trực tiếp.
+            </p>
+          </div>
+          <div className="text-[11px] font-bold text-blue-400 border-t border-white/10 pt-2">
+            Đích đến: Bệnh nhân tại cơ sở 1 & 2
+          </div>
         </div>
 
         {/* Pillar 4 */}
-        <div className="bg-white/5 rounded-2xl p-5 border border-white/10 space-y-3">
-          <div className="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center">
-            <Layers className="w-5 h-5" />
-          </div>
-          <h4 className="font-bold text-base text-white">4. Topic Clusters (Cụm Chuyên Đề)</h4>
-          
-          <div className="p-2.5 rounded-lg bg-black/40 border border-white/5 text-[11px] text-slate-300 space-y-1">
-            <div><strong className="text-purple-400">Định nghĩa:</strong> Gom các bài viết nhỏ lẻ xoay quanh một "trang chuyên đề trung tâm" (Pillar Page) có chiều sâu học thuật.</div>
-            <div className="text-rose-300"><strong>Lỗi cũ:</strong> 1.517 bài hỏi đáp cũ bị rời rạc, làm phân tán sức mạnh SEO (Keyword Cannibalization), tự cạnh tranh triệt tiêu lẫn nhau.</div>
-          </div>
+        <div className="bg-white/5 rounded-2xl p-5 border border-white/10 flex flex-col justify-between space-y-4">
+          <div className="space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center">
+              <Layers className="w-5 h-5" />
+            </div>
+            <h4 className="font-bold text-base text-white">4. Topic Clusters</h4>
+            
+            <div className="p-2.5 rounded-lg bg-black/40 border border-white/5 text-[11px] text-slate-300 space-y-1">
+              <div><strong className="text-purple-400">Định nghĩa:</strong> Cụm chuyên đề trụ cột có cấu trúc Silo.</div>
+              <div className="text-rose-300 text-[10px]"><strong>Hậu quả:</strong> 1.517 bài hỏi đáp cũ tự triệt tiêu sức mạnh.</div>
+            </div>
 
-          <p className="text-xs text-slate-400 leading-relaxed">
-            Gom toàn bộ nội dung thành 6 cụm chuyên sâu (Mũi Xoang, Amidan, Ù Tai, Ngáy OSAS, TMH Nhi) theo cấu trúc Silo chặt chẽ, đưa thẩm quyền chuyên môn tăng vọt.
-          </p>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Gom toàn bộ nội dung thành 6 cụm chuyên sâu (Mũi Xoang, Amidan, Ù Tai, Ngáy OSAS, TMH Nhi).
+            </p>
+          </div>
+          <div className="text-[11px] font-bold text-purple-400 border-t border-white/10 pt-2">
+            Đích đến: Thẩm quyền chuyên môn số 1
+          </div>
         </div>
 
       </div>

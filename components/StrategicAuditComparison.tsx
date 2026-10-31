@@ -53,138 +53,142 @@ export default function StrategicAuditComparison() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               
               {/* Bug 1: Sitemap */}
-              <div className="p-5 rounded-2xl bg-rose-50/60 border border-rose-200/60 space-y-3">
-                <div className="flex items-center justify-between text-xs font-bold text-rose-700">
-                  <span className="flex items-center gap-1.5">
-                    <AlertTriangle className="w-4 h-4 text-rose-600" />
-                    Lỗi 1: Sitemap XML Bị Chuyển Hướng 301
-                  </span>
-                  <span className="bg-rose-200/80 px-2 py-0.5 rounded text-[10px]">Cũ (WordPress)</span>
-                </div>
-                
-                {/* Giải thích thuật ngữ & Mức độ nghiêm trọng */}
-                <div className="p-3 bg-white/80 rounded-xl border border-rose-200 text-xs space-y-1.5">
-                  <div className="text-slate-700">
-                    <strong className="text-rose-950 font-bold">Thuật ngữ:</strong> <code>XML Sitemap</code> là "bản đồ chỉ đường" danh mục trang web nộp cho Google; còn <code>Redirect 301</code> là lệnh tự động chuyển hướng vĩnh viễn sang trang khác.
+              <div className="p-5 rounded-2xl bg-rose-50/50 border border-rose-200/60 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-xs font-bold text-rose-700">
+                    <span className="flex items-center gap-1.5">
+                      <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0" />
+                      Lỗi 1: Sitemap XML Bị Chuyển Hướng 301
+                    </span>
+                    <span className="bg-rose-200/80 text-rose-900 px-2 py-0.5 rounded text-[10px] shrink-0">Cũ (WordPress)</span>
                   </div>
-                  <div className="text-rose-900 font-semibold flex items-start gap-1">
-                    <span className="text-rose-600 font-bold">Mức độ nghiêm trọng:</span>
-                    <span>Cực kỳ nguy hiểm. Google Bot đến đọc bản đồ nhưng bị đẩy sang trang đặt hẹn. Hậu quả là toàn bộ 2.212 trang bài viết, dịch vụ bị "mù", Google giảm hẳn tần suất ghé thăm và không cập nhật nội dung mới.</span>
+                  
+                  {/* Giải thích súc tích & Mức độ nghiêm trọng */}
+                  <div className="p-3 bg-white/90 rounded-xl border border-rose-100 text-xs space-y-1.5">
+                    <div className="text-slate-700 leading-relaxed">
+                      <strong className="text-rose-950 font-bold">Thuật ngữ:</strong> <code>XML Sitemap</code> là sơ đồ danh mục trang gửi cho Google; <code>Redirect 301</code> là lệnh tự chuyển hướng vĩnh viễn sang trang khác.
+                    </div>
+                    <div className="text-rose-900 text-[11px] font-semibold leading-relaxed">
+                      <span className="text-rose-600 font-bold">Mức độ nghiêm trọng:</span> Cực kỳ nguy hiểm. Google Bot bị đẩy sang trang đặt hẹn thay vì đọc danh mục bài, làm "mù" toàn bộ 2.212 trang y khoa và ngừng index bài mới.
+                    </div>
                   </div>
-                </div>
 
-                <p className="text-xs text-rose-900/80 leading-relaxed">
-                  URL <code>/sitemap_index.xml</code> khai báo trong file cấu hình tìm kiếm robots.txt lại trả mã chuyển hướng 301 về trang đặt hẹn thay vì trả nội dung XML.
-                </p>
+                  <p className="text-xs text-rose-900/80 leading-relaxed">
+                    URL <code>/sitemap_index.xml</code> khai báo trong robots.txt trả mã 301 về trang đặt hẹn thay vì trả nội dung XML.
+                  </p>
+                </div>
                 
-                <div className="mt-2 pt-2 border-t border-rose-200/60 flex items-center justify-between text-xs font-bold text-emerald-800">
+                <div className="mt-3 pt-3 border-t border-rose-200/60 flex items-center justify-between text-xs font-bold text-emerald-800">
                   <span className="flex items-center gap-1">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                    Khắc phục trên Next.js:
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    Khắc phục Next.js:
                   </span>
-                  <span>Tự động tạo sitemap chuẩn mã HTTP 200 OK tại <code>/sitemap.xml</code></span>
+                  <span className="text-right">Route <code>/sitemap.xml</code> trả HTTP 200 OK tự động</span>
                 </div>
               </div>
 
               {/* Bug 2: 404 Wildcard */}
-              <div className="p-5 rounded-2xl bg-amber-50/60 border border-amber-200/60 space-y-3">
-                <div className="flex items-center justify-between text-xs font-bold text-amber-800">
-                  <span className="flex items-center gap-1.5">
-                    <ShieldAlert className="w-4 h-4 text-amber-600" />
-                    Lỗi 2: Lỗi Soft 404 Hàng Loạt (Chuyển Hướng Wildcard Sai)
-                  </span>
-                  <span className="bg-amber-200/80 px-2 py-0.5 rounded text-[10px]">Cũ (WordPress)</span>
+              <div className="p-5 rounded-2xl bg-amber-50/50 border border-amber-200/60 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-xs font-bold text-amber-800">
+                    <span className="flex items-center gap-1.5">
+                      <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0" />
+                      Lỗi 2: Soft 404 Hàng Loạt (Wildcard Redirect)
+                    </span>
+                    <span className="bg-amber-200/80 text-amber-900 px-2 py-0.5 rounded text-[10px] shrink-0">Cũ (WordPress)</span>
+                  </div>
+
+                  {/* Giải thích súc tích & Mức độ nghiêm trọng */}
+                  <div className="p-3 bg-white/90 rounded-xl border border-amber-100 text-xs space-y-1.5">
+                    <div className="text-slate-700 leading-relaxed">
+                      <strong className="text-amber-950 font-bold">Thuật ngữ:</strong> <code>Soft 404</code> là lỗi trang chết nhưng web vẫn trả mã 200 hoặc ép chuyển hướng dồn toàn bộ link sai (Wildcard) về 1 trang đích.
+                    </div>
+                    <div className="text-amber-900 text-[11px] font-semibold leading-relaxed">
+                      <span className="text-amber-600 font-bold">Mức độ nghiêm trọng:</span> Nghiêm trọng cao. Google xem đây là hành vi spam đánh lừa, trừ điểm PageRank và làm rớt thứ hạng chính trang Đặt Lịch tiếp nhận chuyển hướng.
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-amber-900/80 leading-relaxed">
+                    53 link chết và mọi URL gõ sai đều bị ép chuyển hướng về <code>/dat-hen-kham-benh/</code> gây lỗi Soft 404 diện rộng.
+                  </p>
                 </div>
 
-                {/* Giải thích thuật ngữ & Mức độ nghiêm trọng */}
-                <div className="p-3 bg-white/80 rounded-xl border border-amber-200 text-xs space-y-1.5">
-                  <div className="text-slate-700">
-                    <strong className="text-amber-950 font-bold">Thuật ngữ:</strong> <code>Soft 404</code> xảy ra khi trang web không tồn tại nhưng hệ thống không báo lỗi (mã 404) mà vẫn trả về mã thành công hoặc ép chuyển hướng (Wildcard Redirect) dồn về 1 trang đích.
-                  </div>
-                  <div className="text-amber-900 font-semibold flex items-start gap-1">
-                    <span className="text-amber-600 font-bold">Mức độ nghiêm trọng:</span>
-                    <span>Nghiêm trọng cao. Thuật toán Google phát hiện hành vi "đánh lừa", xem trang đích là nội dung rác và trừ điểm chất lượng (PageRank penalty), làm rớt thứ hạng của chính trang nhận chuyển hướng (trang Đặt Lịch).</span>
-                  </div>
-                </div>
-
-                <p className="text-xs text-amber-900/80 leading-relaxed">
-                  53 liên kết cũ bị xóa và bất kỳ đường dẫn nào gõ sai đều bị chuyển hướng hàng loạt về <code>/dat-hen-kham-benh/</code> khiến Google báo lỗi Soft 404 diện rộng trong Google Search Console.
-                </p>
-
-                <div className="mt-2 pt-2 border-t border-amber-200/60 flex items-center justify-between text-xs font-bold text-emerald-800">
+                <div className="mt-3 pt-3 border-t border-amber-200/60 flex items-center justify-between text-xs font-bold text-emerald-800">
                   <span className="flex items-center gap-1">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                    Khắc phục trên Next.js:
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    Khắc phục Next.js:
                   </span>
-                  <span>Trang <code>not-found.tsx</code> trả chuẩn mã HTTP 404 Not Found & gợi ý điều hướng</span>
+                  <span className="text-right">Trả chuẩn mã HTTP 404 Not Found & gợi ý điều hướng</span>
                 </div>
               </div>
 
               {/* Bug 3: Schema Brand Mismatch */}
-              <div className="p-5 rounded-2xl bg-purple-50/60 border border-purple-200/60 space-y-3">
-                <div className="flex items-center justify-between text-xs font-bold text-purple-800">
-                  <span className="flex items-center gap-1.5">
-                    <Layers className="w-4 h-4 text-purple-600" />
-                    Lỗi 3: Xung Đột Thực Thể Thương Hiệu (Entity Conflict)
-                  </span>
-                  <span className="bg-purple-200/80 px-2 py-0.5 rounded text-[10px]">Cũ (WordPress)</span>
+              <div className="p-5 rounded-2xl bg-purple-50/50 border border-purple-200/60 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-xs font-bold text-purple-800">
+                    <span className="flex items-center gap-1.5">
+                      <Layers className="w-4 h-4 text-purple-600 shrink-0" />
+                      Lỗi 3: Xung Đột Thực Thể Thương Hiệu (Entity Conflict)
+                    </span>
+                    <span className="bg-purple-200/80 text-purple-900 px-2 py-0.5 rounded text-[10px] shrink-0">Cũ (WordPress)</span>
+                  </div>
+
+                  {/* Giải thích súc tích & Mức độ nghiêm trọng */}
+                  <div className="p-3 bg-white/90 rounded-xl border border-purple-100 text-xs space-y-1.5">
+                    <div className="text-slate-700 leading-relaxed">
+                      <strong className="text-purple-950 font-bold">Thuật ngữ:</strong> <code>Entity (Thực thể)</code> là hồ sơ nhận diện số để Google biết: website là Bệnh viện Tai Mũi Họng hay Phòng khám Đa khoa.
+                    </div>
+                    <div className="text-purple-900 text-[11px] font-semibold leading-relaxed">
+                      <span className="text-purple-600 font-bold">Mức độ nghiêm trọng:</span> Mất ưu thế xếp hạng Top 1. Google bị xung đột dữ liệu, làm giảm thẩm quyền chuyên khoa Tai Mũi Họng vào tay các bệnh viện khác.
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-purple-900/80 leading-relaxed">
+                    Mã Schema và 1.269 bài viết ghi nhầm <em>"Bệnh viện Đa khoa Quốc tế Sài Gòn"</em> với chuyên khoa Tim mạch, Tiêu hóa.
+                  </p>
                 </div>
 
-                {/* Giải thích thuật ngữ & Mức độ nghiêm trọng */}
-                <div className="p-3 bg-white/80 rounded-xl border border-purple-200 text-xs space-y-1.5">
-                  <div className="text-slate-700">
-                    <strong className="text-purple-950 font-bold">Thuật ngữ:</strong> <code>Entity (Thực thể)</code> là "hồ sơ nhận diện số" mà Google và AI dùng để định danh: website này là Bệnh viện Tai Mũi Họng hay Phòng khám Đa khoa.
-                  </div>
-                  <div className="text-purple-900 font-semibold flex items-start gap-1">
-                    <span className="text-purple-600 font-bold">Mức độ nghiêm trọng:</span>
-                    <span>Tổn hại uy tín thương hiệu & SEO. Google bị "rối loạn nhận diện", không biết ưu tiên xếp hạng cho từ khóa Tai Mũi Họng chuyên sâu hay Đa khoa tổng quát, làm mất ưu thế Top 1 của một Bệnh viện chuyên khoa cấp thành phố.</span>
-                  </div>
-                </div>
-
-                <p className="text-xs text-purple-900/80 leading-relaxed">
-                  Đoạn mã khai báo ngầm (Schema) và 1.269 bài viết lại gắn tên <em>"Bệnh viện Đa khoa Quốc tế Sài Gòn"</em> và khai báo chuyên khoa Tim Mạch, Tiêu Hóa thay vì Tai Mũi Họng.
-                </p>
-
-                <div className="mt-2 pt-2 border-t border-purple-200/60 flex items-center justify-between text-xs font-bold text-emerald-800">
+                <div className="mt-3 pt-3 border-t border-purple-200/60 flex items-center justify-between text-xs font-bold text-emerald-800">
                   <span className="flex items-center gap-1">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                    Khắc phục trên Next.js:
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    Khắc phục Next.js:
                   </span>
-                  <span>Đồng bộ 1 thực thể y khoa duy nhất: Bệnh Viện Tai Mũi Họng Sài Gòn (Otolaryngologic)</span>
+                  <span className="text-right">Đồng bộ 1 thực thể: Bệnh Viện Tai Mũi Họng Sài Gòn</span>
                 </div>
               </div>
 
               {/* Bug 4: Canonical Mismatch */}
-              <div className="p-5 rounded-2xl bg-blue-50/60 border border-blue-200/60 space-y-3">
-                <div className="flex items-center justify-between text-xs font-bold text-blue-800">
-                  <span className="flex items-center gap-1.5">
-                    <AlertTriangle className="w-4 h-4 text-blue-600" />
-                    Lỗi 4: Thẻ Canonical Bị Trỏ Nhầm (Canonical Mismatch)
-                  </span>
-                  <span className="bg-blue-200/80 px-2 py-0.5 rounded text-[10px]">Cũ (WordPress)</span>
+              <div className="p-5 rounded-2xl bg-blue-50/50 border border-blue-200/60 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-xs font-bold text-blue-800">
+                    <span className="flex items-center gap-1.5">
+                      <AlertTriangle className="w-4 h-4 text-blue-600 shrink-0" />
+                      Lỗi 4: Thẻ Canonical Bị Trỏ Nhầm Bác Sĩ
+                    </span>
+                    <span className="bg-blue-200/80 text-blue-900 px-2 py-0.5 rounded text-[10px] shrink-0">Cũ (WordPress)</span>
+                  </div>
+
+                  {/* Giải thích súc tích & Mức độ nghiêm trọng */}
+                  <div className="p-3 bg-white/90 rounded-xl border border-blue-100 text-xs space-y-1.5">
+                    <div className="text-slate-700 leading-relaxed">
+                      <strong className="text-blue-950 font-bold">Thuật ngữ:</strong> <code>rel="canonical"</code> là thẻ báo cho Google biết trang nào là bản quyền gốc duy nhất cần được xếp hạng.
+                    </div>
+                    <div className="text-blue-900 text-[11px] font-semibold leading-relaxed">
+                      <span className="text-blue-600 font-bold">Mức độ nghiêm trọng:</span> Mất hiển thị tên Bác sĩ. Hồ sơ BS. Thống, BS. Hà bị coi là bản sao của bác sĩ khác và bị loại bỏ khỏi kết quả tìm kiếm Google.
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-blue-900/80 leading-relaxed">
+                    Hồ sơ BS. Thống, BS. Hà trỏ canonical nhầm về BS. Thúy; nhiều bác sĩ khác trỏ về BS. Gia.
+                  </p>
                 </div>
 
-                {/* Giải thích thuật ngữ & Mức độ nghiêm trọng */}
-                <div className="p-3 bg-white/80 rounded-xl border border-blue-200 text-xs space-y-1.5">
-                  <div className="text-slate-700">
-                    <strong className="text-blue-950 font-bold">Thuật ngữ:</strong> Thẻ <code>rel="canonical"</code> là tín hiệu báo cho Google biết: "Trang này là bản sao, xin hãy công nhận và xếp hạng cho trang đích tôi đang trỏ tới".
-                  </div>
-                  <div className="text-blue-900 font-semibold flex items-start gap-1">
-                    <span className="text-blue-600 font-bold">Mức độ nghiêm trọng:</span>
-                    <span>Xóa sổ uy tín Bác sĩ trên tìm kiếm. Hồ sơ của các bác sĩ giỏi (BS. Bùi Nguyên Thống, BS. Từ Thị Thu Hà) bị Google hiểu là bản sao và biến mất hoàn toàn khỏi kết quả tìm kiếm khi bệnh nhân tìm đích danh tên bác sĩ.</span>
-                  </div>
-                </div>
-
-                <p className="text-xs text-blue-900/80 leading-relaxed">
-                  Cấu hình SEO cũ trỏ nhầm thẻ gốc: Hồ sơ BS. Thống, BS. Hà trỏ canonical về BS. Ngô Thanh Thúy; nhiều bác sĩ khác trỏ về BS. Nguyễn Hoàng Gia.
-                </p>
-
-                <div className="mt-2 pt-2 border-t border-blue-200/60 flex items-center justify-between text-xs font-bold text-emerald-800">
+                <div className="mt-3 pt-3 border-t border-blue-200/60 flex items-center justify-between text-xs font-bold text-emerald-800">
                   <span className="flex items-center gap-1">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                    Khắc phục trên Next.js:
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    Khắc phục Next.js:
                   </span>
-                  <span>Mỗi bác sĩ có URL canonical độc lập + Schema chứng chỉ Physician</span>
+                  <span className="text-right">Mỗi bác sĩ tự trỏ chính mình + Physician Schema</span>
                 </div>
               </div>
 
