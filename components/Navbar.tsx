@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Phone, Calendar, Clock, MapPin, Activity, Menu, X } from 'lucide-react'
+import { Phone, Calendar, Clock, MapPin, Menu, X, Activity, ChevronDown } from 'lucide-react'
 
 interface NavbarProps {
   onOpenBooking: () => void
@@ -10,6 +10,55 @@ interface NavbarProps {
 
 export default function Navbar({ onOpenBooking }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [openMenu, setOpenMenu] = useState<string | null>(null)
+
+  const navGroups = [
+    {
+      label: 'Giới thiệu',
+      items: [
+        ['Tổng quan bệnh viện', '/'],
+        ['Sứ mệnh và tầm nhìn', 'https://taimuihongsg.com/su-menh-tam-nhin/'],
+        ['Văn hóa doanh nghiệp', 'https://taimuihongsg.com/van-hoa-doanh-nghiep/'],
+        ['Trách nhiệm cộng đồng', 'https://taimuihongsg.com/trach-nhiem-cong-dong/'],
+        ['Bệnh viện Tai Mũi Họng Sài Gòn', 'https://taimuihongsg.com/benh-vien-tai-mui-hong-sai-gon/'],
+        ['Trung tâm Tai Mũi Họng trẻ em', 'https://taimuihongsg.com/trung-tam-tai-mui-hong-tre-em/'],
+      ],
+    },
+    {
+      label: 'Bác sĩ',
+      items: [['Đội ngũ bác sĩ', '/bac-si'], ['Lịch làm việc', 'https://taimuihongsg.com/lich-lam-viec-bac-si/']],
+    },
+    {
+      label: 'Chuyên khoa',
+      items: [
+        ['Tổng quan chuyên khoa', '/chuyen-khoa'],
+        ['Tai Mũi Họng', 'https://taimuihongsg.com/chuyen-khoa/tai-mui-hong/'],
+        ['Khoa phẫu thuật Tai Mũi Họng', '/chuyen-khoa/khoa-phau-thuat-tai-mui-hong'],
+        ['Khoa nội trú Tai Mũi Họng', '/chuyen-khoa/khoa-noi-tru'],
+      ],
+    },
+    {
+      label: 'Dịch vụ',
+      items: [
+        ['Đặt hẹn khám bệnh', 'https://taimuihongsg.com/dat-hen-kham-benh/'],
+        ['Dịch vụ kiểm tra chuyên sâu', '/chuyen-khoa/khoa-kham-noi-soi-tai-mui-hong'],
+        ['Đo đa ký giấc ngủ', '/chuyen-khoa/do-da-ky-giac-ngu'],
+        ['Dịch vụ nội trú VIP', 'https://taimuihongsg.com/dich-vu-noi-tru-vip/'],
+        ['Bảng giá dịch vụ', 'https://taimuihongsg.com/bang-gia-dich-vu/'],
+        ['Bảo lãnh viện phí', 'https://taimuihongsg.com/bao-lanh-vien-phi/'],
+      ],
+    },
+    {
+      label: 'Kiến thức',
+      items: [
+        ['Thư viện kiến thức y học', '/kien-thuc'],
+        ['Bệnh về Tai', 'https://taimuihongsg.com/benh-ve-tai/'],
+        ['Bệnh về Mũi xoang', 'https://taimuihongsg.com/benh-ve-mui-xoang/'],
+        ['Bệnh về Họng và thanh quản', 'https://taimuihongsg.com/benh-ve-hong-thanh-quan/'],
+        ['Hỏi đáp chuyên gia', 'https://taimuihongsg.com/hoi-dap-chuyen-gia/'],
+      ],
+    },
+  ]
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
@@ -48,8 +97,8 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
       {/* Main navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-700 to-teal-500 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
-            <Activity className="w-6 h-6" />
+          <div className="w-12 h-12 overflow-hidden rounded-lg bg-white border border-slate-200 flex items-center justify-center group-hover:border-brand-600 transition-colors">
+            <img src="https://taimuihongsg.com/wp-content/uploads/2018/06/logo-taimuihongsg.jpg" alt="Logo Bệnh Viện Tai Mũi Họng Sài Gòn" className="h-full w-full object-contain" />
           </div>
           <div>
             <div className="font-extrabold text-lg tracking-tight text-slate-900 group-hover:text-brand-700 transition-colors">
@@ -62,12 +111,30 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         </Link>
 
         {/* Desktop links */}
-        <nav className="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
-          <Link href="/" className="hover:text-brand-700 transition-colors">Giới thiệu</Link>
-          <Link href="/bac-si" className="hover:text-brand-700 transition-colors">Bác sĩ</Link>
-          <Link href="/chuyen-khoa" className="hover:text-brand-700 transition-colors">Chuyên khoa</Link>
-          <Link href="/kien-thuc" className="hover:text-brand-700 transition-colors">Kiến thức</Link>
-          <Link 
+        <nav className="hidden lg:flex items-center gap-1 text-sm font-semibold text-slate-700" aria-label="Điều hướng chính">
+          {navGroups.map((group) => (
+            <div key={group.label} className="relative">
+              <button
+                type="button"
+                onClick={() => setOpenMenu(openMenu === group.label ? null : group.label)}
+                aria-expanded={openMenu === group.label}
+                aria-haspopup="menu"
+                className="inline-flex items-center gap-1 rounded-lg px-3 py-3 hover:bg-slate-50 hover:text-brand-700"
+              >
+                {group.label}<ChevronDown className={`h-4 w-4 transition-transform ${openMenu === group.label ? 'rotate-180' : ''}`} />
+              </button>
+              {openMenu === group.label && (
+                <div className="absolute left-0 top-full z-50 mt-1 w-72 border border-slate-200 bg-white p-2 shadow-xl" role="menu">
+                  {group.items.map(([label, href]) => (
+                    <Link key={label} href={href} onClick={() => setOpenMenu(null)} className="block px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-800" role="menuitem">
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+          <Link
             href="/tac-hai-khong-danh-rang-ban-dem" 
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition-all text-xs font-bold"
           >
@@ -100,34 +167,16 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
       {/* Mobile menu dropdown */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-slate-200 bg-white px-4 py-4 space-y-3 shadow-xl">
-          <Link 
-            href="/" 
-            onClick={() => setMobileMenuOpen(false)} 
-            className="block py-2 font-medium text-slate-800 hover:text-brand-700"
-          >
-            Giới thiệu
-          </Link>
-          <Link 
-            href="/chuyen-khoa" 
-            onClick={() => setMobileMenuOpen(false)} 
-            className="block py-2 font-medium text-slate-800 hover:text-brand-700"
-          >
-            Chuyên khoa
-          </Link>
-          <Link 
-            href="/bac-si" 
-            onClick={() => setMobileMenuOpen(false)} 
-            className="block py-2 font-medium text-slate-800 hover:text-brand-700"
-          >
-            Bác sĩ
-          </Link>
-          <Link 
-            href="/kien-thuc" 
-            onClick={() => setMobileMenuOpen(false)} 
-            className="block py-2 font-medium text-slate-800 hover:text-brand-700"
-          >
-            Kiến thức
-          </Link>
+          {navGroups.map((group) => (
+            <div key={group.label} className="border-b border-slate-100 pb-2">
+              <button type="button" onClick={() => setOpenMenu(openMenu === group.label ? null : group.label)} aria-expanded={openMenu === group.label} className="flex w-full items-center justify-between py-2 font-semibold text-slate-900">
+                {group.label}<ChevronDown className={`h-4 w-4 transition-transform ${openMenu === group.label ? 'rotate-180' : ''}`} />
+              </button>
+              {openMenu === group.label && <div className="grid gap-1 pb-2 pl-3">
+                {group.items.map(([label, href]) => <Link key={label} href={href} onClick={() => setMobileMenuOpen(false)} className="py-1.5 text-sm text-slate-600 hover:text-brand-700">{label}</Link>)}
+              </div>}
+            </div>
+          ))}
           <Link 
             href="/tac-hai-khong-danh-rang-ban-dem" 
             onClick={() => setMobileMenuOpen(false)} 

@@ -60,7 +60,7 @@ export default function ChienLuocPage() {
   ]
 
   return (
-    <div className="py-12 md:py-16 space-y-16">
+    <div className="py-12 md:py-16 space-y-16 bg-slate-50">
       
       {/* Header Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -71,27 +71,85 @@ export default function ChienLuocPage() {
               Chiến Lược Tái Cấu Trúc Toàn Diện & Thúc Đẩy Tăng Trưởng
             </div>
             <h1 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
-              Kế Hoạch Nâng Cấp Kỹ Thuật & Tăng Trưởng SEO/GEO
+              Hiện Trạng Website & Kế Hoạch Tăng Trưởng SEO/GEO
             </h1>
             <p className="text-slate-300 text-sm md:text-base leading-relaxed">
-              Dựa trên bản audit kỹ thuật 2.212 trang và kiểm tra live ngày 31/10/2026, đây là đề xuất giải pháp toàn diện để đưa Bệnh Viện Tai Mũi Họng Sài Gòn dẫn đầu cả trên công cụ tìm kiếm truyền thống (Google) lẫn công cụ tìm kiếm tạo sinh bằng AI (Google AI Overviews, Gemini, ChatGPT, Perplexity).
+              Một báo cáo hợp nhất từ tình trạng website cũ, tác động đến hoạt động kinh doanh, các lỗi kỹ thuật cần xử lý và lộ trình tăng trưởng trên Google lẫn công cụ tìm kiếm AI.
             </p>
           </div>
         </div>
       </section>
 
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 -mt-10">
+        <nav className="grid grid-cols-2 md:grid-cols-4 bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm" aria-label="Mục lục báo cáo">
+          {[
+            ['#hien-trang', '01', 'Hiện trạng'],
+            ['#audit', '02', 'Audit kỹ thuật'],
+            ['#geo', '03', 'SEO và GEO'],
+            ['#roadmap', '04', 'Roadmap'],
+          ].map(([href, number, label]) => (
+            <a key={href} href={href} className="p-4 border-b md:border-b-0 md:border-r border-slate-200 last:border-r-0 hover:bg-slate-50 transition-colors">
+              <span className="block text-[11px] font-bold text-emerald-700">{number}</span>
+              <span className="block mt-1 text-sm font-bold text-slate-900">{label}</span>
+            </a>
+          ))}
+        </nav>
+      </section>
+
+      <section id="hien-trang" className="max-w-7xl mx-auto px-4 sm:px-6 scroll-mt-32">
+        <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12">
+            <div className="p-6 md:p-10 lg:col-span-5 lg:border-r border-slate-200">
+              <div className="text-sm font-bold text-amber-700">Phần 1. Tình trạng website hiện tại</div>
+              <h2 className="text-2xl md:text-3xl font-black text-slate-950 mt-3">Tài sản nội dung lớn nhưng hạ tầng tìm kiếm đang làm giảm hiệu quả khai thác</h2>
+              <p className="mt-4 text-sm leading-7 text-slate-600">Website tích lũy lượng lớn nội dung y khoa, hồ sơ bác sĩ và trang dịch vụ từ năm 2007. Tuy nhiên, lỗi sitemap, canonical, soft 404 và xung đột entity làm gián đoạn hành trình từ tìm kiếm đến đặt khám.</p>
+              <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 text-sm leading-6 text-amber-950">
+                Vấn đề cốt lõi không phải thiếu nội dung. Vấn đề là nội dung hiện có chưa được tổ chức và phân phối đúng để tạo ra lượt khám.
+              </div>
+            </div>
+            <div className="grid grid-cols-2 lg:col-span-7">
+              {[
+                ['2.212', 'trang y khoa đã tích lũy', 'Tài sản nội dung'],
+                ['9.198', 'ảnh trong thư viện media', 'Tài sản hình ảnh'],
+                ['53', 'liên kết cũ bị gãy', 'Rủi ro trải nghiệm'],
+                ['1.517', 'trang hỏi đáp ngắn, phân tán', 'Cơ hội gom cụm'],
+              ].map(([value, label, meta], index) => (
+                <div key={label} className={`p-6 md:p-8 border-slate-200 ${index < 2 ? 'border-b' : ''} ${index % 2 === 0 ? 'border-r' : ''}`}>
+                  <div className="text-xs font-bold text-slate-500">{meta}</div>
+                  <div className="mt-3 text-3xl font-black text-slate-950">{value}</div>
+                  <div className="mt-2 text-xs md:text-sm leading-5 text-slate-600">{label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 border-t border-slate-200">
+            {[
+              ['Business Flow', 'Tìm kiếm triệu chứng → đọc nội dung → xem dịch vụ hoặc bác sĩ → đặt hẹn → khám và điều trị.'],
+              ['Business Info', 'Hai cơ sở, hơn 80 bác sĩ và chuyên gia, khám ngoại trú, phẫu thuật, nội trú và dịch vụ chuyên sâu.'],
+              ['Revenue Stream', 'Khám chuyên khoa, nội soi, phẫu thuật, nội trú, đa ký giấc ngủ và các dịch vụ phát sinh theo chỉ định.'],
+            ].map(([title, description]) => (
+              <div key={title} className="p-6 md:p-8 md:border-r last:border-r-0 border-slate-200">
+                <h3 className="font-black text-slate-950">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">{description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Audit Review Comparison */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section id="audit" className="max-w-7xl mx-auto px-4 sm:px-6 scroll-mt-32">
         <StrategicAuditComparison />
       </section>
 
       {/* GEO Blueprint */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section id="geo" className="max-w-7xl mx-auto px-4 sm:px-6 scroll-mt-32">
         <GeoFrameworkView />
       </section>
 
       {/* Implementation Roadmap */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section id="roadmap" className="max-w-7xl mx-auto px-4 sm:px-6 scroll-mt-32">
         <div className="bg-white rounded-3xl p-6 md:p-10 border border-slate-200 shadow-xl space-y-8">
           <div>
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-600">
