@@ -114,10 +114,10 @@ export default function StrategicAuditComparison() {
                 <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
                   <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    Khắc phục:
+                    Khắc phục (Rebuild Web):
                   </span>
                   <span className="text-emerald-800 font-medium text-right text-[11px]">
-                    Route <code>/sitemap.xml</code> động chuẩn mã HTTP 200 OK
+                    Xây dựng lại luồng Sitemap động chuẩn mã HTTP 200 OK
                   </span>
                 </div>
               </div>
@@ -164,10 +164,10 @@ export default function StrategicAuditComparison() {
                 <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
                   <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    Khắc phục:
+                    Khắc phục (Rebuild Web):
                   </span>
                   <span className="text-emerald-800 font-medium text-right text-[11px]">
-                    Trang <code>not-found.tsx</code> trả chuẩn mã HTTP 404 Not Found
+                    Thiết lập trang báo lỗi chuẩn mã HTTP 404 Not Found & gợi ý điều hướng
                   </span>
                 </div>
               </div>
@@ -214,10 +214,10 @@ export default function StrategicAuditComparison() {
                 <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
                   <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    Khắc phục:
+                    Khắc phục (Rebuild Web):
                   </span>
                   <span className="text-emerald-800 font-medium text-right text-[11px]">
-                    Đồng bộ 1 thực thể: Bệnh Viện Tai Mũi Họng Sài Gòn
+                    Đồng bộ 100% toàn trang: Bệnh Viện Tai Mũi Họng Sài Gòn
                   </span>
                 </div>
               </div>
@@ -264,10 +264,10 @@ export default function StrategicAuditComparison() {
                 <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
                   <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    Khắc phục:
+                    Khắc phục (Rebuild Web):
                   </span>
                   <span className="text-emerald-800 font-medium text-right text-[11px]">
-                    Mỗi bác sĩ tự trỏ chính mình + Schema Physician E-E-A-T
+                    Cấp URL độc lập cho từng bác sĩ + Dữ liệu cấu trúc Bác sĩ chuyên khoa
                   </span>
                 </div>
               </div>
@@ -499,7 +499,7 @@ export default function StrategicAuditComparison() {
                   <div><strong>Mức độ nghiêm trọng:</strong> Người bệnh đợi quá 3 giây trên 4G/5G sẽ rời bỏ trang ngay lập tức. Tỷ lệ thoát (Bounce Rate) trên mobile lên đến 68%.</div>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  <strong>Khắc phục:</strong> Gỡ bỏ 34 file mã CSS/JS cồng kềnh, bật công nghệ nén ảnh tự động Next/Image chuẩn WebP/AVIF giảm 95% dung lượng ảnh bác sĩ.
+                  <strong>Khắc phục khi Rebuild:</strong> Tinh giản toàn bộ mã nguồn cồng kềnh, bật công nghệ nén ảnh tự động chuẩn WebP/AVIF giảm 95% dung lượng ảnh bác sĩ.
                 </p>
               </div>
 
@@ -517,7 +517,7 @@ export default function StrategicAuditComparison() {
                   <div><strong>Mức độ nghiêm trọng:</strong> Vượt ngưỡng chuẩn của Google (chuẩn là &lt; 0.1). Gây hiện tượng nhảy chữ/banner làm người dùng bấm nhầm nút hoặc bực bội rời trang.</div>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  <strong>Khắc phục:</strong> Bỏ plugin Slider Revolution nặng nề, khóa cố định tỷ lệ khung hình (aspect-ratio) cho banner và ảnh bác sĩ, đạt độ ổn định tuyệt đối (CLS = 0).
+                  <strong>Khắc phục khi Rebuild:</strong> Loại bỏ các hiệu ứng trượt banner giật cục, thiết lập tỷ lệ khung hình cố định cho toàn bộ banner và ảnh, triệt tiêu độ xô lệch (CLS = 0).
                 </p>
               </div>
 
@@ -532,10 +532,10 @@ export default function StrategicAuditComparison() {
                   <span className="text-3xl font-black text-emerald-600">&lt; 0.2s</span>
                 </div>
                 <div className="p-2.5 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-950 space-y-1">
-                  <div><strong>Mức độ nghiêm trọng:</strong> Máy chủ WordPress phải chạy truy vấn MySQL nặng cho từng lượt khách. Khi có chiến dịch quảng cáo hoặc lượng truy cập tăng vọt, web dễ bị treo.</div>
+                  <div><strong>Mức độ nghiêm trọng:</strong> Hạ tầng cũ phải tải lại cơ sở dữ liệu cho từng lượt khách. Khi có lượng truy cập tăng đột biến, hệ thống dễ rơi vào tình trạng quá tải hoặc phản hồi chậm.</div>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  <strong>Khắc phục:</strong> Kiến trúc Next.js Serverless tĩnh hóa trang ngay tại mạng máy chủ biên Edge CDN (Cloudflare/Vercel), tốc độ mở trang tức thì dưới 0.2 giây.
+                  <strong>Khắc phục khi Rebuild:</strong> Phân phối trang tĩnh trực tiếp từ mạng lưới máy chủ biên Edge CDN, tốc độ mở trang lập tức dưới 0.2 giây mà không tốn tài nguyên máy chủ.
                 </p>
               </div>
             </div>
