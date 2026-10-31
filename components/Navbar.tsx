@@ -40,7 +40,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
     {
       label: 'Dịch vụ',
       items: [
-        ['Đặt hẹn khám bệnh', 'https://taimuihongsg.com/dat-hen-kham-benh/'],
+        ['Đặt hẹn khám bệnh', '/dat-hen-kham-benh'],
         ['Dịch vụ kiểm tra chuyên sâu', '/chuyen-khoa/khoa-kham-noi-soi-tai-mui-hong'],
         ['Đo đa ký giấc ngủ', '/chuyen-khoa/do-da-ky-giac-ngu'],
         ['Dịch vụ nội trú VIP', 'https://taimuihongsg.com/dich-vu-noi-tru-vip/'],
@@ -96,22 +96,22 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
 
       {/* Main navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-12 h-12 overflow-hidden rounded-lg bg-white border border-slate-200 flex items-center justify-center group-hover:border-brand-600 transition-colors">
+        <Link href="/" className="flex min-w-0 shrink-0 items-center gap-3 group">
+          <div className="w-12 h-12 shrink-0 overflow-hidden rounded-lg bg-white border border-slate-200 flex items-center justify-center group-hover:border-brand-600 transition-colors">
             <img src="https://taimuihongsg.com/wp-content/uploads/2018/06/logo-taimuihongsg.jpg" alt="Logo Bệnh Viện Tai Mũi Họng Sài Gòn" className="h-full w-full object-contain" />
           </div>
           <div>
-            <div className="font-extrabold text-lg tracking-tight text-slate-900 group-hover:text-brand-700 transition-colors">
+            <div className="whitespace-nowrap text-base font-extrabold tracking-tight text-slate-900 group-hover:text-brand-700 transition-colors xl:text-lg">
               BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN
             </div>
-            <div className="text-[11px] font-semibold tracking-wider text-slate-500 uppercase">
+            <div className="whitespace-nowrap text-[10px] font-semibold tracking-[0.12em] text-slate-500 uppercase xl:text-[11px]">
               Saigon ENT Specialist Hospital • Est. 2007
             </div>
           </div>
         </Link>
 
         {/* Desktop links */}
-        <nav className="hidden lg:flex items-center gap-1 text-sm font-semibold text-slate-700" aria-label="Điều hướng chính">
+        <nav className="hidden lg:flex items-center gap-0 text-sm font-semibold text-slate-700" aria-label="Điều hướng chính">
           {navGroups.map((group) => (
             <div key={group.label} className="relative">
               <button
@@ -119,7 +119,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
                 onClick={() => setOpenMenu(openMenu === group.label ? null : group.label)}
                 aria-expanded={openMenu === group.label}
                 aria-haspopup="menu"
-                className="inline-flex items-center gap-1 rounded-lg px-3 py-3 hover:bg-slate-50 hover:text-brand-700"
+                className="inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-2 py-3 hover:bg-slate-50 hover:text-brand-700 xl:px-3"
               >
                 {group.label}<ChevronDown className={`h-4 w-4 transition-transform ${openMenu === group.label ? 'rotate-180' : ''}`} />
               </button>
@@ -136,7 +136,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
           ))}
           <Link
             href="/tac-hai-khong-danh-rang-ban-dem" 
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition-all text-xs font-bold"
+            className="inline-flex whitespace-nowrap items-center gap-1.5 px-2 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition-all text-xs font-bold xl:px-3"
           >
             <Activity className="w-3.5 h-3.5 text-emerald-600" />
             Chuyên Đề Scrollytelling
@@ -147,7 +147,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         <div className="hidden sm:flex items-center gap-3">
           <button
             onClick={onOpenBooking}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-sm hover:shadow-md transition-all active:scale-95"
+            className="inline-flex whitespace-nowrap items-center gap-2 px-3 py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-sm hover:shadow-md transition-all active:scale-95 xl:px-5"
           >
             <Calendar className="w-4 h-4" />
             Đặt Lịch Khám Ngay
