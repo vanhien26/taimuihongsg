@@ -1,0 +1,966 @@
+[
+  {
+    "id": 880,
+    "count": 9,
+    "description": "",
+    "link": "https://taimuihongsg.com/english/",
+    "name": "English",
+    "slug": "english",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/880"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=880"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=880"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 862,
+    "count": 26,
+    "description": "",
+    "link": "https://taimuihongsg.com/thuong-thuc-benh-hoc/",
+    "name": "THƯỜNG THỨC BỆNH",
+    "slug": "thuong-thuc-benh-hoc",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/862"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=862"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=862"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 863,
+    "count": 12,
+    "description": "",
+    "link": "https://taimuihongsg.com/tai-lieu-tham-khao-y-khoa/",
+    "name": "TÀI LIỆU THAM KHẢO Y KHOA",
+    "slug": "tai-lieu-tham-khao-y-khoa",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/863"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=863"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=863"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 869,
+    "count": 36,
+    "description": "",
+    "link": "https://taimuihongsg.com/t3g/",
+    "name": "T3G",
+    "slug": "t3g",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/869"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=869"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=869"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 127,
+    "count": 241,
+    "description": "",
+    "link": "https://taimuihongsg.com/tin-tuc/",
+    "name": "Tin tức",
+    "slug": "tin-tuc",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/127"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=127"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=127"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 548,
+    "count": 20,
+    "description": "",
+    "link": "https://taimuihongsg.com/thong-tin/",
+    "name": "Thông tin",
+    "slug": "thong-tin",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/548"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=548"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=548"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "count": 23,
+    "description": "",
+    "link": "https://taimuihongsg.com/van-hoa-tmh-sai-gon/",
+    "name": "Văn hóa TMH Sài Gòn",
+    "slug": "van-hoa-tmh-sai-gon",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/6"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=6"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=6"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "count": 23,
+    "description": "",
+    "link": "https://taimuihongsg.com/chuong-trinh-khuyen-mai-hoi-thao/",
+    "name": "Khuyến mãi - Hội thảo",
+    "slug": "chuong-trinh-khuyen-mai-hoi-thao",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/9"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=9"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=9"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 159,
+    "count": 42,
+    "description": "",
+    "link": "https://taimuihongsg.com/thuong-thuc-benh-hoc/benh-ve-tai/",
+    "name": "Bệnh về Tai",
+    "slug": "benh-ve-tai",
+    "taxonomy": "category",
+    "parent": 862,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/159"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": true,
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/862"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=159"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=159"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 160,
+    "count": 57,
+    "description": "",
+    "link": "https://taimuihongsg.com/thuong-thuc-benh-hoc/benh-ve-mui-xoang/",
+    "name": "Bệnh về Mũi xoang",
+    "slug": "benh-ve-mui-xoang",
+    "taxonomy": "category",
+    "parent": 862,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/160"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": true,
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/862"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=160"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=160"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 161,
+    "count": 97,
+    "description": "",
+    "link": "https://taimuihongsg.com/thuong-thuc-benh-hoc/benh-ve-hong-thanh-quan/",
+    "name": "Bệnh về Họng - Thanh quản",
+    "slug": "benh-ve-hong-thanh-quan",
+    "taxonomy": "category",
+    "parent": 862,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/161"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": true,
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/862"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=161"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=161"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 126,
+    "count": 25,
+    "description": "",
+    "link": "https://taimuihongsg.com/thu-cam-on/",
+    "name": "Thư cám ơn",
+    "slug": "thu-cam-on",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/126"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=126"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=126"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 798,
+    "count": 45,
+    "description": "",
+    "link": "https://taimuihongsg.com/truyen-thong-t3g/",
+    "name": "Truyền Thông T3G",
+    "slug": "truyen-thong-t3g",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/798"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=798"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=798"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 346,
+    "count": 16,
+    "description": "",
+    "link": "https://taimuihongsg.com/quan-ly-chat-luong/",
+    "name": "Quản lý Chất lượng",
+    "slug": "quan-ly-chat-luong",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/346"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=346"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=346"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 835,
+    "count": 20,
+    "description": "",
+    "link": "https://taimuihongsg.com/quan-1/",
+    "name": "Quận 1",
+    "slug": "quan-1",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/835"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=835"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=835"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 836,
+    "count": 9,
+    "description": "",
+    "link": "https://taimuihongsg.com/quan-7/",
+    "name": "Quận 7",
+    "slug": "quan-7",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/836"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=836"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=836"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 829,
+    "count": 3,
+    "description": "",
+    "link": "https://taimuihongsg.com/duoi-18/",
+    "name": "Dưới 18",
+    "slug": "duoi-18",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/829"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=829"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=829"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 834,
+    "count": 19,
+    "description": "",
+    "link": "https://taimuihongsg.com/nu/",
+    "name": "Nữ",
+    "slug": "nu",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/834"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=834"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=834"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 833,
+    "count": 18,
+    "description": "",
+    "link": "https://taimuihongsg.com/nam/",
+    "name": "Nam",
+    "slug": "nam",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/833"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=833"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=833"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 830,
+    "count": 14,
+    "description": "",
+    "link": "https://taimuihongsg.com/18-25/",
+    "name": "18-25",
+    "slug": "18-25",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/830"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=830"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=830"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 831,
+    "count": 18,
+    "description": "",
+    "link": "https://taimuihongsg.com/25-40/",
+    "name": "25-40",
+    "slug": "25-40",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/831"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=831"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=831"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 832,
+    "count": 21,
+    "description": "",
+    "link": "https://taimuihongsg.com/tren-40/",
+    "name": "Trên 40",
+    "slug": "tren-40",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories/832"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/posts?categories=832"
+        },
+        {
+          "href": "https://taimuihongsg.com/wp-json/wp/v2/cpt_masonry_gallery?categories=832"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

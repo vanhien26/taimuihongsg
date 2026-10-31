@@ -1,0 +1,130 @@
+{
+  "total_profiles": 18,
+  "sample": [
+    {
+      "url": "https://taimuihongsg.com/bac-si/bs-ckii-do-ky-nhat/",
+      "name": "BS.CKII. Đỗ Kỳ Nhật",
+      "title": "BS.CKII. Đỗ Kỳ Nhật – BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN",
+      "canonical": "https://taimuihongsg.com/bac-si/bs-ckii-do-ky-nhat/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/bs-ckii-nguyen-kim-phong/",
+      "name": "BS.CKII. Nguyễn Kim Phong",
+      "title": "BS.CKII. Nguyễn Kim Phong – BỆNH VIÊN TAI MŨI HỌNG SÀI GÒN",
+      "canonical": "https://taimuihongsg.com/bac-si/bs-ckii-nguyen-kim-phong/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/bs-ckii-tran-cao-khoat/",
+      "name": "BS.CKII. Trần Cao Khoát",
+      "title": "BS.CKII. Trần Cao Khoát - BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN",
+      "canonical": "https://taimuihongsg.com/bac-si/bs-ckii-tran-cao-khoat/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/bs-ckii-trinh-thi-minh-hai/",
+      "name": "BS.CKII. Trịnh Thị Minh Hải",
+      "title": "BS.CKII. Trịnh Thị Minh Hải – BỆNH VIỆN TMH Sài Gòn",
+      "canonical": "https://taimuihongsg.com/bac-si/bs-ckii-trinh-thi-minh-hai/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/bs-ckii-vu-van-khanh/",
+      "name": "BS.CKII. Vũ Văn Khánh",
+      "title": "BS.CKII. Vũ Văn Khánh - BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN",
+      "canonical": "https://taimuihongsg.com/bac-si/bs-ckii-vu-van-khanh/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/ths-bs-cki-nguyen-tat-cuong/",
+      "name": "ThS.BS.CKI Nguyễn Tất Cường",
+      "title": "BS. Nguyễn Tất Cường – PHÒNG KHÁM ĐA KHOA QUỐC TẾ SÀI GÒN",
+      "canonical": "https://taimuihongsg.com/bac-si/ths-bs-cki-nguyen-tat-cuong/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/ths-bs-cki-tran-anh-thu/",
+      "name": "THS.BS.CKI. Trần Anh Thư",
+      "title": "THS.BS.CKI. Trần Anh Thư - BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN",
+      "canonical": "https://taimuihongsg.com/bac-si/ths-bs-cki-tran-anh-thu/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/ths-bs-cki-truong-the-anh/",
+      "name": "THS.BS.CKI. Trương Thế Anh",
+      "title": "THS.BS.CKI. Trương Thế Anh – BỆNH VIỆN TMH Sài Gòn",
+      "canonical": "https://taimuihongsg.com/bac-si/ths-bs-cki-truong-the-anh/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/ths-bs-ckii-dang-nhat-quynh-nhu/",
+      "name": "THS.BS.CKII Đặng Nhật Quỳnh Như",
+      "title": "THS.BS. Đặng Nhật Quỳnh Như - BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN",
+      "canonical": "https://taimuihongsg.com/bac-si/ths-bs-ckii-dang-nhat-quynh-nhu/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/ths-bs-ckii-dinh-tien-trung/",
+      "name": "THS.BS. CKII. Đinh Tiến Trung",
+      "title": "THS.BS. Đinh Tiến Trung – PHÒNG KHÁM ĐA KHOA QUỐC TẾ SÀI GÒN",
+      "canonical": "https://taimuihongsg.com/bac-si/ths-bs-ckii-dinh-tien-trung/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/ths-bs-ckii-hoang-long/",
+      "name": "THS.BS.CKII Hoàng Long",
+      "title": "THS.BS. CKII Hoàng Long – PHÒNG KHÁM ĐA KHOA QUỐC TẾ SÀI GÒN",
+      "canonical": "https://taimuihongsg.com/bac-si/ths-bs-ckii-hoang-long/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/ths-bs-ckii-hoang-ngoc-duc/",
+      "name": "THS.BS.CKII Hoàng Ngọc Đức",
+      "title": "THS.BS. CKII Hoàng Ngọc Đức – Bệnh viện Tai Mũi Họng Sài Gòn",
+      "canonical": "https://taimuihongsg.com/bac-si/ths-bs-ckii-hoang-ngoc-duc/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/ths-bs-ckii-tran-quy-ngoc/",
+      "name": "THS.BS.CKII. Trần Quý Ngọc",
+      "title": "THS.BS.CKII. Trần Quý Ngọc – BỆNH VIỆN TMH Sài Gòn",
+      "canonical": "https://taimuihongsg.com/bac-si/ths-bs-ckii-tran-quy-ngoc/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/ths-bs-ckii-truong-kim-tri/",
+      "name": "THS.BS.CKII. Trương Kim Tri",
+      "title": "THS.BS.CKII. Trương Kim Tri – BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN",
+      "canonical": "https://taimuihongsg.com/bac-si/ths-bs-ckii-truong-kim-tri/",
+      "canonical_mismatch": false
+    },
+    {
+      "url": "https://taimuihongsg.com/bac-si/ths-bs-dang-dieu-linh/",
+      "name": "THS.BS. Đặng Diệu Linh",
+      "title": "THS.BS. Đặng Diệu Linh – BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN",
+      "canonical": "https://taimuihongsg.com/bac-si/ths-bs-dang-dieu-linh/",
+      "canonical_mismatch": false
+    }
+  ],
+  "all_urls": [
+    "https://taimuihongsg.com/bac-si/bs-ckii-do-ky-nhat/",
+    "https://taimuihongsg.com/bac-si/bs-ckii-nguyen-kim-phong/",
+    "https://taimuihongsg.com/bac-si/bs-ckii-tran-cao-khoat/",
+    "https://taimuihongsg.com/bac-si/bs-ckii-trinh-thi-minh-hai/",
+    "https://taimuihongsg.com/bac-si/bs-ckii-vu-van-khanh/",
+    "https://taimuihongsg.com/bac-si/ths-bs-cki-nguyen-tat-cuong/",
+    "https://taimuihongsg.com/bac-si/ths-bs-cki-tran-anh-thu/",
+    "https://taimuihongsg.com/bac-si/ths-bs-cki-truong-the-anh/",
+    "https://taimuihongsg.com/bac-si/ths-bs-ckii-dang-nhat-quynh-nhu/",
+    "https://taimuihongsg.com/bac-si/ths-bs-ckii-dinh-tien-trung/",
+    "https://taimuihongsg.com/bac-si/ths-bs-ckii-hoang-long/",
+    "https://taimuihongsg.com/bac-si/ths-bs-ckii-hoang-ngoc-duc/",
+    "https://taimuihongsg.com/bac-si/ths-bs-ckii-tran-quy-ngoc/",
+    "https://taimuihongsg.com/bac-si/ths-bs-ckii-truong-kim-tri/",
+    "https://taimuihongsg.com/bac-si/ths-bs-dang-dieu-linh/",
+    "https://taimuihongsg.com/bac-si/ths-bs-nguyen-cong-son/",
+    "https://taimuihongsg.com/bac-si/ths-bs-tran-ngoc-quynh/",
+    "https://taimuihongsg.com/bac-si/ts-bs-ckii-hoang-luong/"
+  ]
+}
