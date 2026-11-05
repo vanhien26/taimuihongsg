@@ -157,7 +157,7 @@ export default function ChienLuocTangTruongPage() {
               </div>
               <h3 className="mt-4 text-base font-bold text-slate-950">Đã có nền tảng tốt</h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                Website hoạt động từ năm 2007, có hơn <strong>2.200 bài viết y khoa</strong> và đội ngũ hơn <strong>80 bác sĩ chuyên khoa</strong> tại Quận 1. Đây là thế mạnh lớn so với các đơn vị mới.
+                Website hoạt động từ năm 2007, có hơn <strong>2.200 bài viết y khoa</strong> và đội ngũ <strong>18 bác sĩ chuyên khoa chủ chốt</strong> tại Quận 1. Đây là thế mạnh lớn so với các đơn vị mới.
               </p>
             </div>
 
@@ -184,29 +184,30 @@ export default function ChienLuocTangTruongPage() {
 
           {/* Key Numbers Grid */}
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-            <div className="border-b border-slate-100 bg-slate-50/70 px-6 py-4">
-              <div className="text-xs font-bold uppercase tracking-wider text-slate-500">Số liệu hiện có trên website</div>
+            <div className="border-b border-slate-100 bg-slate-50/70 px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+              <div className="text-xs font-bold uppercase tracking-wider text-slate-700">Dữ liệu kiểm toán trên website & thị trường</div>
+              <div className="text-[11px] text-slate-500">Nguồn: Audit CMS sitemap & dữ liệu đối soát bên thứ ba</div>
             </div>
             <div className="grid grid-cols-2 divide-x divide-y divide-slate-100 sm:grid-cols-4 sm:divide-y-0">
               <div className="p-6">
-                <div className="text-xs font-semibold text-slate-500">Bài viết y khoa</div>
+                <div className="text-xs font-semibold text-slate-500">Bài viết & Hỏi đáp y khoa</div>
                 <div className="mt-2 text-3xl font-black tracking-tight text-slate-950">2.212</div>
-                <div className="mt-1 text-xs text-slate-600">Cần gom nhóm và cập nhật lại</div>
+                <div className="mt-1 text-xs text-slate-600">532 bài chuyên sâu & 1.517 hỏi đáp</div>
               </div>
               <div className="p-6">
-                <div className="text-xs font-semibold text-slate-500">Đội ngũ bác sĩ</div>
-                <div className="mt-2 text-3xl font-black tracking-tight text-brand-700">80+</div>
-                <div className="mt-1 text-xs text-slate-600">Cần trang riêng cho từng bác sĩ</div>
+                <div className="text-xs font-semibold text-slate-500">Bác sĩ chuyên khoa chủ chốt</div>
+                <div className="mt-2 text-3xl font-black tracking-tight text-brand-700">18</div>
+                <div className="mt-1 text-xs text-slate-600">Profile công khai (toàn viện 80+ nhân sự)</div>
               </div>
               <div className="p-6">
-                <div className="text-xs font-semibold text-slate-500">Lượt vào từ Google</div>
-                <div className="mt-2 text-3xl font-black tracking-tight text-emerald-700">64.5%</div>
-                <div className="mt-1 text-xs text-slate-600">Kênh người bệnh tìm đến chính</div>
+                <div className="text-xs font-semibold text-slate-500">Tỷ trọng tìm kiếm Google</div>
+                <div className="mt-2 text-3xl font-black tracking-tight text-emerald-700">~64.5%</div>
+                <div className="mt-1 text-xs text-slate-600">Ước tính Semrush (cần đối soát GA4)</div>
               </div>
               <div className="p-6">
                 <div className="text-xs font-semibold text-slate-500">Hãng bảo hiểm đối tác</div>
                 <div className="mt-2 text-3xl font-black tracking-tight text-sky-700">35+</div>
-                <div className="mt-1 text-xs text-slate-600">Cần làm rõ quyền lợi bảo lãnh</div>
+                <div className="mt-1 text-xs text-slate-600">Liên kết bảo lãnh viện phí trực tiếp</div>
               </div>
             </div>
           </div>
