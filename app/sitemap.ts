@@ -92,12 +92,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
-    {
-      url: `${baseUrl}/web-plan`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
   ]
 
   const doctorRoutes: MetadataRoute.Sitemap = DOCTORS.map((doc) => ({

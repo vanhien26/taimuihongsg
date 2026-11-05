@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import BookingModal from './BookingModal'
 import Link from 'next/link'
-import { ArrowUp, Calendar, Phone, Moon, Presentation, TrendingUp } from 'lucide-react'
+import { ArrowUp, Calendar, Phone, Moon, Presentation } from 'lucide-react'
 
 export function ClientLayoutWrapper({ children }: { children: React.ReactNode }) {
   const [bookingOpen, setBookingOpen] = useState(false)
@@ -36,19 +36,6 @@ export function ClientLayoutWrapper({ children }: { children: React.ReactNode })
         preselectedSpecialty={preselectedSpecialty}
       />
       <div className="fixed bottom-5 right-4 z-40 flex items-center gap-2 sm:right-6" aria-label="Điều hướng nhanh">
-        {/* Nút Báo Cáo Chiến Lược Tăng Trưởng & Bảng Đối Chiếu Audit */}
-        <Link
-          href="/chien-luoc-tang-truong"
-          aria-label="Chiến lược tăng trưởng và Audit"
-          title="Báo cáo Chiến lược Tăng trưởng và Audit kỹ thuật"
-          className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-teal-200 bg-white text-teal-700 shadow-lg transition-all hover:scale-105 hover:bg-teal-50 hover:text-teal-900 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700"
-        >
-          <TrendingUp className="h-5 w-5" />
-          <span className="pointer-events-none absolute bottom-full mb-2 hidden whitespace-nowrap rounded-lg bg-slate-900 px-2.5 py-1 text-[11px] font-bold text-white shadow-md group-hover:block">
-            Chiến lược và Audit
-          </span>
-        </Link>
-
         {/* Nút bài viết Scrollytelling */}
         <Link
           href="/tac-hai-khong-danh-rang-ban-dem"
@@ -65,13 +52,13 @@ export function ClientLayoutWrapper({ children }: { children: React.ReactNode })
         {/* Nút Báo Cáo Business Impact Cho Bác Sĩ (Chủ Viện) */}
         <Link
           href="/web-plan"
-          aria-label="Kế hoạch Web Plan cho Bác Sĩ"
+          aria-label="Technical Audit và Growth Plan"
           title="Báo cáo Business Impact cho Bác Sĩ (Chủ Viện)"
           className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-brand-300 bg-white text-brand-800 shadow-lg transition-all hover:scale-105 hover:bg-brand-50 hover:text-brand-950 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-700"
         >
           <Presentation className="h-5 w-5" />
           <span className="pointer-events-none absolute bottom-full mb-2 hidden whitespace-nowrap rounded-lg bg-slate-900 px-2.5 py-1 text-[11px] font-bold text-white shadow-md group-hover:block">
-            Web Plan Bác Sĩ
+          Audit & Growth Plan
           </span>
         </Link>
 

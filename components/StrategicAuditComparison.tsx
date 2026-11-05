@@ -1,11 +1,9 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import { AlertTriangle, CheckCircle2, Zap, Search, ShieldAlert, Layers, ArrowUpRight, FileText, UserCheck, BookOpen, Share2 } from 'lucide-react'
 
 export default function StrategicAuditComparison() {
-  const [activeTab, setActiveTab] = useState<'audit' | 'content' | 'vitals' | 'schema'>('audit')
-
   return (
     <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
       <div className="border-b border-slate-200 px-6 pb-5 pt-6 md:px-8 md:pb-6 md:pt-8">
@@ -18,70 +16,25 @@ export default function StrategicAuditComparison() {
           </h3>
         </div>
 
-        {/* Tab switcher */}
-        <div className="mt-5 flex max-w-full items-center gap-1 overflow-x-auto rounded-xl bg-slate-50 p-1 text-xs font-semibold ring-1 ring-inset ring-slate-200 md:text-sm">
-          <button
-            onClick={() => setActiveTab('audit')}
-            className={`px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
-              activeTab === 'audit' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            5 vấn đề chính
-          </button>
-          <button
-            onClick={() => setActiveTab('content')}
-            className={`px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
-              activeTab === 'content' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            Nội dung cần sắp xếp lại
-          </button>
-          <button
-            onClick={() => setActiveTab('vitals')}
-            className={`px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
-              activeTab === 'vitals' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            Tốc độ website
-          </button>
-          <button
-            onClick={() => setActiveTab('schema')}
-            className={`px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
-              activeTab === 'schema' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            Thông tin bệnh viện
-          </button>
-        </div>
+        <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">
+          Báo cáo được trình bày theo một mạch: vấn đề chính, nội dung, tốc độ và thông tin bệnh viện.
+        </p>
       </div>
 
       <div className="px-6 pb-6 pt-6 md:px-8 md:pb-8">
-        {activeTab === 'audit' && (
-          <div className="space-y-6">
-            <div className="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm text-slate-700 md:flex-row md:items-center md:justify-between md:p-6">
-              <div className="max-w-3xl leading-6">
-                <strong className="text-slate-900 font-bold">Phương pháp đối soát:</strong> Kiểm thử trực tiếp trên mã nguồn và headers phản hồi của máy chủ sản xuất <code>taimuihongsg.com</code>.
-              </div>
-              <div className="flex shrink-0 items-center gap-3">
-                <span className="flex items-center gap-2 text-xs font-semibold text-rose-700">
-                  <span className="h-2 w-2 rounded-full bg-rose-500"></span>
-                  5 vấn đề cần xử lý để website hoạt động hiệu quả hơn
-                </span>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <section id="audit-issues" className="space-y-6">
+            <div className="grid grid-cols-1 items-start gap-6">
               
               {/* Card 1: Sitemap */}
-              <div className="flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200 bg-white">
-                <div className="p-5 space-y-4">
+              <div className="flex h-fit min-h-0 self-start flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                <div className="space-y-6 p-6 md:p-8">
                   {/* Header Card */}
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
                     <div className="flex items-center gap-2">
                       <div className="w-7 h-7 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center font-bold text-xs">
                         01
                       </div>
-                      <h4 className="font-extrabold text-sm text-slate-900">
+                      <h4 className="font-bold text-xl tracking-tight text-slate-900">
                         Sitemap XML Bị Chuyển Hướng 301
                       </h4>
                     </div>
@@ -91,47 +44,47 @@ export default function StrategicAuditComparison() {
                   </div>
 
                   {/* Thuật ngữ & Giải thích */}
-                  <div className="text-xs space-y-1">
+                  <div className="space-y-2 text-base">
                     <span className="font-bold text-slate-900">Điều đang xảy ra:</span>
-                    <p className="text-slate-600 leading-relaxed">
+                    <p className="leading-7 text-slate-600">
                       Bản danh mục website dành cho Google đang dùng luồng cũ. Cần kiểm tra lại để Google luôn nhận được danh sách trang mới nhất.
                     </p>
                   </div>
 
                   {/* Mức độ nghiêm trọng */}
-                  <div className="p-3 bg-rose-50/70 border border-rose-100 rounded-xl text-xs space-y-1">
-                    <span className="font-bold text-rose-900 flex items-center gap-1">
+                  <div className="space-y-2 rounded-xl border border-rose-100 bg-rose-50/70 p-5 text-base">
+                    <span className="flex items-center gap-2 font-bold text-rose-900">
                       <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" />
                       Ảnh hưởng đến website:
                     </span>
-                    <p className="text-rose-950/90 leading-relaxed text-[11px]">
+                    <p className="leading-7 text-rose-950/90">
                       Nội dung mới có thể chậm được Google phát hiện. Đây là rủi ro cần xử lý, chưa nên quy thành số lượt khám bị mất nếu chưa có dữ liệu đo lường.
                     </p>
                   </div>
                 </div>
 
                 {/* Giải pháp */}
-                <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
-                  <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
+                <div className="flex flex-col gap-2 border-t border-emerald-100 bg-emerald-50/60 px-6 py-5 text-base md:flex-row md:items-center md:justify-between md:px-8">
+                  <span className="flex shrink-0 items-center gap-2 font-bold text-emerald-900">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                     Hướng xử lý:
                   </span>
-                  <span className="text-emerald-800 font-medium text-right text-[11px]">
+                  <span className="font-medium text-emerald-800 md:text-right">
                     Cập nhật bản danh mục website và kiểm tra lại với Google
                   </span>
                 </div>
               </div>
 
               {/* Card 2: Soft 404 */}
-              <div className="flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200 bg-white">
-                <div className="p-5 space-y-4">
+              <div className="flex h-fit min-h-0 self-start flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                <div className="space-y-6 p-6 md:p-8">
                   {/* Header Card */}
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
                     <div className="flex items-center gap-2">
                       <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xs">
                         02
                       </div>
-                      <h4 className="font-extrabold text-sm text-slate-900">
+                      <h4 className="font-bold text-xl tracking-tight text-slate-900">
                         Lỗi Soft 404 Do Chuyển Hướng Ép Dồn
                       </h4>
                     </div>
@@ -141,39 +94,39 @@ export default function StrategicAuditComparison() {
                   </div>
 
                   {/* Thuật ngữ & Giải thích */}
-                  <div className="text-xs space-y-1">
+                  <div className="space-y-2 text-base">
                     <span className="font-bold text-slate-900">Điều đang xảy ra:</span>
-                    <p className="text-slate-600 leading-relaxed">
+                    <p className="leading-7 text-slate-600">
                       Một số đường dẫn cũ hoặc sai có thể đưa người dùng đến trang không liên quan thay vì thông báo rõ rằng nội dung không còn tồn tại.
                     </p>
                   </div>
 
                   {/* Mức độ nghiêm trọng */}
-                  <div className="p-3 bg-amber-50/70 border border-amber-100 rounded-xl text-xs space-y-1">
-                    <span className="font-bold text-amber-900 flex items-center gap-1">
+                  <div className="space-y-2 rounded-xl border border-amber-100 bg-amber-50/70 p-5 text-base">
+                    <span className="flex items-center gap-2 font-bold text-amber-900">
                       <ShieldAlert className="w-3.5 h-3.5 text-amber-600 shrink-0" />
                       Ảnh hưởng đến người bệnh:
                     </span>
-                    <p className="text-amber-950/90 leading-relaxed text-[11px]">
+                    <p className="leading-7 text-amber-950/90">
                       Người bệnh có thể không tìm thấy thông tin họ cần và rời website trước khi xem dịch vụ hoặc đặt hẹn. Cần kiểm tra từng đường dẫn để xác nhận phạm vi ảnh hưởng.
                     </p>
                   </div>
                 </div>
 
                 {/* Giải pháp */}
-                <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
-                  <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
+                <div className="flex flex-col gap-2 border-t border-emerald-100 bg-emerald-50/60 px-6 py-5 text-base md:flex-row md:items-center md:justify-between md:px-8">
+                  <span className="flex shrink-0 items-center gap-2 font-bold text-emerald-900">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                     Hướng xử lý:
                   </span>
-                  <span className="text-emerald-800 font-medium text-right text-[11px]">
+                  <span className="font-medium text-emerald-800 md:text-right">
                     Trả thông báo không tìm thấy trang và gợi ý nội dung phù hợp
                   </span>
                 </div>
               </div>
 
               {/* Card 3: Entity Conflict */}
-              <div className="flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200 bg-white">
+              <div className="flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white">
                 <div className="p-5 space-y-4">
                   {/* Header Card */}
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
@@ -223,7 +176,7 @@ export default function StrategicAuditComparison() {
               </div>
 
               {/* Card 4: Canonical Mismatch */}
-              <div className="flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200 bg-white">
+              <div className="flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white">
                 <div className="p-5 space-y-4">
                   {/* Header Card */}
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
@@ -273,7 +226,7 @@ export default function StrategicAuditComparison() {
               </div>
 
               {/* Card 5: English Version & International Patients */}
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors md:col-span-2">
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:border-slate-300 transition-colors md:col-span-2">
                 <div className="p-5 space-y-4">
                   {/* Header Card */}
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
@@ -325,12 +278,13 @@ export default function StrategicAuditComparison() {
               </div>
 
             </div>
-          </div>
-        )}
+        </section>
 
-        {/* TAB AUDIT NỘI DUNG CŨ */}
-        {activeTab === 'content' && (
-          <div className="space-y-6">
+        <section id="content-restructure" className="mt-12 space-y-6 border-t border-slate-200 pt-10">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-amber-700">Phần 2</span>
+            <h4 className="mt-2 text-2xl font-bold tracking-tight text-slate-900">Nội dung cần sắp xếp lại</h4>
+          </div>
             <div className="p-4 bg-amber-50/60 border border-amber-200/80 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-amber-950">
               <div>
                 <strong className="text-amber-950 font-bold">Kiểm kê 2.212 bài viết & 49 trang tĩnh:</strong> Dữ liệu y khoa phong phú nhưng mắc 5 mô thức viết sai chuẩn SEO Y Tế (YMYL) và không phục vụ AI Search.
@@ -343,7 +297,7 @@ export default function StrategicAuditComparison() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               
               {/* Pattern 1: Thiếu Bác sĩ bảo chứng */}
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:border-slate-300 transition-colors">
                 <div className="p-5 space-y-4">
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
                     <div className="flex items-center gap-2">
@@ -389,7 +343,7 @@ export default function StrategicAuditComparison() {
               </div>
 
               {/* Pattern 2: Thiếu Direct-Answer cho AI */}
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:border-slate-300 transition-colors">
                 <div className="p-5 space-y-4">
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
                     <div className="flex items-center gap-2">
@@ -435,7 +389,7 @@ export default function StrategicAuditComparison() {
               </div>
 
               {/* Pattern 3: Thin content tự triệt tiêu */}
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:border-slate-300 transition-colors">
                 <div className="p-5 space-y-4">
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
                     <div className="flex items-center gap-2">
@@ -481,7 +435,7 @@ export default function StrategicAuditComparison() {
               </div>
 
               {/* Pattern 4: Rác shortcode WPBakery & Taxonomy sai */}
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:border-slate-300 transition-colors">
                 <div className="p-5 space-y-4">
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
                     <div className="flex items-center gap-2">
@@ -527,7 +481,7 @@ export default function StrategicAuditComparison() {
               </div>
 
               {/* Pattern 5: Bài viết tiếng Anh nghèo nàn, thiếu truy vấn thực tế */}
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors md:col-span-2">
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:border-slate-300 transition-colors md:col-span-2">
                 <div className="p-5 space-y-4">
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
                     <div className="flex items-center gap-2">
@@ -575,11 +529,13 @@ export default function StrategicAuditComparison() {
               </div>
 
             </div>
-          </div>
-        )}
+        </section>
 
-        {activeTab === 'vitals' && (
-          <div className="space-y-4">
+        <section id="site-speed" className="mt-12 space-y-4 border-t border-slate-200 pt-10">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-sky-700">Phần 3</span>
+            <h4 className="mt-2 text-2xl font-bold tracking-tight text-slate-900">Tốc độ website</h4>
+          </div>
             <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl text-xs text-slate-700 leading-relaxed">
               <strong className="text-slate-900 font-bold">Core Web Vitals là gì?</strong> Đây là bộ 3 chỉ số đo lường trải nghiệm thực tế của người dùng do Google quy định từ năm 2021. Nếu trang web chậm hoặc giật khung hình, Google sẽ <strong>hạ thứ hạng tìm kiếm trên thiết bị di động</strong> và người bệnh sẽ tắt trang sang bệnh viện đối thủ ngay trong 3 giây đầu tiên.
             </div>
@@ -588,62 +544,61 @@ export default function StrategicAuditComparison() {
               <div className="p-5 rounded-2xl bg-white border border-slate-200 text-left space-y-3 shadow-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold text-slate-500 uppercase">1. Chỉ số LCP</span>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-bold">Rất Chậm</span>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700">Cần đo</span>
                 </div>
                 <div className="text-xs text-slate-800 font-semibold">Largest Contentful Paint (Thời gian tải nội dung chính)</div>
                 <div className="flex items-baseline gap-3">
-                  <span className="text-2xl font-black text-rose-600 line-through">3.1s</span>
-                  <span className="text-3xl font-black text-emerald-600">0.7s</span>
+                  <span className="text-lg font-bold text-slate-700">Chưa có số đo xác thực</span>
                 </div>
                 <div className="p-2.5 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-950 space-y-1">
-                  <div><strong>Mức độ nghiêm trọng:</strong> Người bệnh đợi quá 3 giây trên 4G/5G sẽ rời bỏ trang ngay lập tức. Tỷ lệ thoát (Bounce Rate) trên mobile lên đến 68%.</div>
+                  <div><strong>Điều cần kiểm tra:</strong> Đo thời gian hiển thị nội dung chính trên các thiết bị và mạng phổ biến trước khi quyết định mức cải thiện.</div>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  <strong>Khắc phục khi Rebuild:</strong> Tinh giản toàn bộ mã nguồn cồng kềnh, bật công nghệ nén ảnh tự động chuẩn WebP/AVIF giảm 95% dung lượng ảnh bác sĩ.
+                  <strong>Khuyến nghị:</strong> Tối ưu ảnh, font và phần nội dung hiển thị đầu tiên sau khi có số đo làm mốc.
                 </p>
               </div>
 
               <div className="p-5 rounded-2xl bg-white border border-slate-200 text-left space-y-3 shadow-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold text-slate-500 uppercase">2. Chỉ số CLS</span>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-bold">Giật Khung Hình</span>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700">Cần đo</span>
                 </div>
                 <div className="text-xs text-slate-800 font-semibold">Cumulative Layout Shift (Độ dịch chuyển bố cục đột ngột)</div>
                 <div className="flex items-baseline gap-3">
-                  <span className="text-2xl font-black text-rose-600 line-through">0.21</span>
-                  <span className="text-3xl font-black text-emerald-600">0.00</span>
+                  <span className="text-lg font-bold text-slate-700">Chưa có số đo xác thực</span>
                 </div>
                 <div className="p-2.5 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-950 space-y-1">
-                  <div><strong>Mức độ nghiêm trọng:</strong> Vượt ngưỡng chuẩn của Google (chuẩn là &lt; 0.1). Gây hiện tượng nhảy chữ/banner làm người dùng bấm nhầm nút hoặc bực bội rời trang.</div>
+                  <div><strong>Điều cần kiểm tra:</strong> Kiểm tra tình trạng nhảy chữ, banner và nút bấm khi trang đang tải trên mobile.</div>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  <strong>Khắc phục khi Rebuild:</strong> Loại bỏ các hiệu ứng trượt banner giật cục, thiết lập tỷ lệ khung hình cố định cho toàn bộ banner và ảnh, triệt tiêu độ xô lệch (CLS = 0).
+                  <strong>Khuyến nghị:</strong> Cố định kích thước ảnh và khu vực hiển thị để bố cục ổn định hơn.
                 </p>
               </div>
 
               <div className="p-5 rounded-2xl bg-white border border-slate-200 text-left space-y-3 shadow-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold text-slate-500 uppercase">3. Chỉ số TTFB</span>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-bold">Phản Hồi Máy Chủ</span>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700">Cần đo</span>
                 </div>
                 <div className="text-xs text-slate-800 font-semibold">Time to First Byte (Thời gian máy chủ phản hồi gói tin đầu tiên)</div>
                 <div className="flex items-baseline gap-3">
-                  <span className="text-2xl font-black text-rose-600 line-through">1.5s</span>
-                  <span className="text-3xl font-black text-emerald-600">&lt; 0.2s</span>
+                  <span className="text-lg font-bold text-slate-700">Chưa có số đo xác thực</span>
                 </div>
                 <div className="p-2.5 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-950 space-y-1">
-                  <div><strong>Mức độ nghiêm trọng:</strong> Hạ tầng cũ phải tải lại cơ sở dữ liệu cho từng lượt khách. Khi có lượng truy cập tăng đột biến, hệ thống dễ rơi vào tình trạng quá tải hoặc phản hồi chậm.</div>
+                  <div><strong>Điều cần kiểm tra:</strong> Đo thời gian máy chủ bắt đầu phản hồi và theo dõi khi lượng truy cập tăng.</div>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  <strong>Khắc phục khi Rebuild:</strong> Phân phối trang tĩnh trực tiếp từ mạng lưới máy chủ biên Edge CDN, tốc độ mở trang lập tức dưới 0.2 giây mà không tốn tài nguyên máy chủ.
+                  <strong>Khuyến nghị:</strong> Rà soát máy chủ, bộ nhớ đệm và cách phân phối nội dung trước khi chọn giải pháp hạ tầng.
                 </p>
               </div>
             </div>
-          </div>
-        )}
+        </section>
 
-        {activeTab === 'schema' && (
-          <div className="space-y-4">
+        <section id="hospital-info" className="mt-12 space-y-4 border-t border-slate-200 pt-10">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-violet-700">Phần 4</span>
+            <h4 className="mt-2 text-2xl font-bold tracking-tight text-slate-900">Thông tin bệnh viện</h4>
+          </div>
             <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl text-xs text-slate-700 leading-relaxed space-y-2">
               <div>
                 <strong className="text-slate-900 font-bold">Schema E-E-A-T là gì?</strong> Đây là đoạn mã dữ liệu cấu trúc (JSON-LD) gắn ngầm dưới nền website để robot của Google đọc hiểu bản chất của bệnh viện. E-E-A-T viết tắt cho: <em>Kinh nghiệm (Experience) - Chuyên môn (Expertise) - Thẩm quyền (Authoritativeness) - Đáng tin cậy (Trustworthiness)</em>.
@@ -662,8 +617,7 @@ export default function StrategicAuditComparison() {
               </div>
               <p className="mt-4 text-xs leading-5 text-slate-500">Phần mã triển khai được giữ trong tài liệu kỹ thuật, không đưa vào slide trình bày.</p>
             </div>
-          </div>
-        )}
+        </section>
       </div>
     </div>
   )
