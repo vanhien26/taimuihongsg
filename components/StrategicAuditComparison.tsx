@@ -7,26 +7,26 @@ export default function StrategicAuditComparison() {
   const [activeTab, setActiveTab] = useState<'audit' | 'content' | 'vitals' | 'schema'>('audit')
 
   return (
-    <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200/80 shadow-xl shadow-slate-100">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200">
+    <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+      <div className="border-b border-slate-200 px-6 pb-5 pt-6 md:px-8 md:pb-6 md:pt-8">
         <div>
           <span className="text-xs font-bold uppercase tracking-widest text-emerald-600">
-            Dữ liệu Đối Soát & Kiểm Thử Live Ngày 31/10/2026
+            Kết quả kiểm tra website gốc
           </span>
-          <h3 className="text-xl md:text-2xl font-black text-slate-900 mt-1">
-            Bảng Đối Chiếu Hiện Trạng Cũ vs. Giải Pháp Tối Ưu Mới
+          <h3 className="mt-2 max-w-3xl text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+            Website hiện tại đang vướng gì và sẽ xử lý ra sao?
           </h3>
         </div>
 
         {/* Tab switcher */}
-        <div className="flex items-center bg-slate-100 p-1 rounded-xl text-xs font-bold overflow-x-auto max-w-full">
+        <div className="mt-5 flex max-w-full items-center gap-1 overflow-x-auto rounded-xl bg-slate-50 p-1 text-xs font-semibold ring-1 ring-inset ring-slate-200 md:text-sm">
           <button
             onClick={() => setActiveTab('audit')}
             className={`px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
               activeTab === 'audit' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            5 Lỗi Kỹ Thuật & Quốc Tế
+            5 vấn đề chính
           </button>
           <button
             onClick={() => setActiveTab('content')}
@@ -34,7 +34,7 @@ export default function StrategicAuditComparison() {
               activeTab === 'content' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            Audit Nội Dung Cũ
+            Nội dung cần sắp xếp lại
           </button>
           <button
             onClick={() => setActiveTab('vitals')}
@@ -42,7 +42,7 @@ export default function StrategicAuditComparison() {
               activeTab === 'vitals' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            Core Web Vitals
+            Tốc độ website
           </button>
           <button
             onClick={() => setActiveTab('schema')}
@@ -50,30 +50,30 @@ export default function StrategicAuditComparison() {
               activeTab === 'schema' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            Entity & Schema E-E-A-T
+            Thông tin bệnh viện
           </button>
         </div>
       </div>
 
-      <div className="pt-6">
+      <div className="px-6 pb-6 pt-6 md:px-8 md:pb-8">
         {activeTab === 'audit' && (
           <div className="space-y-6">
-            <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-700">
-              <div>
+            <div className="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm text-slate-700 md:flex-row md:items-center md:justify-between md:p-6">
+              <div className="max-w-3xl leading-6">
                 <strong className="text-slate-900 font-bold">Phương pháp đối soát:</strong> Kiểm thử trực tiếp trên mã nguồn và headers phản hồi của máy chủ sản xuất <code>taimuihongsg.com</code>.
               </div>
-              <div className="flex items-center gap-3 shrink-0">
-                <span className="flex items-center gap-1.5 text-rose-700 font-bold">
-                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
-                  5 lỗi cản trở tăng trưởng & thu thập dữ liệu
+              <div className="flex shrink-0 items-center gap-3">
+                <span className="flex items-center gap-2 text-xs font-semibold text-rose-700">
+                  <span className="h-2 w-2 rounded-full bg-rose-500"></span>
+                  5 vấn đề cần xử lý để website hoạt động hiệu quả hơn
                 </span>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               
               {/* Card 1: Sitemap */}
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+              <div className="flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200 bg-white">
                 <div className="p-5 space-y-4">
                   {/* Header Card */}
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
@@ -92,9 +92,9 @@ export default function StrategicAuditComparison() {
 
                   {/* Thuật ngữ & Giải thích */}
                   <div className="text-xs space-y-1">
-                    <span className="font-bold text-slate-900">Bản chất kỹ thuật:</span>
+                    <span className="font-bold text-slate-900">Điều đang xảy ra:</span>
                     <p className="text-slate-600 leading-relaxed">
-                      <code>XML Sitemap</code> là sơ đồ dẫn đường cho robot tìm kiếm. Hiện tại URL <code>/sitemap_index.xml</code> lại trả mã <code>301 Redirect</code> đưa robot thẳng vào trang đặt hẹn.
+                      Bản danh mục website dành cho Google đang dùng luồng cũ. Cần kiểm tra lại để Google luôn nhận được danh sách trang mới nhất.
                     </p>
                   </div>
 
@@ -102,10 +102,10 @@ export default function StrategicAuditComparison() {
                   <div className="p-3 bg-rose-50/70 border border-rose-100 rounded-xl text-xs space-y-1">
                     <span className="font-bold text-rose-900 flex items-center gap-1">
                       <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" />
-                      Mức độ nghiêm trọng & Tác hại:
+                      Ảnh hưởng đến website:
                     </span>
                     <p className="text-rose-950/90 leading-relaxed text-[11px]">
-                      Google Bot bị "mù", không thể quét 2.212 bài viết y khoa và dịch vụ. Bài viết mới đăng tải không được lập chỉ mục (index), lãng phí tài nguyên nội dung.
+                      Nội dung mới có thể chậm được Google phát hiện. Đây là rủi ro cần xử lý, chưa nên quy thành số lượt khám bị mất nếu chưa có dữ liệu đo lường.
                     </p>
                   </div>
                 </div>
@@ -114,16 +114,16 @@ export default function StrategicAuditComparison() {
                 <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
                   <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    Khắc phục (Rebuild Web):
+                    Hướng xử lý:
                   </span>
                   <span className="text-emerald-800 font-medium text-right text-[11px]">
-                    Xây dựng lại luồng Sitemap động chuẩn mã HTTP 200 OK
+                    Cập nhật bản danh mục website và kiểm tra lại với Google
                   </span>
                 </div>
               </div>
 
               {/* Card 2: Soft 404 */}
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+              <div className="flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200 bg-white">
                 <div className="p-5 space-y-4">
                   {/* Header Card */}
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
@@ -142,9 +142,9 @@ export default function StrategicAuditComparison() {
 
                   {/* Thuật ngữ & Giải thích */}
                   <div className="text-xs space-y-1">
-                    <span className="font-bold text-slate-900">Bản chất kỹ thuật:</span>
+                    <span className="font-bold text-slate-900">Điều đang xảy ra:</span>
                     <p className="text-slate-600 leading-relaxed">
-                      <code>Soft 404</code> xảy ra khi trang đã xóa hoặc link gõ sai không báo mã 404 mà bị ép chuyển hướng (Wildcard Redirect) dồn hết về <code>/dat-hen-kham-benh/</code>.
+                      Một số đường dẫn cũ hoặc sai có thể đưa người dùng đến trang không liên quan thay vì thông báo rõ rằng nội dung không còn tồn tại.
                     </p>
                   </div>
 
@@ -152,10 +152,10 @@ export default function StrategicAuditComparison() {
                   <div className="p-3 bg-amber-50/70 border border-amber-100 rounded-xl text-xs space-y-1">
                     <span className="font-bold text-amber-900 flex items-center gap-1">
                       <ShieldAlert className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                      Mức độ nghiêm trọng & Tác hại:
+                      Ảnh hưởng đến người bệnh:
                     </span>
                     <p className="text-amber-950/90 leading-relaxed text-[11px]">
-                      Google coi đây là hành vi spam điều hướng. Trang nhận chuyển hướng (trang Đặt Hẹn) bị thuật toán đánh tụt điểm uy tín (PageRank) và giảm thứ hạng toàn diện.
+                      Người bệnh có thể không tìm thấy thông tin họ cần và rời website trước khi xem dịch vụ hoặc đặt hẹn. Cần kiểm tra từng đường dẫn để xác nhận phạm vi ảnh hưởng.
                     </p>
                   </div>
                 </div>
@@ -164,16 +164,16 @@ export default function StrategicAuditComparison() {
                 <div className="px-5 py-3.5 bg-emerald-50/60 border-t border-emerald-100 text-xs flex items-center justify-between gap-2">
                   <span className="font-bold text-emerald-900 flex items-center gap-1.5 shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    Khắc phục (Rebuild Web):
+                    Hướng xử lý:
                   </span>
                   <span className="text-emerald-800 font-medium text-right text-[11px]">
-                    Thiết lập trang báo lỗi chuẩn mã HTTP 404 Not Found & gợi ý điều hướng
+                    Trả thông báo không tìm thấy trang và gợi ý nội dung phù hợp
                   </span>
                 </div>
               </div>
 
               {/* Card 3: Entity Conflict */}
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+              <div className="flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200 bg-white">
                 <div className="p-5 space-y-4">
                   {/* Header Card */}
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
@@ -223,7 +223,7 @@ export default function StrategicAuditComparison() {
               </div>
 
               {/* Card 4: Canonical Mismatch */}
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors">
+              <div className="flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200 bg-white">
                 <div className="p-5 space-y-4">
                   {/* Header Card */}
                   <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
@@ -653,30 +653,14 @@ export default function StrategicAuditComparison() {
               </div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-slate-900 text-emerald-300 font-mono text-xs overflow-x-auto space-y-2 shadow-inner">
-              <div className="text-slate-400 font-bold">// Schema JSON-LD Chuẩn Mới: Khắc phục triệt để lỗi phân loại Đa khoa</div>
-              <pre className="text-slate-200 leading-relaxed">
-{`{
-  "@context": "https://schema.org",
-  "@type": ["Hospital", "MedicalOrganization"],
-  "name": "Bệnh Viện Tai Mũi Họng Sài Gòn",
-  "url": "https://taimuihongsg.com/",
-  "medicalSpecialty": "Otolaryngologic",
-  "telephone": "(028) 38.213.456",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1 - 3 Trịnh Văn Cấn",
-    "addressLocality": "Quận 1",
-    "addressRegion": "TP. Hồ Chí Minh",
-    "addressCountry": "VN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 10.7686,
-    "longitude": 106.6970
-  }
-}`}
-              </pre>
+            <div className="rounded-2xl border border-brand-100 bg-brand-50/50 p-5 md:p-6">
+              <h4 className="font-bold text-slate-950">Thông tin cần thống nhất</h4>
+              <div className="mt-4 grid gap-3 text-sm leading-6 text-slate-700 md:grid-cols-3">
+                <div className="rounded-xl bg-white p-4 ring-1 ring-inset ring-brand-100"><strong className="text-slate-950">Tên bệnh viện</strong><p className="mt-1">Dùng thống nhất tên Bệnh viện Tai Mũi Họng Sài Gòn trên toàn website.</p></div>
+                <div className="rounded-xl bg-white p-4 ring-1 ring-inset ring-brand-100"><strong className="text-slate-950">Chuyên môn</strong><p className="mt-1">Làm rõ bệnh viện chuyên sâu về Tai, Mũi, Họng và các dịch vụ liên quan.</p></div>
+                <div className="rounded-xl bg-white p-4 ring-1 ring-inset ring-brand-100"><strong className="text-slate-950">Địa điểm liên hệ</strong><p className="mt-1">Đồng bộ địa chỉ, số điện thoại, giờ khám và vị trí của từng cơ sở.</p></div>
+              </div>
+              <p className="mt-4 text-xs leading-5 text-slate-500">Phần mã triển khai được giữ trong tài liệu kỹ thuật, không đưa vào slide trình bày.</p>
             </div>
           </div>
         )}

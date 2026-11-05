@@ -170,3 +170,49 @@ Google đã chính thức đưa bộ 3 chỉ số **Core Web Vitals** vào tiêu
    * Giữ trọn vẹn toàn bộ cấu trúc URL gốc và giá trị SEO tích lũy 19 năm qua.
    * Xóa bỏ triệt để 6 lỗi kỹ thuật nghiêm trọng.
    * Mở rộng thêm dòng doanh thu từ tệp bệnh nhân quốc tế và bảo lãnh bảo hiểm toàn cầu qua cổng **English Portal** chuẩn mực.
+
+---
+
+## PHẦN IV. ĐỐI SOÁT LIVE BỔ SUNG NGÀY 05/11/2026
+
+Phần này ghi nhận các lỗi được kiểm tra trực tiếp trên website sản xuất. Các kết luận được chia thành lỗi đã xác nhận và giả thuyết cần tiếp tục đối soát bằng Google Search Console, Analytics hoặc dữ liệu máy chủ.
+
+### 1. Entity và Schema đang định danh sai tổ chức - Mức độ P0
+
+Homepage, trang đặt hẹn và trang Khoa Nội trú vẫn xuất hiện các node `MedicalOrganization` và `Hospital` với tên **Bệnh viện Đa khoa Quốc tế Sài Gòn**, trong khi tên thương hiệu hiện tại là **Bệnh Viện Tai Mũi Họng Sài Gòn**. Metadata `og:site_name` cũng đang trộn hai thương hiệu.
+
+Tác động: Google có thể hiểu đây là hai thực thể khác nhau, làm suy yếu tính nhất quán của thương hiệu, chuyên khoa, địa chỉ và hồ sơ bác sĩ.
+
+Khắc phục: tạo một entity graph duy nhất cho Bệnh Viện Tai Mũi Họng Sài Gòn, đồng bộ tên, logo, URL, địa chỉ, điện thoại, `sameAs`, `Organization`, `MedicalOrganization`, `Hospital` và `WebSite`.
+
+### 2. Sitemap có dấu hiệu stale - Mức độ P0
+
+`/sitemap.xml` hiện chuyển hướng 301 đến `/sitemap_index.xml`. Redirect này có thể là hành vi bình thường của Rank Math, không nên tự động kết luận là lỗi. Tuy nhiên, các sitemap con được công khai có `lastmod` gần nhất vào tháng 12/2023, trong khi website có nội dung cập nhật năm 2026.
+
+Tác động: sitemap có thể không phản ánh đầy đủ các bài viết, bác sĩ, dịch vụ và cập nhật mới. Sitemap hỗ trợ Google phát hiện URL nhưng không đảm bảo mọi URL được crawl hoặc index.
+
+Khắc phục: đối chiếu sitemap với danh sách URL canonical, cập nhật `lastmod` theo thời điểm nội dung thật sự thay đổi, loại URL noindex hoặc đã xóa, sau đó submit lại trong Search Console.
+
+### 3. English Portal chưa phải phiên bản tiếng Anh hoàn chỉnh - Mức độ P0
+
+`/english/` đang hoạt động như một chuyên mục bài viết. Header, footer và nhiều nội dung điều hướng vẫn bằng tiếng Việt. Schema vẫn định danh tổ chức đa khoa và `inLanguage` chưa phản ánh đúng một portal tiếng Anh hoàn chỉnh. Chưa ghi nhận bộ `hreflang` hai chiều cho các trang tương ứng.
+
+Tác động: bệnh nhân quốc tế khó hoàn thành hành trình từ tìm hiểu dịch vụ đến đặt hẹn. Đây là vấn đề trải nghiệm, SEO quốc tế và chuyển đổi, không nên mô tả là đã mất 100% khách quốc tế nếu chưa có dữ liệu Analytics.
+
+Khắc phục: xây các trang tiếng Anh tương ứng cho homepage, dịch vụ, bác sĩ, đặt hẹn, bảo hiểm và liên hệ. Chỉ triển khai `hreflang` sau khi mỗi cặp URL có nội dung dịch thật và liên kết hai chiều.
+
+### 4. Schema bị lặp và có nguy cơ xung đột - Mức độ P1
+
+Website xuất hiện nhiều node `MedicalOrganization`, `Hospital`, `Organization`, `Person`, `WPHeader`, `WPFooter`, `WebSite` và `SiteNavigationElement`. Nhiều node đang dùng tên tổ chức đa khoa không nhất quán.
+
+Khắc phục: hợp nhất entity ID, loại bỏ node trùng, chỉ giữ schema phù hợp với từng loại trang và kiểm tra bằng Rich Results Test cùng URL Inspection.
+
+### 5. Các lỗi cần kiểm tra thêm trước khi kết luận
+
+Các claim về wildcard redirect, Soft 404 và canonical bác sĩ cần được kiểm tra theo danh sách URL thực tế. Mỗi URL phải ghi nhận HTTP status, redirect chain, canonical khai báo, canonical Google chọn và nội dung trả về.
+
+Không nên dùng các số liệu như `150 - 200 ca mất mỗi tháng`, `35 - 40% rơi rụng`, `68% bounce rate` hoặc `+45% lượt khám` như sự thật đã xác minh nếu chưa có dữ liệu Analytics, Search Console, CRM và booking.
+
+### 6. Cập nhật chuẩn Core Web Vitals
+
+Core Web Vitals nên được theo dõi bằng LCP, INP và CLS. TTFB là chỉ số chẩn đoán hiệu suất máy chủ, không phải một trong ba Core Web Vitals hiện hành. Mục tiêu ban đầu nên là LCP không quá 2.5 giây, INP không quá 200 ms và CLS không quá 0.1 ở percentile 75, thay vì cam kết CLS bằng 0 hoặc LCP dưới 0.8 giây.

@@ -68,40 +68,102 @@ export default function ChienLuocPage() {
   ]
 
   return (
-    <div className="py-12 md:py-16 space-y-16 bg-slate-50">
+    <div className="space-y-14 bg-white py-8 md:space-y-20 md:py-12">
       
       {/* Header Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="bg-gradient-to-r from-navy-900 via-brand-900 to-teal-900 rounded-3xl p-8 md:p-12 text-white shadow-xl relative overflow-hidden">
-          <div className="relative z-10 max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold">
+        <div className="relative overflow-hidden border-l-4 border-brand-700 bg-slate-950 p-7 text-white shadow-sm md:p-12">
+          <div className="relative z-10 max-w-4xl space-y-4">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sky-300">
               <Compass className="w-3.5 h-3.5" />
               Chiến Lược Tái Cấu Trúc Toàn Diện & Thúc Đẩy Tăng Trưởng
             </div>
             <h1 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
-              Hiện Trạng Website & Kế Hoạch Tăng Trưởng SEO/GEO
+              Hiện trạng website và kế hoạch tăng trưởng
             </h1>
             <p className="text-slate-300 text-sm md:text-base leading-relaxed">
-              Một báo cáo hợp nhất từ tình trạng website cũ, tác động đến hoạt động kinh doanh, các lỗi kỹ thuật cần xử lý và lộ trình tăng trưởng trên Google lẫn công cụ tìm kiếm AI.
+              Báo cáo dành cho việc ra quyết định: website đang vướng gì, ảnh hưởng đến hành trình đặt khám ra sao và nên ưu tiên cải thiện theo thứ tự nào.
             </p>
+            <div className="grid gap-3 border-t border-white/15 pt-6 text-sm sm:grid-cols-3"><div><div className="font-bold text-white">01</div><div className="mt-1 text-slate-400">Hiện trạng và rủi ro</div></div><div><div className="font-bold text-white">02</div><div className="mt-1 text-slate-400">Audit các điểm cần sửa</div></div><div><div className="font-bold text-white">03</div><div className="mt-1 text-slate-400">Growth và cách đo lường</div></div></div>
           </div>
         </div>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 -mt-10">
-        <nav className="grid grid-cols-2 md:grid-cols-4 bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm" aria-label="Mục lục báo cáo">
+        <nav className="grid grid-cols-2 border-b border-slate-200 bg-white md:grid-cols-4" aria-label="Mục lục báo cáo">
           {[
             ['#hien-trang', '01', 'Hiện trạng'],
             ['#audit', '02', 'Audit kỹ thuật'],
             ['#geo', '03', 'SEO và GEO'],
             ['#roadmap', '04', 'Roadmap'],
           ].map(([href, number, label]) => (
-            <a key={href} href={href} className="p-4 border-b md:border-b-0 md:border-r border-slate-200 last:border-r-0 hover:bg-slate-50 transition-colors">
+            <a key={href} href={href} className="border-b border-slate-200 p-4 transition-colors hover:bg-slate-50 md:border-b-0 md:border-r last:border-r-0">
               <span className="block text-[11px] font-bold text-emerald-700">{number}</span>
               <span className="block mt-1 text-sm font-bold text-slate-900">{label}</span>
             </a>
           ))}
         </nav>
+      </section>
+
+      <section className="mx-auto grid max-w-7xl gap-px bg-slate-200 px-4 sm:px-6 md:grid-cols-3">
+        {[
+          ['Ưu tiên ngay', 'Sửa nhận diện bệnh viện, sitemap và các đường dẫn cũ.', 'P0'],
+          ['Cần xây nền', 'Chuẩn hóa trang dịch vụ, bác sĩ, English và luồng đặt hẹn.', 'P1'],
+          ['Đo để tăng trưởng', 'Theo dõi từ lượt tìm kiếm đến cuộc gọi và lịch hẹn thành công.', 'KPI'],
+        ].map(([title, description, label]) => (
+          <div key={title} className="bg-white p-5 md:p-6"><div className="text-xs font-bold uppercase tracking-wider text-brand-700">{label}</div><h2 className="mt-2 font-bold text-slate-950">{title}</h2><p className="mt-2 text-sm leading-6 text-slate-600">{description}</p></div>
+        ))}
+      </section>
+
+      <section id="growth-snapshot" className="mx-auto max-w-7xl scroll-mt-32 px-4 sm:px-6">
+        <div className="border border-slate-200 bg-white">
+          <div className="flex flex-col justify-between gap-3 border-b border-slate-200 p-6 sm:flex-row sm:items-end md:p-8">
+            <div><span className="text-xs font-bold uppercase tracking-widest text-brand-700">Growth snapshot</span><h2 className="mt-2 text-2xl font-black tracking-tight text-slate-950 md:text-3xl">Website đang có nền tảng, nhưng đà tăng trưởng đang chậm lại</h2><p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">Snapshot tham khảo từ bộ dữ liệu SEO/GEO ngày 04/11/2026. Đây là tín hiệu định hướng, cần đối chiếu thêm với dữ liệu Search Console, Analytics và CRM trước khi kết luận về doanh thu.</p></div><span className="shrink-0 text-xs font-semibold text-slate-500">VN • Organic + AI Search</span>
+          </div>
+          <div className="grid grid-cols-2 divide-x divide-y divide-slate-200 sm:grid-cols-4 lg:grid-cols-8 lg:divide-y-0">
+            {[
+              ['21', 'AI visibility', 'Cần tăng hiện diện'],
+              ['50', 'AI mentions', 'Được nhắc đến'],
+              ['292', 'Cited pages', 'Trang được trích dẫn'],
+              ['40', 'Authority score', 'Mức độ uy tín'],
+              ['94K', 'Organic traffic', '-1.2%'],
+              ['29.9K', 'Organic keywords', '-2.9%'],
+              ['10.5K', 'Backlinks', 'Liên kết giới thiệu'],
+              ['4,470', 'Organic competitors', 'Đối thủ cùng nhóm'],
+            ].map(([value, label, note]) => <div key={label} className="min-w-0 p-4 md:p-5"><div className="text-2xl font-black tracking-tight text-brand-700 md:text-3xl">{value}</div><div className="mt-2 text-xs font-bold leading-4 text-slate-900">{label}</div><div className="mt-1 text-[11px] leading-4 text-slate-500">{note}</div></div>)}
+          </div>
+          <div className="grid gap-6 border-t border-slate-200 p-6 md:grid-cols-3 md:p-8"><div><h3 className="font-bold text-slate-950">Điểm sáng</h3><p className="mt-2 text-sm leading-6 text-slate-600">Website vẫn có lượng từ khóa, nội dung và nguồn trích dẫn đủ lớn để phục hồi.</p></div><div><h3 className="font-bold text-slate-950">Tín hiệu cần chú ý</h3><p className="mt-2 text-sm leading-6 text-slate-600">Organic traffic và số từ khóa đang giảm nhẹ trong snapshot tham khảo.</p></div><div><h3 className="font-bold text-slate-950">Cơ hội tăng trưởng</h3><p className="mt-2 text-sm leading-6 text-slate-600">Tập trung vào nhóm từ khóa thương mại, transactional và các dịch vụ có giá trị cao.</p></div></div>
+          <div className="grid gap-px border-t border-slate-200 bg-slate-200 lg:grid-cols-2">
+            <div className="bg-white p-6 md:p-8">
+              <div className="flex items-start justify-between gap-4"><div><span className="text-xs font-bold uppercase tracking-widest text-slate-500">So sánh thị trường</span><h3 className="mt-2 text-xl font-black text-slate-950">Lượng truy cập đang thấp hơn nhóm tham chiếu</h3></div><span className="shrink-0 text-xs font-semibold text-slate-500">Traffic snapshot</span></div>
+              <p className="mt-3 text-sm leading-6 text-slate-600">Số liệu cho thấy khoảng cách lớn giữa website và các bệnh viện có độ phủ tìm kiếm cao hơn. Đây là cơ hội để ưu tiên nội dung dịch vụ, chuyên khoa và thương hiệu.</p>
+              <div className="mt-6 space-y-4">
+                {[
+                  ['taimuihongsg.com', '69,224', 28, true],
+                  ['Tamanh Hospital', '3.602M', 82, false],
+                  ['Vinmec', '12.07M', 100, false],
+                  ['Bệnh viện Nam Sài Gòn', '119,282', 34, false],
+                  ['Hồng Ngọc Hospital', '258,127', 42, false],
+                ].map(([name, value, width, current]) => <div key={String(name)}><div className="mb-1 flex items-center justify-between gap-4 text-xs"><span className={current ? 'font-bold text-brand-700' : 'font-medium text-slate-600'}>{name}</span><span className="font-bold text-slate-900">{value}</span></div><div className="h-2 bg-slate-100"><div className={current ? 'h-2 bg-brand-600' : 'h-2 bg-slate-300'} style={{ width: `${width}%` }} /></div></div>)}
+              </div>
+              <p className="mt-5 text-xs leading-5 text-slate-500">Mốc so sánh theo dữ liệu tham khảo người dùng cung cấp. Không dùng để khẳng định doanh thu hoặc số bệnh nhân.</p>
+            </div>
+            <div className="bg-white p-6 md:p-8">
+              <div className="flex items-start justify-between gap-4"><div><span className="text-xs font-bold uppercase tracking-widest text-slate-500">Channels overview</span><h3 className="mt-2 text-xl font-black text-slate-950">Organic Search đang là kênh chính</h3></div><span className="shrink-0 text-xs font-semibold text-slate-500">09/2026 • Worldwide</span></div>
+              <p className="mt-3 text-sm leading-6 text-slate-600">Phần lớn lượt truy cập đến từ tìm kiếm tự nhiên. Điều này giúp website có nền tảng tốt, nhưng cũng tạo rủi ro phụ thuộc nếu thứ hạng giảm.</p>
+              <div className="mt-6 space-y-3">
+                {[
+                  ['Organic Search', '64.55%', 64.55, 'bg-brand-600'],
+                  ['Direct', '30.18%', 30.18, 'bg-slate-700'],
+                  ['Organic Social', '2.03%', 2.03, 'bg-sky-500'],
+                  ['Gen AI', '2.73%', 2.73, 'bg-emerald-500'],
+                  ['Khác', '0.51%', 0.51, 'bg-slate-300'],
+                ].map(([name, value, width, color]) => <div key={String(name)}><div className="mb-1 flex items-center justify-between text-xs"><span className="font-medium text-slate-700">{name}</span><span className="font-bold text-slate-900">{value}</span></div><div className="h-3 bg-slate-100"><div className={`h-3 ${color}`} style={{ width: `${Math.max(Number(width), 1)}%` }} /></div></div>)}
+              </div>
+              <div className="mt-6 border-l-2 border-brand-600 pl-4 text-sm leading-6 text-slate-700"><strong className="text-slate-950">Hàm ý:</strong> bảo vệ nhóm từ khóa thương hiệu và dịch vụ có ý định đặt lịch, đồng thời mở rộng social, referral và AI content để giảm phụ thuộc vào một kênh.</div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="hien-trang" className="max-w-7xl mx-auto px-4 sm:px-6 scroll-mt-32">
@@ -148,6 +210,29 @@ export default function ChienLuocPage() {
 
       {/* Audit Review Comparison */}
       <section id="audit" className="max-w-7xl mx-auto px-4 sm:px-6 scroll-mt-32">
+        <div id="audit-live" className="mb-8 scroll-mt-32 rounded-3xl border border-rose-200 bg-white p-6 shadow-sm md:p-8">
+          <div className="flex flex-col justify-between gap-4 border-b border-slate-200 pb-6 md:flex-row md:items-end">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-rose-700">Kết quả kiểm tra website gốc ngày 05/11/2026</span>
+              <h2 className="mt-2 text-2xl font-black tracking-tight text-slate-950 md:text-3xl">4 vấn đề đang làm website kém hiệu quả</h2>
+              <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">Đây là những vấn đề đã nhìn thấy trực tiếp trên website. Phần ảnh hưởng đến số bệnh nhân và doanh thu sẽ được đo thêm bằng dữ liệu vận hành thực tế.</p>
+            </div>
+            <span className="inline-flex shrink-0 items-center rounded-full bg-rose-50 px-3 py-1.5 text-xs font-bold text-rose-800">Ưu tiên xử lý P0</span>
+          </div>
+          <div className="mt-6 grid gap-3 md:grid-cols-2">
+            {[
+              ['Google đang nhận diện sai tên bệnh viện', 'Một số thông tin trên website vẫn ghi bệnh viện là đơn vị đa khoa, chưa thống nhất với thương hiệu Bệnh Viện Tai Mũi Họng Sài Gòn.'],
+              ['Danh mục website chưa được cập nhật', 'Bản danh mục gửi cho Google vẫn có dấu hiệu dùng dữ liệu cũ, cần bổ sung và rà soát các trang mới.'],
+              ['Khu vực tiếng Anh chưa hoàn chỉnh', 'Trang English vẫn còn menu và nội dung tiếng Việt, chưa đủ để bệnh nhân quốc tế tự tìm hiểu và đặt hẹn.'],
+              ['Thông tin giới thiệu bị lặp và mâu thuẫn', 'Tên bệnh viện, loại hình và thông tin nhận diện xuất hiện nhiều phiên bản khác nhau trên cùng website.'],
+            ].map(([title, detail], index) => (
+              <article key={title} className="border-l-4 border-l-rose-500 bg-slate-50 p-5">
+                <div className="flex items-start gap-3"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-rose-100 text-xs font-black text-rose-800">0{index + 1}</span><div><h3 className="font-bold text-slate-950">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{detail}</p></div></div>
+              </article>
+            ))}
+          </div>
+          <div className="mt-6 flex flex-col gap-3 border-t border-slate-200 pt-5 text-sm sm:flex-row sm:items-center sm:justify-between"><span className="font-semibold text-slate-700">Những điểm cần đo thêm</span><span className="text-slate-600">Các link cũ, trang lỗi, hồ sơ bác sĩ, tốc độ website và số lượt đặt hẹn thực tế.</span></div>
+        </div>
         <StrategicAuditComparison />
       </section>
 
@@ -156,73 +241,27 @@ export default function ChienLuocPage() {
         <GeoFrameworkView />
       </section>
 
-      {/* Implementation Roadmap */}
+      {/* Action sequence */}
       <section id="roadmap" className="max-w-7xl mx-auto px-4 sm:px-6 scroll-mt-32">
-        <div className="bg-white rounded-3xl p-6 md:p-10 border border-slate-200 shadow-xl space-y-8">
+        <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-10">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-600">
-              Kế Hoạch Hành Động Thực Thi
-            </span>
-            <h3 className="text-2xl md:text-3xl font-black text-slate-900 mt-1">
-              Lộ Trình Tái Cấu Trúc 8 Tuần Bứt Phá
-            </h3>
+            <span className="text-xs font-bold uppercase tracking-widest text-brand-700">Thứ tự ưu tiên đề xuất</span>
+            <h3 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">Nên làm gì từng bước một?</h3>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">Ở giai đoạn này, chỉ cần thống nhất thứ tự ưu tiên. Lịch triển khai chi tiết sẽ được xây dựng sau khi chốt phạm vi và nguồn lực.</p>
           </div>
-
-          {/* Stepper selector */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {ROADMAP.map((phase) => (
-              <button
-                key={phase.week}
-                onClick={() => setSelectedWeek(phase.week)}
-                className={`p-4 rounded-2xl text-left border transition-all ${
-                  selectedWeek === phase.week
-                    ? 'bg-emerald-50 border-brand-600 text-brand-950 font-bold shadow-sm'
-                    : 'bg-slate-50 border-slate-200 text-slate-600 hover:bg-slate-100 font-medium'
-                }`}
-              >
-                <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Giai đoạn {phase.week}</div>
-                <div className="text-sm font-bold line-clamp-1">{phase.title.split(':')[0]}</div>
-              </button>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {[
+              ['01', 'Sửa các lỗi đang cản Google và người bệnh', 'Kiểm tra sitemap, đường dẫn cũ, trang lỗi và các thông tin nhận diện sai.'],
+              ['02', 'Thống nhất thông tin bệnh viện', 'Chuẩn hóa tên, chuyên khoa, cơ sở, bác sĩ, giờ khám và thông tin liên hệ trên toàn hệ thống.'],
+              ['03', 'Sắp xếp lại nội dung theo nhu cầu khám', 'Ưu tiên các trang dịch vụ, chuyên khoa, bác sĩ và nhóm câu hỏi mà người bệnh thường tìm.'],
+              ['04', 'Đo hiệu quả rồi mới mở rộng', 'Theo dõi lượt tìm kiếm, cuộc gọi, lượt đặt hẹn và phản hồi của người bệnh trước khi lập kế hoạch chi tiết hơn.'],
+            ].map(([number, title, detail]) => (
+              <div key={number} className="flex gap-4 rounded-xl border border-slate-200 bg-slate-50/60 p-5">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-50 text-sm font-bold text-brand-700">{number}</span>
+                <div><h4 className="font-bold text-slate-950">{title}</h4><p className="mt-2 text-sm leading-6 text-slate-600">{detail}</p></div>
+              </div>
             ))}
           </div>
-
-          {/* Active Phase Details */}
-          {(() => {
-            const current = ROADMAP.find((r) => r.week === selectedWeek)!
-            return (
-              <div className="bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-200 space-y-6">
-                <div>
-                  <h4 className="text-xl font-black text-slate-900">{current.title}</h4>
-                  <div className="text-xs font-bold text-emerald-800 mt-1">
-                    Mục tiêu tác động: {current.impact}
-                  </div>
-                </div>
-
-                {/* Khối định nghĩa thuật ngữ & Mức độ nghiêm trọng */}
-                <div className="p-4 bg-white rounded-xl border border-slate-200 text-xs space-y-2">
-                  <div className="text-slate-800 leading-relaxed">
-                    <strong className="text-slate-950 font-bold">Lý giải thuật ngữ:</strong> {current.termsExplained}
-                  </div>
-                  <div className="text-rose-900 font-semibold leading-relaxed">
-                    {current.severity}
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="text-xs font-bold text-slate-700 uppercase tracking-wider">Nhiệm vụ cụ thể cần triển khai:</div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {current.tasks.map((task, i) => (
-                      <div key={i} className="p-3.5 bg-white rounded-xl border border-slate-200/80 text-xs text-slate-700 flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                        <span className="leading-relaxed">{task}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )
-          })()}
-
         </div>
       </section>
 

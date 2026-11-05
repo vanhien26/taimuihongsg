@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import BookingModal from './BookingModal'
 import Link from 'next/link'
-import { ArrowUp, Calendar, Phone, TrendingUp, Presentation } from 'lucide-react'
+import { ArrowUp, Calendar, Phone, Moon, Presentation, TrendingUp } from 'lucide-react'
 
 export function ClientLayoutWrapper({ children }: { children: React.ReactNode }) {
   const [bookingOpen, setBookingOpen] = useState(false)
@@ -39,13 +39,26 @@ export function ClientLayoutWrapper({ children }: { children: React.ReactNode })
         {/* Nút Báo Cáo Chiến Lược Tăng Trưởng & Bảng Đối Chiếu Audit */}
         <Link
           href="/chien-luoc-tang-truong"
-          aria-label="Chiến lược tăng trưởng & Audit"
-          title="Báo cáo Chiến lược Tăng trưởng & Audit kỹ thuật"
+          aria-label="Chiến lược tăng trưởng và Audit"
+          title="Báo cáo Chiến lược Tăng trưởng và Audit kỹ thuật"
           className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-teal-200 bg-white text-teal-700 shadow-lg transition-all hover:scale-105 hover:bg-teal-50 hover:text-teal-900 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700"
         >
           <TrendingUp className="h-5 w-5" />
           <span className="pointer-events-none absolute bottom-full mb-2 hidden whitespace-nowrap rounded-lg bg-slate-900 px-2.5 py-1 text-[11px] font-bold text-white shadow-md group-hover:block">
-            Chiến Lược & Audit
+            Chiến lược và Audit
+          </span>
+        </Link>
+
+        {/* Nút bài viết Scrollytelling */}
+        <Link
+          href="/tac-hai-khong-danh-rang-ban-dem"
+          aria-label="Tác hại của việc không đánh răng ban đêm"
+          title="Scrollytelling: Tác hại của việc không đánh răng ban đêm"
+          className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-teal-200 bg-white text-teal-700 shadow-lg transition-all hover:scale-105 hover:bg-teal-50 hover:text-teal-900 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700"
+        >
+          <Moon className="h-5 w-5" />
+          <span className="pointer-events-none absolute bottom-full mb-2 hidden whitespace-nowrap rounded-lg bg-slate-900 px-2.5 py-1 text-[11px] font-bold text-white shadow-md group-hover:block">
+            Không đánh răng ban đêm
           </span>
         </Link>
 
