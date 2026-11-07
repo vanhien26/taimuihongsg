@@ -14,7 +14,14 @@ import {
   Compass, 
   Clock, 
   HelpCircle,
-  Globe2
+  Globe2,
+  AlertTriangle,
+  Server,
+  Stethoscope,
+  Users,
+  Sparkles,
+  Zap,
+  ShieldCheck
 } from 'lucide-react'
 
 export default function ChienLuocTangTruongPage() {
@@ -293,6 +300,56 @@ export default function ChienLuocTangTruongPage() {
               </div>
             </div>
           </div>
+
+          {/* Deep Technical Audit Bottlenecks */}
+          <div className="rounded-2xl border border-rose-200 bg-rose-50/30 p-6 md:p-8 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-rose-100 pb-4">
+              <div>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-rose-800">
+                  <AlertTriangle className="h-4 w-4" />
+                  Kiểm toán kỹ thuật • 3 lỗi nghẽn tầng sâu trên hệ thống cũ
+                </div>
+                <h3 className="mt-1 text-lg font-bold text-slate-950">
+                  Các lỗi mã nguồn ngầm đang cản trở Google và làm tụt điểm tín nhiệm
+                </h3>
+              </div>
+              <span className="inline-flex items-center rounded-lg bg-rose-100 px-2.5 py-1 text-xs font-bold text-rose-800 shrink-0">
+                Cần xử lý dứt điểm
+              </span>
+            </div>
+
+            <div className="mt-5 grid gap-4 md:grid-cols-3 text-xs leading-relaxed">
+              <div className="rounded-xl border border-rose-100 bg-white p-4 shadow-2xs">
+                <div className="font-bold text-slate-900 flex items-center gap-1.5 text-sm">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-rose-100 text-rose-700 text-xs font-black">1</span>
+                  Ép chuyển hướng sai (Soft 404)
+                </div>
+                <p className="mt-2 text-slate-600">
+                  Bất kỳ link gãy hoặc bài viết cũ bị xóa đều bị hệ thống cũ tự động ép chuyển hướng (Redirect 301) về trang Đặt hẹn. Google đánh giá đây là lỗi Soft 404, làm <strong>hạ điểm uy tín (Domain Trust)</strong> của chính trang đặt hẹn và gây ức chế khi người bệnh bị văng vào form ngoài ý muốn.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-rose-100 bg-white p-4 shadow-2xs">
+                <div className="font-bold text-slate-900 flex items-center gap-1.5 text-sm">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-rose-100 text-rose-700 text-xs font-black">2</span>
+                  Sitemap XML chậm cập nhật
+                </div>
+                <p className="mt-2 text-slate-600">
+                  Bản đồ gửi URL cho Google (Sitemap) có nhiều chuyên mục dừng cập nhật từ cuối năm 2023 dù website vẫn đăng bài trong năm 2026. Điều này khiến các bài viết chuyên khoa và dịch vụ mới <strong>chậm được Google phát hiện và hiển thị</strong> cho người bệnh tìm kiếm.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-rose-100 bg-white p-4 shadow-2xs">
+                <div className="font-bold text-slate-900 flex items-center gap-1.5 text-sm">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-rose-100 text-rose-700 text-xs font-black">3</span>
+                  Máy chủ chưa bật bộ đệm (Cache)
+                </div>
+                <p className="mt-2 text-slate-600">
+                  Mặc dù có kết nối Cloudflare nhưng toàn bộ tài nguyên web đang ở trạng thái <code>DYNAMIC</code>, bắt máy chủ WordPress/PHP phải xử lý từng lượt xem trang đơn lẻ. Khi có nhiều người truy cập cùng lúc, tốc độ phản hồi máy chủ (TTFB) bị kéo dài.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
 
@@ -390,11 +447,11 @@ export default function ChienLuocTangTruongPage() {
                   <ul className="mt-2 space-y-2 text-slate-700">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-1" />
-                      <span>Gom bài viết vào <strong>6 nhóm chuyên khoa chính</strong> (Mũi Xoang, Amidan, Ù Tai - Thính Học, Đo Giấc Ngủ, TMH Nhi, Phẫu thuật).</span>
+                      <span>Gom bài viết vào <strong>6 nhóm chuyên khoa chính</strong>, tập trung dẫn phễu về <strong>4 dịch vụ mũi nhọn có giá trị điều trị cao</strong>: Phẫu thuật Xoang FESS, Cắt Amidan/Nạo VA Plasma, Đo Giấc Ngủ (OSAS) và Phục hồi Ù tai.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-1" />
-                      <span>Đầu mỗi bài có đoạn tóm tắt 50 từ dễ hiểu và để rõ tên bác sĩ kiểm duyệt nội dung.</span>
+                      <span>Đầu mỗi bài có đoạn tóm tắt trực diện 50 từ (Direct Answer Block) và để rõ tên bác sĩ kiểm duyệt để các công cụ AI (ChatGPT, Google Gemini) ưu tiên trích dẫn nguồn uy tín.</span>
                     </li>
                   </ul>
                 </div>
@@ -433,11 +490,11 @@ export default function ChienLuocTangTruongPage() {
                   <ul className="mt-2 space-y-2 text-slate-700">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-1" />
-                      <span>Xây dựng trang tiếng Anh riêng tại <strong>/english</strong> với 100% tiếng Anh chuẩn xác.</span>
+                      <span>Xây dựng cổng tiếng Anh chuẩn tại <strong>/english</strong> phục vụ cộng đồng Expat tại Q.1, Q.2, Q.7 và khách du lịch y tế.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-1" />
-                      <span>Nêu rõ quy trình đón tiếp, bảo lãnh viện phí hơn 35 hãng bảo hiểm và xuất hồ sơ y khoa bằng tiếng Anh.</span>
+                      <span>Quy trình bệnh nhân quốc tế: Tiếp đón nhân sự tiếng Anh tại Quận 1, khám nội soi màn hình trực tiếp, xuất hóa đơn VAT và hồ sơ y khoa có mã ICD-10 trong 30 phút để thanh toán bảo hiểm quốc tế (Direct Billing hơn 35 hãng).</span>
                     </li>
                   </ul>
                 </div>
@@ -487,6 +544,49 @@ export default function ChienLuocTangTruongPage() {
               </div>
             </div>
 
+          </div>
+
+          {/* Growth Focus: High-Value Clinical Services Box */}
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-4">
+              <div>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-700">
+                  <Stethoscope className="h-4 w-4" />
+                  Chiến lược tăng trưởng trọng tâm • Khai thác dịch vụ kỹ thuật cao
+                </div>
+                <h3 className="mt-1 text-lg font-bold text-slate-950">
+                  Tập trung dẫn phễu vào 4 dịch vụ mũi nhọn có biên lợi nhuận tốt
+                </h3>
+              </div>
+              <span className="text-xs text-slate-500">Định vị bệnh viện chuyên khoa số 1</span>
+            </div>
+
+            <p className="mt-4 text-sm text-slate-600 leading-relaxed">
+              Bệnh viện chuyên khoa tư nhân không cần cạnh tranh lượt xem các bài viết cảm sốt thông thường với các bệnh viện đa khoa lớn. Mọi bài viết y khoa và lưu lượng tìm kiếm cần được tổ chức để dẫn phễu người bệnh có triệu chứng thực tế về <strong>4 nhóm phẫu thuật & điều trị chuyên sâu</strong>:
+            </p>
+
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-4">
+                <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Mũi nhọn 1</div>
+                <div className="mt-1 font-bold text-slate-900 text-sm">Phẫu thuật Mũi Xoang & Vách ngăn</div>
+                <div className="mt-1.5 text-xs text-slate-600 leading-5">Phẫu thuật nội soi FESS, chỉnh hình vách ngăn không đau, phục hồi nhanh cùng ngày.</div>
+              </div>
+              <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-4">
+                <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Mũi nhọn 2</div>
+                <div className="mt-1 font-bold text-slate-900 text-sm">Cắt Amidan & Nạo VA Plasma</div>
+                <div className="mt-1.5 text-xs text-slate-600 leading-5">Công nghệ dao Plasma / Coblator nhiệt độ thấp, ít chảy máu, xuất viện sau 24 giờ.</div>
+              </div>
+              <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-4">
+                <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Mũi nhọn 3</div>
+                <div className="mt-1 font-bold text-slate-900 text-sm">Đo Đa Ký Giấc Ngủ (OSAS)</div>
+                <div className="mt-1.5 text-xs text-slate-600 leading-5">Chẩn đoán và điều trị hội chứng ngưng thở khi ngủ & ngủ ngáy – dịch vụ cao cấp ít cơ sở có.</div>
+              </div>
+              <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-4">
+                <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Mũi nhọn 4</div>
+                <div className="mt-1 font-bold text-slate-900 text-sm">Thính học & Trị liệu Ù tai</div>
+                <div className="mt-1.5 text-xs text-slate-600 leading-5">Đo thính lực buồng cách âm chuẩn quốc tế, máy trợ thính kỹ thuật số và liệu trình trị liệu ù tai chuyên sâu.</div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -577,6 +677,28 @@ export default function ChienLuocTangTruongPage() {
                 Đo được từ lúc người bệnh xem bài đến số ca khám thực tế; form gợi ý đúng bác sĩ phù hợp với triệu chứng.
               </div>
 
+            
+              {/* Row 6: Soft 404 & Sitemap */}
+              <div className="p-4 font-bold text-slate-900 md:col-span-3 bg-slate-50/40 text-sm">
+                6. Link hỏng & Sitemap XML
+              </div>
+              <div className="p-4 text-sm leading-6 text-slate-600 md:col-span-4">
+                Link gãy/sai bị tự động ép redirect về trang đặt hẹn gây Soft 404; sitemap chậm cập nhật bài mới từ 2023.
+              </div>
+              <div className="p-4 text-sm leading-6 text-slate-800 md:col-span-5 font-medium bg-emerald-50/20">
+                Xóa bỏ redirect ép buộc, trả mã <strong>404 chuẩn kèm thanh tìm kiếm</strong>; sitemap XML tự động cập nhật bài mới tức thì.
+              </div>
+
+              {/* Row 7: Server & Performance */}
+              <div className="p-4 font-bold text-slate-900 md:col-span-3 bg-slate-50/40 text-sm">
+                7. Hạ tầng & Bộ nhớ đệm
+              </div>
+              <div className="p-4 text-sm leading-6 text-slate-600 md:col-span-4">
+                Máy chủ xử lý từng request đơn lẻ (chưa bật cache), ảnh thô nặng 7.8MB khiến điện thoại tải chậm quá 3 giây.
+              </div>
+              <div className="p-4 text-sm leading-6 text-slate-800 md:col-span-5 font-medium bg-emerald-50/20">
+                Bật <strong>bộ nhớ đệm toàn cầu</strong>, nén ảnh tự động chuẩn WebP, mở trang <strong>dưới 1 giây</strong> trên điện thoại.
+              </div>
             </div>
           </div>
         </section>
@@ -682,6 +804,87 @@ export default function ChienLuocTangTruongPage() {
               </div>
             </div>
 
+          </div>
+        
+          {/* RACI Coordination Framework */}
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-4">
+              <div>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-700">
+                  <Users className="h-4 w-4" />
+                  Cơ chế vận hành • Mô hình phối hợp 3 bên (RACI Framework)
+                </div>
+                <h3 className="mt-1 text-lg font-bold text-slate-950">
+                  Phân định rõ trách nhiệm để triển khai kế hoạch đúng tiến độ
+                </h3>
+              </div>
+              <span className="text-xs text-slate-500">Phối hợp liên phòng ban</span>
+            </div>
+
+            <div className="mt-5 grid gap-4 md:grid-cols-3 text-xs leading-relaxed">
+              <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5">
+                <div className="flex items-center gap-2 text-sm font-bold text-brand-700">
+                  <Server className="h-4 w-4" />
+                  1. Bộ phận Kỹ thuật & Website
+                </div>
+                <div className="mt-3 space-y-2 text-slate-700">
+                  <div className="flex items-start gap-1.5">
+                    <span className="text-brand-600 font-bold">•</span>
+                    <span>Sửa triệt để lỗi sitemap, canonical và schema thực thể Bệnh viện.</span>
+                  </div>
+                  <div className="flex items-start gap-1.5">
+                    <span className="text-brand-600 font-bold">•</span>
+                    <span>Tối ưu tốc độ tải trang dưới 1 giây và bật bộ nhớ đệm CDN.</span>
+                  </div>
+                  <div className="flex items-start gap-1.5">
+                    <span className="text-brand-600 font-bold">•</span>
+                    <span>Cài đặt công cụ đo lường chuyển đổi (Search Console, GA4, Hotline).</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5">
+                <div className="flex items-center gap-2 text-sm font-bold text-purple-700">
+                  <Stethoscope className="h-4 w-4" />
+                  2. Hội đồng Y khoa & Bác sĩ
+                </div>
+                <div className="mt-3 space-y-2 text-slate-700">
+                  <div className="flex items-start gap-1.5">
+                    <span className="text-purple-600 font-bold">•</span>
+                    <span>Rà soát và ký duyệt chuyên môn 204 bài viết mũi nhọn (chuẩn E-E-A-T).</span>
+                  </div>
+                  <div className="flex items-start gap-1.5">
+                    <span className="text-purple-600 font-bold">•</span>
+                    <span>Cung cấp bằng cấp, chứng chỉ và lịch khám định kỳ chính xác của 18 bác sĩ.</span>
+                  </div>
+                  <div className="flex items-start gap-1.5">
+                    <span className="text-purple-600 font-bold">•</span>
+                    <span>Thẩm định bảng gợi ý chuyên khoa theo triệu chứng bệnh trong form đặt hẹn.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5">
+                <div className="flex items-center gap-2 text-sm font-bold text-emerald-700">
+                  <ShieldCheck className="h-4 w-4" />
+                  3. Tiếp tân & Chăm sóc Khách hàng
+                </div>
+                <div className="mt-3 space-y-2 text-slate-700">
+                  <div className="flex items-start gap-1.5">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span>Cam kết gọi lại xác nhận lịch hẹn trực tuyến trong vòng 15 phút.</span>
+                  </div>
+                  <div className="flex items-start gap-1.5">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span>Nắm rõ quy trình tiếp đón có nhân sự tiếng Anh cho bệnh nhân quốc tế.</span>
+                  </div>
+                  <div className="flex items-start gap-1.5">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span>Tư vấn rõ ràng chính sách bảo lãnh viện phí cho hơn 35 hãng bảo hiểm liên kết.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
