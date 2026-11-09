@@ -322,21 +322,14 @@ export default function ChienLuocTangTruongPage() {
             <div className="rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs space-y-8">
               
               {/* Header */}
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-slate-100 pb-5">
-                <div>
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-700">
-                    <TrendingUp className="h-4 w-4" />
-                    Nghiên cứu nhu cầu thực tế • Dữ liệu phân tích từ 3.968 từ khóa
-                  </div>
-                  <h3 className="mt-1 text-xl sm:text-2xl font-black text-slate-950">
-                    Định cỡ Dung lượng Thị trường Tìm kiếm (Search Market Sizing)
-                  </h3>
+              <div className="border-b border-slate-100 pb-5">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-700">
+                  <TrendingUp className="h-4 w-4" />
+                  Nghiên cứu nhu cầu thực tế • Dữ liệu phân tích từ 3.968 từ khóa
                 </div>
-                <div className="flex items-center gap-2 self-start sm:self-auto">
-                  <span className="inline-flex items-center rounded-lg bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-800 border border-emerald-200/60">
-                    Đã chuẩn hóa & Khử trùng lặp
-                  </span>
-                </div>
+                <h3 className="mt-1 text-xl sm:text-2xl font-black text-slate-950">
+                  Định cỡ Dung lượng Thị trường Tìm kiếm (Search Market Sizing)
+                </h3>
               </div>
 
               {/* 3 Tier Market Sizing Metric Cards (TAM - SAM - SOM) */}
@@ -380,13 +373,8 @@ export default function ChienLuocTangTruongPage() {
 
               {/* Breakdown of 4 Core Service Clusters with Representative Keywords */}
               <div className="space-y-4">
-                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                  <div className="text-sm font-bold text-slate-950 uppercase tracking-wide">
-                    4 Cụm Từ Khóa Tiêu Biểu & Phân Bổ Ý Định Tìm Kiếm
-                  </div>
-                  <div className="text-xs text-slate-500">
-                    Nguồn: Đối soát từ thư mục dữ liệu từ khóa dự án (taimuihongsg-key)
-                  </div>
+                <div className="text-sm font-bold text-slate-950 uppercase tracking-wide">
+                  4 Cụm Từ Khóa Tiêu Biểu & Phân Bổ Ý Định Tìm Kiếm
                 </div>
 
                 <div className="grid gap-4 md:grid-cols-2">
@@ -795,18 +783,13 @@ export default function ChienLuocTangTruongPage() {
 
             {/* Research & Strategy: GEO / AEO in Healthcare */}
             <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs space-y-6">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-4">
-                <div>
-                  <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-purple-700">
-                    Nghiên cứu công nghệ tìm kiếm • Chiến lược GEO & AEO trong Y tế
-                  </div>
-                  <h3 className="mt-1 text-xl sm:text-2xl font-bold text-slate-950">
-                    Tại sao tối ưu hóa cho AI (GEO/AEO) là bước ngoặt sống còn của Bệnh viện?
-                  </h3>
+              <div className="border-b border-slate-100 pb-4">
+                <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-purple-700">
+                  Nghiên cứu công nghệ tìm kiếm • Chiến lược GEO & AEO trong Y tế
                 </div>
-                <span className="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-lg shrink-0">
-                  Xu hướng tìm kiếm 2024 - 2026
-                </span>
+                <h3 className="mt-1 text-xl sm:text-2xl font-bold text-slate-950">
+                  Tại sao tối ưu hóa cho AI (GEO/AEO) là bước ngoặt sống còn của Bệnh viện?
+                </h3>
               </div>
 
               <p className="text-base text-slate-600 leading-relaxed">
