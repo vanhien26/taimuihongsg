@@ -713,13 +713,13 @@ export default function ChienLuocTangTruongPage() {
           <div>
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-700">
               <Clock className="h-4 w-4" />
-              Phần 4 • Kế hoạch triển khai theo từng tuần
+              Phần 4 • Đề xuất Lộ trình theo Giai đoạn ưu tiên
             </div>
             <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-950 md:text-4xl">
               Thứ tự ưu tiên các việc cần làm
             </h2>
             <p className="mt-2 max-w-3xl text-base leading-relaxed text-slate-600">
-              Làm việc quan trọng trước để không gián đoạn hoạt động khám chữa bệnh thường nhật.
+              Triển khai theo thứ tự ưu tiên từ nền tảng kỹ thuật đến nội dung chuyên môn và mở rộng đo lường, không làm gián đoạn hoạt động khám chữa bệnh thường nhật.
             </p>
           </div>
 
@@ -728,7 +728,7 @@ export default function ChienLuocTangTruongPage() {
             {/* Phase 1 */}
             <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-7 shadow-sm">
               <div>
-                <div className="text-sm font-bold uppercase tracking-wider text-brand-700">Tuần 1 - 2 (Làm trước)</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-brand-700">Giai đoạn 1 • Ưu tiên nền tảng</div>
                 <h3 className="mt-1 text-xl font-bold text-slate-950">Sửa lỗi tìm kiếm & Thống nhất tên bệnh viện</h3>
               </div>
 
@@ -748,15 +748,15 @@ export default function ChienLuocTangTruongPage() {
               </div>
 
               <div className="mt-6 border-t border-slate-100 pt-4 text-sm font-bold text-slate-900">
-                Kết quả: Google nhận diện đúng tên bệnh viện và bác sĩ, không còn lỗi kỹ thuật.
+                Mục tiêu hoàn thành: Google nhận diện đúng tên bệnh viện và bác sĩ, không còn lỗi kỹ thuật ngầm.
               </div>
             </div>
 
             {/* Phase 2 */}
             <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-7 shadow-sm">
               <div>
-                <div className="text-sm font-bold uppercase tracking-wider text-slate-600">Tuần 3 - 6 (Làm tiếp theo)</div>
-                <h3 className="mt-1 text-xl font-bold text-slate-950">Sắp xếp lại bài viết & Hoàn thiện trang tiếng Anh</h3>
+                <div className="text-sm font-bold uppercase tracking-wider text-slate-600">Giai đoạn 2 • Tái cấu trúc nội dung</div>
+                <h3 className="mt-1 text-xl font-bold text-slate-950">Sắp xếp lại bài viết & Cổng tiếng Anh</h3>
               </div>
 
               <div className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700">
@@ -766,7 +766,7 @@ export default function ChienLuocTangTruongPage() {
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Hoàn thiện trang tiếng Anh cho người nước ngoài và danh sách bảo hiểm.</span>
+                  <span>Hoàn thiện cổng tiếng Anh riêng biệt cho người nước ngoài và danh mục bảo lãnh.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -775,14 +775,14 @@ export default function ChienLuocTangTruongPage() {
               </div>
 
               <div className="mt-6 border-t border-slate-100 pt-4 text-sm font-bold text-slate-900">
-                Kết quả: Người bệnh đọc bài thấy tin cậy hơn, người nước ngoài có trang đặt hẹn rõ ràng.
+                Mục tiêu hoàn thành: Người bệnh đọc bài thấy tin cậy hơn, khách quốc tế có kênh đặt hẹn chuẩn xác.
               </div>
             </div>
 
             {/* Phase 3 */}
             <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-7 shadow-sm">
               <div>
-                <div className="text-sm font-bold uppercase tracking-wider text-slate-600">Tuần 7 - 12 (Đo lường & Mở rộng)</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-slate-600">Giai đoạn 3 • Mở rộng & Tối ưu</div>
                 <h3 className="mt-1 text-xl font-bold text-slate-950">Tối ưu tìm kiếm bản đồ & Đo lường thực tế</h3>
               </div>
 
@@ -793,19 +793,23 @@ export default function ChienLuocTangTruongPage() {
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Đẩy mạnh các dịch vụ mũi nhọn: Đo giấc ngủ, phẫu thuật xoang, nạo VA.</span>
+                  <span>Đẩy mạnh dẫn phễu vào 4 dịch vụ mũi nhọn: Đo giấc ngủ, phẫu thuật xoang, nạo VA.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Báo cáo số cuộc gọi và số lượt đặt lịch thực tế hàng tháng.</span>
+                  <span>Đối soát số cuộc gọi và số lượt đặt lịch thực tế định kỳ hàng tháng.</span>
                 </div>
               </div>
 
               <div className="mt-6 border-t border-slate-100 pt-4 text-sm font-bold text-slate-900">
-                Kết quả: Nắm rõ hiệu quả thực tế và số ca khám mang lại từ kênh trực tuyến.
+                Mục tiêu hoàn thành: Nắm rõ hiệu quả thực tế và số ca khám mang lại từ kênh trực tuyến.
               </div>
             </div>
 
+          </div>
+
+          <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 text-sm leading-relaxed text-slate-600">
+            <strong className="text-slate-900 font-bold">Lưu ý về tiến độ:</strong> Đây là <em>lộ trình phân kỳ theo thứ tự ưu tiên logic</em>. Thời gian triển khai chi tiết cho từng giai đoạn sẽ được xây dựng và thống nhất sau khi Ban Giám Đốc phê duyệt phạm vi công việc cùng nguồn lực phối hợp của các phòng ban.
           </div>
         
           {/* RACI Coordination Framework */}
