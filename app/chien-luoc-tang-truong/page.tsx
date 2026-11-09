@@ -991,117 +991,299 @@ export default function ChienLuocTangTruongPage() {
 
 
         {/* ========================================================================= */}
-        {/* SECTION 5: MEASUREMENT FRAMEWORK                                          */}
+        {/* SECTION 5: MEASUREMENT FRAMEWORK & TELEMETRY BOARD                        */}
         {/* ========================================================================= */}
-        <section id="kpis" className="scroll-mt-36 py-14 sm:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8">
+        <section id="kpis" className="scroll-mt-36 py-16 sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
             
-            {/* Header */}
-            <div>
+            {/* Header & Manifesto */}
+            <div className="space-y-3">
               <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-700">
                 <Activity className="h-5 w-5" />
                 Phần 5 • Đề xuất Khung đo lường hiệu quả (Measurement Framework)
               </div>
-              <h2 className="mt-2 text-2xl font-black tracking-tight text-slate-950 sm:text-3xl md:text-4xl">
+              <h2 className="text-2xl font-black tracking-tight text-slate-950 sm:text-3xl md:text-4xl">
                 Các chỉ số cần cài đặt theo dõi sau khi sửa website
               </h2>
-              <p className="mt-2 max-w-3xl text-base leading-relaxed text-slate-600">
-                Báo cáo này dừng lại ở việc <strong>Audit hiện trạng</strong> và <strong>Đề xuất Kế hoạch Tăng trưởng</strong>. Chúng tôi không tự đưa ra các con số cam kết (KPI) ảo trước khi kết nối dữ liệu đo lường thực tế từ Search Console, Google Analytics 4 và hệ thống quản lý bệnh nhân của bệnh viện.
+              <p className="max-w-3xl text-base leading-relaxed text-slate-600">
+                Báo cáo này dừng lại ở việc <strong>Audit hiện trạng</strong> và <strong>Đề xuất Kế hoạch Tăng trưởng</strong>. Chúng tôi chủ trương <strong>không tự đặt ra các con số KPI cảm tính</strong> trước khi kết nối đầy đủ hạ tầng đo lường từ Search Console, Google Analytics 4 và dữ liệu tiếp nhận bệnh nhân thực tế.
               </p>
             </div>
 
-            {/* 4 Measurement Groups */}
-            <div className="grid gap-6 md:grid-cols-4">
+            {/* Closed-loop Patient Telemetry Flow (Luồng đo lường khép kín) */}
+            <div className="rounded-2xl border border-slate-200/90 bg-slate-50/70 p-6 sm:p-8">
+              <div className="mb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-200/80 pb-3">
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-700">
+                  Mô hình đo lường khép kín • Từ Tìm kiếm trực tuyến đến Bệnh nhân thực tế
+                </span>
+                <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200/60">
+                  Data Pipeline: Web → Phone/Form → HIS Phòng khám
+                </span>
+              </div>
               
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
-                <div>
-                  <div className="text-xs font-bold uppercase tracking-wider text-purple-700">Nhóm 1</div>
-                  <h4 className="mt-1 text-lg font-bold text-slate-950">Chuẩn hóa thông tin</h4>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="space-y-1.5 rounded-xl border border-slate-200/60 bg-white p-4 shadow-2xs">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-400">
+                    <span>TẦNG 1</span>
+                    <span className="text-purple-600 font-semibold">GSC / AI / Maps</span>
+                  </div>
+                  <div className="font-bold text-slate-950 text-base">Hiện diện tìm kiếm</div>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Đo lượt hiển thị và nhấp chuột tự nhiên từ người tìm triệu chứng bệnh & địa chỉ viện.
+                  </p>
                 </div>
-                <div className="space-y-3 text-sm text-slate-700 leading-relaxed divide-y divide-slate-100">
-                  <div className="pt-2">
-                    <span className="font-bold text-slate-950 block">Tên bệnh viện:</span>
-                    <span className="text-slate-600 mt-0.5 block">Sửa dứt điểm lỗi hiển thị nhầm sang phòng khám đa khoa.</span>
+
+                <div className="space-y-1.5 rounded-xl border border-slate-200/60 bg-white p-4 shadow-2xs">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-400">
+                    <span>TẦNG 2</span>
+                    <span className="text-brand-600 font-semibold">Google Analytics 4</span>
                   </div>
-                  <div className="pt-2">
-                    <span className="font-bold text-slate-950 block">Kiểm duyệt y khoa:</span>
-                    <span className="text-slate-600 mt-0.5 block">Rà soát các bài viết chuyên khoa trọng điểm để bổ sung tên bác sĩ duyệt.</span>
+                  <div className="font-bold text-slate-950 text-base">Tương tác nội dung</div>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Theo dõi thời gian đọc bài, tỷ lệ thoát trang và luồng di chuyển vào từng chuyên khoa.
+                  </p>
+                </div>
+
+                <div className="space-y-1.5 rounded-xl border border-slate-200/60 bg-white p-4 shadow-2xs">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-400">
+                    <span>TẦNG 3</span>
+                    <span className="text-emerald-600 font-semibold">GA4 Events / DataLayer</span>
                   </div>
-                  <div className="pt-2">
-                    <span className="font-bold text-slate-950 block">Hồ sơ bác sĩ:</span>
-                    <span className="text-slate-600 mt-0.5 block">Tách trang độc lập, sửa lỗi trỏ nhầm canonical.</span>
+                  <div className="font-bold text-slate-950 text-base">Chuyển đổi trực tuyến</div>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Ghi nhận sự kiện bấm gọi hotline cấp cứu và số lượt gửi form đặt lịch khám thành công.
+                  </p>
+                </div>
+
+                <div className="space-y-1.5 rounded-xl border border-slate-200/60 bg-white p-4 shadow-2xs">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-400">
+                    <span>TẦNG 4</span>
+                    <span className="text-sky-600 font-semibold">HIS Viện & Tiếp tân</span>
+                  </div>
+                  <div className="font-bold text-slate-950 text-base">Khám thực tế tại viện</div>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Đối soát tỷ lệ người bệnh thực tế đến khám tại 1-3 & 6-8 Trịnh Văn Cấn (Show-up rate).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 4 Measurement Ledgers (Clean 2-Column Responsive Matrix) */}
+            <div className="grid gap-8 lg:grid-cols-2">
+
+              {/* Pillar 1: Chuẩn hóa Thực thể & E-E-A-T */}
+              <div className="rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-xs space-y-5">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                  <div className="flex items-center gap-2.5">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-purple-100 text-purple-700 text-xs font-black">
+                      01
+                    </span>
+                    <div>
+                      <h3 className="font-bold text-slate-950 text-lg">Chuẩn hóa Thực thể & Dữ liệu Y khoa</h3>
+                      <p className="text-xs text-slate-500">Mục tiêu: Bảo vệ uy tín thương hiệu Bệnh viện & Chuẩn E-E-A-T</p>
+                    </div>
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2.5 py-1 rounded-md">
+                    Chất lượng
+                  </span>
+                </div>
+
+                <div className="divide-y divide-slate-100 text-sm">
+                  <div className="py-3.5 first:pt-0 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Đồng bộ thương hiệu Bệnh viện</span>
+                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Schema / GSC</span>
+                    </div>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      Sửa dứt điểm tình trạng hiển thị nhầm lẫn sang phòng khám đa khoa trên Google Knowledge Panel và kết quả tìm kiếm.
+                    </p>
+                  </div>
+
+                  <div className="py-3.5 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Kiểm duyệt Y khoa bài viết</span>
+                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Medical Review Tag</span>
+                    </div>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      Rà soát và bổ sung tên bác sĩ chuyên khoa kiểm duyệt cho các bài viết chuyên khoa trọng điểm theo chuẩn y tế YMYL.
+                    </p>
+                  </div>
+
+                  <div className="py-3.5 last:pb-0 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Định danh Hồ sơ 18 Bác sĩ</span>
+                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Screaming Frog / GSC</span>
+                    </div>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      Tách trang hồ sơ bác sĩ độc lập, sửa triệt để lỗi thẻ canonical trỏ nhầm về trang chủ, index đầy đủ chuyên khoa công tác.
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
-                <div>
-                  <div className="text-xs font-bold uppercase tracking-wider text-brand-700">Nhóm 2</div>
-                  <h4 className="mt-1 text-lg font-bold text-slate-950">Khả năng tìm thấy</h4>
+              {/* Pillar 2: Khả năng Tìm thấy & Tối ưu AI (Visibility & GEO) */}
+              <div className="rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-xs space-y-5">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                  <div className="flex items-center gap-2.5">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-100 text-brand-700 text-xs font-black">
+                      02
+                    </span>
+                    <div>
+                      <h3 className="font-bold text-slate-950 text-lg">Khả năng Tìm thấy & Hiện diện AI (GEO)</h3>
+                      <p className="text-xs text-slate-500">Mục tiêu: Mở rộng tiếp cận tự nhiên và đón đầu tìm kiếm AI</p>
+                    </div>
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-brand-700 bg-brand-50 px-2.5 py-1 rounded-md">
+                    Tìm kiếm
+                  </span>
                 </div>
-                <div className="space-y-3 text-sm text-slate-700 leading-relaxed divide-y divide-slate-100">
-                  <div className="pt-2">
-                    <span className="font-bold text-slate-950 block">Lượt tìm kiếm tự nhiên:</span>
-                    <span className="text-slate-600 mt-0.5 block">Đo qua Search Console (mốc tham khảo bên thứ ba ~69K/tháng).</span>
+
+                <div className="divide-y divide-slate-100 text-sm">
+                  <div className="py-3.5 first:pt-0 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Lưu lượng tìm kiếm tự nhiên</span>
+                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Google Search Console</span>
+                    </div>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      Theo dõi số lượt hiển thị (Impressions) và nhấp chuột (Clicks) thực tế từ Google (đối soát với mốc tham khảo bên thứ ba ~69K/tháng).
+                    </p>
                   </div>
-                  <div className="pt-2">
-                    <span className="font-bold text-slate-950 block">Trích dẫn trên AI:</span>
-                    <span className="text-slate-600 mt-0.5 block">Theo dõi tần suất xuất hiện trên Google AI và ChatGPT.</span>
+
+                  <div className="py-3.5 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Tần suất trích dẫn trên AI (AEO)</span>
+                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">AI Overviews / ChatGPT</span>
+                    </div>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      Theo dõi định kỳ tỷ lệ website được các cỗ máy AI (Google Gemini, AI Overviews, Perplexity) chọn làm nguồn trích dẫn y khoa đáng tin cậy.
+                    </p>
                   </div>
-                  <div className="pt-2">
-                    <span className="font-bold text-slate-950 block">Bản đồ Google Maps:</span>
-                    <span className="text-slate-600 mt-0.5 block">Đo lượt xem và gọi điện từ vị trí cơ sở Quận 1.</span>
+
+                  <div className="py-3.5 last:pb-0 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Hiệu quả Bản đồ Google Maps</span>
+                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Google Business Profile</span>
+                    </div>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      Đo lường số lượt xem vị trí, yêu cầu chỉ đường và cuộc gọi điện trực tiếp từ người bệnh ở Quận 1 và khu vực trung tâm TP.HCM.
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
-                <div>
-                  <div className="text-xs font-bold uppercase tracking-wider text-emerald-700">Nhóm 3</div>
-                  <h4 className="mt-1 text-lg font-bold text-slate-950">Hành vi người bệnh</h4>
+              {/* Pillar 3: Hành vi & Chuyển đổi Người bệnh */}
+              <div className="rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-xs space-y-5">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                  <div className="flex items-center gap-2.5">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700 text-xs font-black">
+                      03
+                    </span>
+                    <div>
+                      <h3 className="font-bold text-slate-950 text-lg">Chuyển đổi & Hành vi Người bệnh</h3>
+                      <p className="text-xs text-slate-500">Mục tiêu: Đánh giá tỷ lệ người đọc chuyển thành người đặt hẹn</p>
+                    </div>
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">
+                    Chuyển đổi
+                  </span>
                 </div>
-                <div className="space-y-3 text-sm text-slate-700 leading-relaxed divide-y divide-slate-100">
-                  <div className="pt-2">
-                    <span className="font-bold text-slate-950 block">Bấm gọi Hotline:</span>
-                    <span className="text-slate-600 mt-0.5 block">Cài mã theo dõi số lượt bấm gọi trên website.</span>
+
+                <div className="divide-y divide-slate-100 text-sm">
+                  <div className="py-3.5 first:pt-0 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Bấm gọi Hotline & Cấp cứu</span>
+                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">GA4 Event: click_hotline</span>
+                    </div>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      Cài đặt mã theo dõi sự kiện bấm gọi số 028 38.213.456 và số cấp cứu 090 3123381 trên cả giao diện di động và máy tính.
+                    </p>
                   </div>
-                  <div className="pt-2">
-                    <span className="font-bold text-slate-950 block">Gửi form đặt hẹn:</span>
-                    <span className="text-slate-600 mt-0.5 block">Đo số lượt gửi form hoàn tất mỗi tuần.</span>
+
+                  <div className="py-3.5 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Gửi form đặt hẹn trực tuyến</span>
+                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">GA4 Event: booking_submit</span>
+                    </div>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      Đo số lượt gửi phiếu đăng ký khám hoàn tất mỗi tuần; theo dõi tỷ lệ rớt ở từng bước điền thông tin (Form Abandonment Rate).
+                    </p>
                   </div>
-                  <div className="pt-2">
-                    <span className="font-bold text-slate-950 block">Bệnh nhân đến khám:</span>
-                    <span className="text-slate-600 mt-0.5 block">Đối chiếu dữ liệu web với sổ tiếp nhận thực tế tại viện.</span>
+
+                  <div className="py-3.5 last:pb-0 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Đối soát Bệnh nhân đến khám</span>
+                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">HIS & Báo cáo Tiếp tân</span>
+                    </div>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      Đối chiếu định kỳ giữa danh sách đăng ký qua web với số bệnh nhân thực tế đến làm thủ tục tại viện để tính tỷ lệ đến khám thực (Show-up rate).
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
-                <div>
-                  <div className="text-xs font-bold uppercase tracking-wider text-sky-700">Nhóm 4</div>
-                  <h4 className="mt-1 text-lg font-bold text-slate-950">Dịch vụ thế mạnh</h4>
+              {/* Pillar 4: Khách hàng Quốc tế & Dịch vụ Trọng tâm */}
+              <div className="rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-xs space-y-5">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                  <div className="flex items-center gap-2.5">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-sky-100 text-sky-700 text-xs font-black">
+                      04
+                    </span>
+                    <div>
+                      <h3 className="font-bold text-slate-950 text-lg">Phân khúc Trọng tâm & Khách Quốc tế</h3>
+                      <p className="text-xs text-slate-500">Mục tiêu: Đánh giá sự quan tâm đến các dịch vụ thế mạnh</p>
+                    </div>
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-sky-700 bg-sky-50 px-2.5 py-1 rounded-md">
+                    Phân khúc
+                  </span>
                 </div>
-                <div className="space-y-3 text-sm text-slate-700 leading-relaxed divide-y divide-slate-100">
-                  <div className="pt-2">
-                    <span className="font-bold text-slate-950 block">Đo đa ký giấc ngủ:</span>
-                    <span className="text-slate-600 mt-0.5 block">Đo số lượt đọc và gửi tư vấn về ngáy/ngưng thở khi ngủ.</span>
+
+                <div className="divide-y divide-slate-100 text-sm">
+                  <div className="py-3.5 first:pt-0 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Dịch vụ Đo đa ký giấc ngủ & Kỹ thuật cao</span>
+                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">GA4 Specialty Funnel</span>
+                    </div>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      Theo dõi số lượt tìm hiểu và yêu cầu tư vấn các dịch vụ đặc thù (ngưng thở khi ngủ OSAS, phẫu thuật xoang, đo thính lực buồng cách âm).
+                    </p>
                   </div>
-                  <div className="pt-2">
-                    <span className="font-bold text-slate-950 block">Bệnh nhân nước ngoài:</span>
-                    <span className="text-slate-600 mt-0.5 block">Theo dõi lượng truy cập trang tiếng Anh (/english).</span>
+
+                  <div className="py-3.5 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Lưu lượng Bệnh nhân Quốc tế</span>
+                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">GA4 Geo / English Portal</span>
+                    </div>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      Theo dõi lượng truy cập và liên hệ từ người nước ngoài qua khu vực tiếng Anh (/english) và người dùng tìm kiếm tại khu vực Quận 1.
+                    </p>
                   </div>
-                  <div className="pt-2">
-                    <span className="font-bold text-slate-950 block">Bảo lãnh viện phí:</span>
-                    <span className="text-slate-600 mt-0.5 block">Đo lượt xem danh sách 35 hãng bảo hiểm liên kết.</span>
+
+                  <div className="py-3.5 last:pb-0 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Tương tác Bảo lãnh Viện phí</span>
+                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">GA4 Event: view_insurance</span>
+                    </div>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      Đo lường số lượt tra cứu danh sách 35 hãng bảo hiểm liên kết, thời gian xem quy trình thanh toán trực tiếp viện phí.
+                    </p>
                   </div>
                 </div>
               </div>
 
             </div>
 
-            {/* Disclaimer */}
-            <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-5 text-sm leading-relaxed text-slate-700">
-              <strong className="text-slate-950 font-bold">Lưu ý về số liệu:</strong> Đây là <em>khung đo lường đề xuất</em>. Báo cáo không tự đặt ra các chỉ tiêu cam kết (KPI) về doanh thu hay số lượt khám cụ thể khi chưa có số đo xác thực từ Google Analytics 4, Search Console và dữ liệu vận hành phòng khám.
+            {/* Governance Callout */}
+            <div className="border-l-2 border-brand-500 bg-brand-50/50 p-5 rounded-r-2xl">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-brand-700 shrink-0 mt-0.5" />
+                <div className="space-y-1 text-sm leading-relaxed text-slate-700">
+                  <span className="font-bold text-slate-950">Cam kết về tính chuẩn xác của dữ liệu:</span>
+                  <p>
+                    Đây là <em>khung đo lường & giám sát kỹ thuật</em> đề xuất cho giai đoạn sau khi sửa website. Báo cáo không tự đưa ra các cam kết (KPI) tăng trưởng cảm tính về doanh thu hay số lượt khám cụ thể khi chưa kết nối trực tiếp với Google Analytics 4, Search Console và dữ liệu tiếp nhận của Bệnh viện.
+                  </p>
+                </div>
+              </div>
             </div>
 
           </div>
