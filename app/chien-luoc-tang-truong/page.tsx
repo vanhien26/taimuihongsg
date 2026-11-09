@@ -19,7 +19,6 @@ import {
   Server,
   Stethoscope,
   Users,
-  Sparkles,
   ShieldCheck,
   TrendingUp,
   FileCheck
@@ -180,9 +179,9 @@ export default function ChienLuocTangTruongPage() {
 
               <div className="space-y-3 border-l-2 border-brand-500 pl-5">
                 <div className="text-xs font-bold uppercase tracking-wider text-brand-700">03 • Hướng giải quyết</div>
-                <h3 className="text-xl font-bold text-slate-950">Khắc phục kỹ thuật & Định vị mũi nhọn</h3>
+                <h3 className="text-xl font-bold text-slate-950">Khắc phục kỹ thuật & Chuẩn hóa điều hướng chuyên khoa</h3>
                 <p className="text-base text-slate-600 leading-relaxed">
-                  Sửa dứt điểm các lỗi kỹ thuật ngầm, thống nhất tên Bệnh viện trên toàn bộ hệ thống, gom bài viết dẫn phễu về các ca phẫu thuật chuyên sâu và thiết lập hệ thống đo lường chuyển đổi thực tế.
+                  Sửa dứt điểm các lỗi kỹ thuật ngầm, thống nhất thương hiệu Bệnh viện trên toàn bộ hệ thống, chuẩn hóa điều hướng từ bài viết về đúng chuyên khoa và thiết lập hệ thống đo lường đặt hẹn thực tế.
                 </p>
               </div>
             </div>
@@ -238,7 +237,7 @@ export default function ChienLuocTangTruongPage() {
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-500">So sánh lượng người xem</span>
                   <h3 className="mt-1 text-2xl font-black text-slate-950">Lượng người vào web so với các bệnh viện khác</h3>
                   <p className="mt-2 text-base text-slate-600 leading-relaxed">
-                    Lượng người vào website hiện thấp hơn các bệnh viện đa khoa lớn. Hướng đi đúng không phải chạy đua viết thêm bài lan man, mà tập trung vào các dịch vụ mũi nhọn: Mũi xoang, Amidan, Ù tai, Đo giấc ngủ và Phẫu thuật.
+                    Lượng người vào website hiện thấp hơn các bệnh viện đa khoa lớn. Hướng đi đúng không phải chạy đua viết thêm bài lan man, mà tập trung điều hướng người bệnh có triệu chứng thực tế về đúng các chuyên khoa điều trị thế mạnh của Bệnh viện.
                   </p>
                 </div>
 
@@ -471,7 +470,7 @@ export default function ChienLuocTangTruongPage() {
                     <ul className="space-y-2.5 text-slate-700">
                       <li className="flex items-start gap-2.5">
                         <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span>Gom bài viết vào <strong>6 nhóm chuyên khoa chính</strong>, tập trung dẫn phễu về <strong>4 dịch vụ mũi nhọn có giá trị điều trị cao</strong>: Phẫu thuật Xoang FESS, Cắt Amidan/Nạo VA Plasma, Đo Giấc Ngủ (OSAS) và Phục hồi Ù tai.</span>
+                        <span>Gom bài viết vào các nhóm chuyên khoa chính, bổ sung khối thông tin điều hướng rõ ràng để người bệnh có triệu chứng dễ dàng tìm hiểu quy trình khám và đặt hẹn với bác sĩ chuyên khoa tương ứng.</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
@@ -570,49 +569,58 @@ export default function ChienLuocTangTruongPage() {
 
             </div>
 
-            {/* Growth Focus: High-Value Clinical Services Box */}
+            {/* Content to Clinical Specialty Alignment Framework */}
             <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-4">
                 <div>
                   <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-700">
                     <Stethoscope className="h-5 w-5" />
-                    Chiến lược tăng trưởng trọng tâm • Khai thác dịch vụ kỹ thuật cao
+                    Định hướng chuyển đổi • Liên kết nội dung với chuyên khoa thực tế
                   </div>
                   <h3 className="mt-1 text-xl sm:text-2xl font-bold text-slate-950">
-                    Tập trung dẫn phễu vào 4 dịch vụ mũi nhọn có biên lợi nhuận tốt
+                    Phân luồng nội dung theo danh mục Chuyên khoa Kỹ thuật cao
                   </h3>
                 </div>
-                <span className="text-sm font-semibold text-slate-600">Định vị bệnh viện chuyên khoa số 1</span>
+                <span className="text-sm font-semibold text-slate-600">Định vị chuyên môn Tai Mũi Họng</span>
               </div>
 
               <p className="mt-4 text-base text-slate-600 leading-relaxed">
-                Bệnh viện chuyên khoa tư nhân không cần cạnh tranh lượt xem các bài viết cảm sốt thông thường với các bệnh viện đa khoa lớn. Mọi bài viết y khoa và lưu lượng tìm kiếm cần được tổ chức để dẫn phễu người bệnh có triệu chứng thực tế về <strong>4 nhóm phẫu thuật & điều trị chuyên sâu</strong>:
+                Là bệnh viện chuyên khoa, website không nên dàn trải bài viết theo các triệu chứng đại trà (cảm, ho, sốt thông thường) vốn đã bão hòa trên các trang tin đa khoa. Mỗi bài viết y khoa cần có khối thông tin chuyển tiếp rõ ràng, hỗ trợ người bệnh nhận biết mức độ bệnh và kết nối đúng bác sĩ phụ trách chuyên khoa đó.
               </p>
 
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-2">
-                  <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Mũi nhọn 1</div>
-                  <div className="font-bold text-slate-900 text-base">Phẫu thuật Mũi Xoang & Vách ngăn</div>
-                  <div className="text-sm text-slate-600 leading-relaxed">Phẫu thuật nội soi FESS, chỉnh hình vách ngăn không đau, phục hồi nhanh cùng ngày.</div>
+              <div className="mt-6">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
+                  Minh họa các nhóm kỹ thuật chuyên sâu trên website hiện hành (Cần phê duyệt từ Ban Giám đốc):
                 </div>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-2">
+                    <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Chuyên khoa Mũi Xoang</div>
+                    <div className="font-bold text-slate-900 text-base">Phẫu thuật Nội soi Mũi Xoang (FESS)</div>
+                    <div className="text-sm text-slate-600 leading-relaxed">Điều hướng người bệnh viêm xoang mạn tính, polyp mũi tìm hiểu quy trình phẫu thuật và công nghệ hiện có.</div>
+                  </div>
 
-                <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-2">
-                  <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Mũi nhọn 2</div>
-                  <div className="font-bold text-slate-900 text-base">Cắt Amidan & Nạo VA Plasma</div>
-                  <div className="text-sm text-slate-600 leading-relaxed">Công nghệ dao Plasma / Coblator nhiệt độ thấp, ít chảy máu, xuất viện sau 24 giờ.</div>
-                </div>
+                  <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-2">
+                    <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Chuyên khoa Họng - Thanh quản</div>
+                    <div className="font-bold text-slate-900 text-base">Cắt Amidan & Nạo VA Plasma</div>
+                    <div className="text-sm text-slate-600 leading-relaxed">Cung cấp thông tin chuẩn y khoa về chỉ định phẫu thuật bằng dao Plasma nhiệt độ thấp cho phụ huynh và người bệnh.</div>
+                  </div>
 
-                <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-2">
-                  <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Mũi nhọn 3</div>
-                  <div className="font-bold text-slate-900 text-base">Đo Đa Ký Giấc Ngủ (OSAS)</div>
-                  <div className="text-sm text-slate-600 leading-relaxed">Chẩn đoán và điều trị hội chứng ngưng thở khi ngủ & ngủ ngáy – dịch vụ cao cấp ít cơ sở có.</div>
-                </div>
+                  <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-2">
+                    <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Đơn vị Rối loạn Giấc ngủ</div>
+                    <div className="font-bold text-slate-900 text-base">Đo Đa Ký Giấc Ngủ (OSAS)</div>
+                    <div className="text-sm text-slate-600 leading-relaxed">Giúp người bệnh ngáy to, nghi ngờ ngưng thở khi ngủ hiểu rõ quy trình đo đa ký và phương pháp can thiệp.</div>
+                  </div>
 
-                <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-2">
-                  <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Mũi nhọn 4</div>
-                  <div className="font-bold text-slate-900 text-base">Thính học & Trị liệu Ù tai</div>
-                  <div className="text-sm text-slate-600 leading-relaxed">Đo thính lực buồng cách âm chuẩn quốc tế, máy trợ thính kỹ thuật số và liệu trình trị liệu ù tai chuyên sâu.</div>
+                  <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-2">
+                    <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Đơn vị Thính học</div>
+                    <div className="font-bold text-slate-900 text-base">Thính học & Can thiệp Ù tai</div>
+                    <div className="text-sm text-slate-600 leading-relaxed">Hướng dẫn người bệnh tiếp cận phòng đo thính lực buồng cách âm và quy trình thăm khám thính học chuyên sâu.</div>
+                  </div>
                 </div>
+              </div>
+
+              <div className="mt-4 rounded-lg bg-amber-50/80 border border-amber-200/80 p-3.5 text-xs text-amber-900 leading-relaxed">
+                <strong>Lưu ý về định hướng kinh doanh:</strong> Báo cáo kỹ thuật không đưa ra nhận định hoặc phỏng đoán về biên lợi nhuận của dịch vụ. Danh mục các chuyên khoa hoặc kỹ thuật ưu tiên truyền thông sẽ do <strong>Ban Giám đốc & Hội đồng Chuyên môn Bệnh viện quyết định</strong> dựa trên kế hoạch phát triển chuyên môn và năng lực tiếp nhận thực tế của các khoa phòng.
               </div>
             </div>
 
@@ -621,7 +629,6 @@ export default function ChienLuocTangTruongPage() {
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-4">
                 <div>
                   <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-purple-700">
-                    <Sparkles className="h-5 w-5" />
                     Nghiên cứu công nghệ tìm kiếm • Chiến lược GEO & AEO trong Y tế
                   </div>
                   <h3 className="mt-1 text-xl sm:text-2xl font-bold text-slate-950">
@@ -933,7 +940,7 @@ export default function ChienLuocTangTruongPage() {
                   </div>
                   <div className="flex items-start gap-2.5">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Đẩy mạnh dẫn phễu vào 4 dịch vụ mũi nhọn: Đo giấc ngủ, phẫu thuật xoang, nạo VA.</span>
+                    <span>Hoàn thiện khối thông tin điều hướng chuyên khoa gắn liền với từng bài viết y khoa và dịch vụ điều trị.</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
@@ -998,7 +1005,7 @@ export default function ChienLuocTangTruongPage() {
                   <div className="space-y-2 text-slate-700">
                     <div className="flex items-start gap-2">
                       <span className="text-purple-600 font-bold">•</span>
-                      <span>Rà soát và ký duyệt chuyên môn 204 bài viết mũi nhọn (chuẩn E-E-A-T).</span>
+                      <span>Rà soát và ký duyệt chuyên môn các bài viết chuyên khoa trọng điểm theo từng đợt (chuẩn E-E-A-T).</span>
                     </div>
                     <div className="flex items-start gap-2">
                       <span className="text-purple-600 font-bold">•</span>
@@ -1073,7 +1080,7 @@ export default function ChienLuocTangTruongPage() {
                   </div>
                   <div className="pt-2">
                     <span className="font-bold text-slate-950 block">Kiểm duyệt y khoa:</span>
-                    <span className="text-slate-600 mt-0.5 block">Rà soát 204 bài mũi nhọn để bổ sung tên bác sĩ duyệt.</span>
+                    <span className="text-slate-600 mt-0.5 block">Rà soát các bài viết chuyên khoa trọng điểm để bổ sung tên bác sĩ duyệt.</span>
                   </div>
                   <div className="pt-2">
                     <span className="font-bold text-slate-950 block">Hồ sơ bác sĩ:</span>
