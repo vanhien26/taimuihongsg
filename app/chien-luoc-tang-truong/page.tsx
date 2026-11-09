@@ -318,6 +318,230 @@ export default function ChienLuocTangTruongPage() {
 
             </div>
 
+            {/* Search Market Sizing & Keyword Intelligence */}
+            <div className="rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs space-y-8">
+              
+              {/* Header */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-slate-100 pb-5">
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-700">
+                    <TrendingUp className="h-4 w-4" />
+                    Nghiên cứu nhu cầu thực tế • Dữ liệu phân tích từ 3.968 từ khóa
+                  </div>
+                  <h3 className="mt-1 text-xl sm:text-2xl font-black text-slate-950">
+                    Định cỡ Dung lượng Thị trường Tìm kiếm (Search Market Sizing)
+                  </h3>
+                </div>
+                <div className="flex items-center gap-2 self-start sm:self-auto">
+                  <span className="inline-flex items-center rounded-lg bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-800 border border-emerald-200/60">
+                    Đã chuẩn hóa & Khử trùng lặp
+                  </span>
+                </div>
+              </div>
+
+              {/* 3 Tier Market Sizing Metric Cards (TAM - SAM - SOM) */}
+              <div className="grid gap-4 sm:grid-cols-3">
+                <div className="rounded-xl border border-slate-200/70 bg-slate-50/70 p-5 space-y-2">
+                  <div className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                    TAM • Tổng nhu cầu toàn quốc
+                  </div>
+                  <div className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight">
+                    273.740
+                  </div>
+                  <div className="text-xs text-slate-600 leading-relaxed">
+                    Lượt tìm kiếm/tháng trên 4 mảng TMH, Mũi xoang, Amidan & Răng hàm mặt (đã trừ 65K lượt trùng do gõ không dấu/viết tắt).
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-brand-200 bg-brand-50/40 p-5 space-y-2">
+                  <div className="text-xs font-bold uppercase tracking-wider text-brand-800">
+                    SAM • Thị trường mục tiêu TP.HCM & Lân cận
+                  </div>
+                  <div className="text-3xl sm:text-4xl font-black text-brand-700 tracking-tight">
+                    ~135.000
+                  </div>
+                  <div className="text-xs text-slate-600 leading-relaxed">
+                    Lượt tìm kiếm/tháng phù hợp trực tiếp với cơ sở Quận 1 (đã lọc bỏ từ khóa các tỉnh phía Bắc/Trung và viện công lập đối thủ).
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-emerald-200 bg-emerald-50/40 p-5 space-y-2">
+                  <div className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+                    SOM • Thị phần mục tiêu khả thi (12 tháng)
+                  </div>
+                  <div className="text-3xl sm:text-4xl font-black text-emerald-700 tracking-tight">
+                    25.000 - 35.000
+                  </div>
+                  <div className="text-xs text-slate-600 leading-relaxed">
+                    Lượt truy cập tự nhiên/tháng có thể đạt được khi website sửa dứt điểm các lỗi kỹ thuật và tối ưu trang đích theo chuẩn y khoa.
+                  </div>
+                </div>
+              </div>
+
+              {/* Breakdown of 4 Core Service Clusters with Representative Keywords */}
+              <div className="space-y-4">
+                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                  <div className="text-sm font-bold text-slate-950 uppercase tracking-wide">
+                    4 Cụm Từ Khóa Tiêu Biểu & Phân Bổ Ý Định Tìm Kiếm
+                  </div>
+                  <div className="text-xs text-slate-500">
+                    Nguồn: Đối soát từ thư mục dữ liệu từ khóa dự án (taimuihongsg-key)
+                  </div>
+                </div>
+
+                <div className="grid gap-4 md:grid-cols-2">
+                  
+                  {/* Cluster 1: Kham TMH & Dia phuong */}
+                  <div className="rounded-xl border border-slate-200/80 bg-slate-50/40 p-5 space-y-3">
+                    <div className="flex items-center justify-between border-b border-slate-200/60 pb-2.5">
+                      <div className="font-bold text-slate-950 text-base flex items-center gap-2">
+                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-brand-100 text-brand-800 text-2xs font-bold">1</span>
+                        Khám Tai Mũi Họng & Tìm kiếm Địa phương
+                      </div>
+                      <span className="font-mono text-xs font-bold text-brand-800 bg-brand-100/70 px-2 py-0.5 rounded">
+                        SAM: ~85.100/tháng
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Nhu cầu tìm nơi khám gần nhất cực cao. Người bệnh có xu hướng gọi điện hoặc đến khám ngay trong ngày.
+                    </p>
+                    <div className="space-y-1.5 text-xs">
+                      <div className="flex items-center justify-between py-1 border-b border-slate-100">
+                        <span className="font-medium text-slate-900">phòng khám tai mũi họng</span>
+                        <span className="font-mono font-bold text-slate-700">27.100 lượt/tháng</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1 border-b border-slate-100">
+                        <span className="font-medium text-slate-900">phòng khám tai mũi họng gần đây</span>
+                        <span className="font-mono font-bold text-emerald-700">14.800 lượt/tháng</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1 border-b border-slate-100">
+                        <span className="font-medium text-slate-900">khám tai mũi họng</span>
+                        <span className="font-mono font-bold text-slate-700">2.900 lượt/tháng</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1">
+                        <span className="font-medium text-slate-900">bác sĩ tai mũi họng</span>
+                        <span className="font-mono font-bold text-slate-700">1.600 lượt/tháng</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Cluster 2: Mui Xoang */}
+                  <div className="rounded-xl border border-slate-200/80 bg-slate-50/40 p-5 space-y-3">
+                    <div className="flex items-center justify-between border-b border-slate-200/60 pb-2.5">
+                      <div className="font-bold text-slate-950 text-base flex items-center gap-2">
+                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-sky-100 text-sky-800 text-2xs font-bold">2</span>
+                        Bệnh lý Mũi Xoang & Phẫu thuật Xoang
+                      </div>
+                      <span className="font-mono text-xs font-bold text-sky-800 bg-sky-100/70 px-2 py-0.5 rounded">
+                        SAM: ~148.200/tháng
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Phễu triệu chứng khổng lồ. Cần bài viết hướng dẫn nhận diện để dẫn người bệnh mạn tính về phẫu thuật FESS.
+                    </p>
+                    <div className="space-y-1.5 text-xs">
+                      <div className="flex items-center justify-between py-1 border-b border-slate-100">
+                        <span className="font-medium text-slate-900">viêm xoang / viêm xoang mũi</span>
+                        <span className="font-mono font-bold text-slate-700">15.000 lượt/tháng</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1 border-b border-slate-100">
+                        <span className="font-medium text-slate-900">dấu hiệu viêm xoang / triệu chứng</span>
+                        <span className="font-mono font-bold text-slate-700">4.300 lượt/tháng</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1 border-b border-slate-100">
+                        <span className="font-medium text-slate-900">polyp mũi</span>
+                        <span className="font-mono font-bold text-slate-700">2.400 lượt/tháng</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1">
+                        <span className="font-medium text-slate-900">mổ xoang / mổ viêm xoang bao nhiêu tiền</span>
+                        <span className="font-mono font-bold text-emerald-700">560 lượt/tháng</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Cluster 3: Amidan - VA */}
+                  <div className="rounded-xl border border-slate-200/80 bg-slate-50/40 p-5 space-y-3">
+                    <div className="flex items-center justify-between border-b border-slate-200/60 pb-2.5">
+                      <div className="font-bold text-slate-950 text-base flex items-center gap-2">
+                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-100 text-purple-800 text-2xs font-bold">3</span>
+                        Cắt Amidan, Nạo VA & Công nghệ Plasma
+                      </div>
+                      <span className="font-mono text-xs font-bold text-purple-800 bg-purple-100/70 px-2 py-0.5 rounded">
+                        SAM: ~22.200/tháng
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Dịch vụ phẫu thuật có giá trị chuyển đổi cao. Người bệnh quan tâm nhất đến mức độ đau, thời gian nằm viện và chi phí.
+                    </p>
+                    <div className="space-y-1.5 text-xs">
+                      <div className="flex items-center justify-between py-1 border-b border-slate-100">
+                        <span className="font-medium text-slate-900">cắt amidan / mổ amidan</span>
+                        <span className="font-mono font-bold text-slate-700">5.280 lượt/tháng</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1 border-b border-slate-100">
+                        <span className="font-medium text-slate-900">cắt amidan có đau không / có nên cắt</span>
+                        <span className="font-mono font-bold text-emerald-700">2.180 lượt/tháng</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1 border-b border-slate-100">
+                        <span className="font-medium text-slate-900">amidan sưng / amidan quá phát</span>
+                        <span className="font-mono font-bold text-slate-700">1.880 lượt/tháng</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1">
+                        <span className="font-medium text-slate-900">chi phí cắt amidan / giá cắt amidan</span>
+                        <span className="font-mono font-bold text-emerald-700">760 lượt/tháng</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Cluster 4: Rang Ham Mat */}
+                  <div className="rounded-xl border border-slate-200/80 bg-slate-50/40 p-5 space-y-3">
+                    <div className="flex items-center justify-between border-b border-slate-200/60 pb-2.5">
+                      <div className="font-bold text-slate-950 text-base flex items-center gap-2">
+                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-100 text-emerald-800 text-2xs font-bold">4</span>
+                        Khám Răng Hàm Mặt & Nha khoa Gia đình
+                      </div>
+                      <span className="font-mono text-xs font-bold text-emerald-800 bg-emerald-100/70 px-2 py-0.5 rounded">
+                        SAM: ~17.100/tháng
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Phục vụ người bệnh tìm kiếm nơi khám răng uy tín, giá thầu quảng cáo (CPC) cao; kết hợp tốt với chính sách bảo lãnh viện phí.
+                    </p>
+                    <div className="space-y-1.5 text-xs">
+                      <div className="flex items-center justify-between py-1 border-b border-slate-100">
+                        <span className="font-medium text-slate-900">phòng khám răng hàm mặt</span>
+                        <span className="font-mono font-bold text-slate-700">6.600 lượt/tháng</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1 border-b border-slate-100">
+                        <span className="font-medium text-slate-900">phòng khám chuyên khoa răng hàm mặt</span>
+                        <span className="font-mono font-bold text-slate-700">2.400 lượt/tháng</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1 border-b border-slate-100">
+                        <span className="font-medium text-slate-900">khám răng hàm mặt (CPC: $1.19)</span>
+                        <span className="font-mono font-bold text-slate-700">590 lượt/tháng</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1">
+                        <span className="font-medium text-slate-900">phòng khám răng hàm mặt gần đây / gần nhất</span>
+                        <span className="font-mono font-bold text-emerald-700">600 lượt/tháng</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              {/* Strategic Implication for C-Suite */}
+              <div className="rounded-xl border-l-2 border-brand-500 bg-brand-50/50 p-4 text-xs leading-relaxed text-slate-700 space-y-1">
+                <span className="font-bold text-slate-950 block text-sm">
+                  Rút ra định hướng chiến lược từ dữ liệu thị trường:
+                </span>
+                <p>
+                  Có tới <strong>48.4% lượt tìm kiếm mang ý định chuyển đổi trực tiếp</strong> (tìm phòng khám gần đây, tìm bác sĩ, khảo sát giá mổ và phẫu thuật). Bệnh viện không cần viết dàn trải hàng nghìn bài tin tức đại trà, mà tập trung xây dựng <strong>các trang đích chuyên sâu cho 4 cụm trên</strong> (giải quyết 3 câu hỏi lớn: Có đau không? Bao lâu xuất viện? Bảo hiểm thanh toán thế nào?) kết hợp tối ưu <strong>Google Maps cơ sở Quận 1</strong> để đón ngay lượng người bệnh có nhu cầu thực tế.
+                </p>
+              </div>
+
+            </div>
+
             {/* Deep Technical Audit Bottlenecks - Sleek Warning Panel */}
             <div className="rounded-2xl border border-rose-200 bg-rose-50/40 p-6 sm:p-8">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-rose-200/70 pb-4">
