@@ -590,6 +590,109 @@ export default function ChienLuocTangTruongPage() {
               </div>
             </div>
           </div>
+
+          {/* Research & Strategy: GEO / AEO in Healthcare */}
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-4">
+              <div>
+                <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-purple-700">
+                  <Sparkles className="h-5 w-5" />
+                  Nghiên cứu công nghệ tìm kiếm • Chiến lược GEO & AEO trong Y tế
+                </div>
+                <h3 className="mt-1 text-xl sm:text-2xl font-bold text-slate-950">
+                  Tại sao tối ưu hóa cho AI (GEO/AEO) là bước ngoặt sống còn của Bệnh viện?
+                </h3>
+              </div>
+              <span className="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-lg shrink-0">
+                Xu hướng tìm kiếm 2024 - 2026
+              </span>
+            </div>
+
+            <p className="mt-4 text-base text-slate-600 leading-relaxed">
+              Hành vi tìm kiếm thông tin y tế đang trải qua cuộc chuyển dịch lớn nhất trong 20 năm qua. Người bệnh không còn gõ từ khóa ngắn (như <em>"khám tai mũi họng"</em>) rồi click vào 10 đường link truyền thống. Thay vào đó, họ hỏi trực tiếp các cỗ máy AI (<strong>Google AI Overviews, Gemini, ChatGPT, Perplexity</strong>) bằng các câu hỏi đàm thoại chi tiết và yêu cầu đưa ra câu trả lời đích danh.
+            </p>
+
+            {/* 3 Academic & Industry Research Findings */}
+            <div className="mt-6">
+              <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
+                Cơ sở nghiên cứu thực chứng (Evidence-based Research)
+              </div>
+              <div className="grid gap-4 md:grid-cols-3">
+                <div className="rounded-xl border border-purple-100 bg-purple-50/40 p-5">
+                  <div className="font-bold text-slate-950 text-base flex items-center gap-2">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-purple-200 text-purple-800 text-xs font-black">1</span>
+                    Nghiên cứu Princeton & Georgia Tech
+                  </div>
+                  <div className="mt-1 text-xs font-semibold text-purple-700">Nghiên cứu gốc về GEO (Kulkarni et al., 2024)</div>
+                  <p className="mt-2.5 text-sm text-slate-700 leading-relaxed">
+                    Nghiên cứu khoa học đầu tiên về thuật toán AI chỉ ra: Việc bổ sung <strong>trích dẫn y khoa có căn cứ (Cite Sources)</strong> và <strong>trích dẫn chuyên môn từ bác sĩ thực tế (Authoritative Quotation)</strong> giúp tăng từ <strong>30% đến 41%</strong> khả năng website được các mô hình AI chọn làm câu trả lời chính cho người dùng.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-sky-100 bg-sky-50/40 p-5">
+                  <div className="font-bold text-slate-950 text-base flex items-center gap-2">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-sky-200 text-sky-800 text-xs font-black">2</span>
+                    Dự báo thị trường từ Gartner
+                  </div>
+                  <div className="mt-1 text-xs font-semibold text-sky-700">Chuyển dịch sang Answer Engines (2024 - 2026)</div>
+                  <p className="mt-2.5 text-sm text-slate-700 leading-relaxed">
+                    Gartner dự báo lưu lượng tìm kiếm truyền thống qua các liên kết web có thể <strong>sụt giảm tới 25% vào năm 2026</strong> khi người dùng chuyển sang nhận câu trả lời tổng hợp trực tiếp từ AI. Bệnh viện nào không chuẩn hóa dữ liệu cho Answer Engines (AEO) sẽ mất dần dòng bệnh nhân mới vào tay đối thủ.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-emerald-100 bg-emerald-50/40 p-5">
+                  <div className="font-bold text-slate-950 text-base flex items-center gap-2">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-200 text-emerald-800 text-xs font-black">3</span>
+                    Cơ chế an toàn Y tế (YMYL của Google)
+                  </div>
+                  <div className="mt-1 text-xs font-semibold text-emerald-700">Tiêu chuẩn khắt khe cho nội dung sức khỏe</div>
+                  <p className="mt-2.5 text-sm text-slate-700 leading-relaxed">
+                    Do liên quan trực tiếp đến tính mạng con người (*Your Money Your Life*), các cỗ máy AI áp dụng bộ lọc an toàn cao nhất: AI chỉ trích dẫn các đơn vị có <strong>Schema định danh rõ ràng (`Hospital`, `Physician`)</strong> và kiên quyết loại bỏ các bài viết ẩn danh, không có bác sĩ chịu trách nhiệm chuyên môn.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 4 Actionable GEO/AEO Standards for Saigon ENT Hospital */}
+            <div className="mt-6 rounded-xl border border-slate-100 bg-slate-50/80 p-5">
+              <div className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-3">
+                4 Chuẩn kỹ thuật GEO & AEO áp dụng trực tiếp cho Bệnh Viện Tai Mũi Họng Sài Gòn
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-sm leading-relaxed text-slate-700">
+                <div className="space-y-1">
+                  <div className="font-bold text-slate-950 flex items-center gap-1.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                    <span>Direct Answer Block</span>
+                  </div>
+                  <p className="text-xs text-slate-600 leading-5">Đầu mỗi bài viết có đoạn tóm tắt 40 - 60 từ trả lời trực diện triệu chứng và giải pháp, giúp bot AI trích xuất câu trả lời ngay lập tức.</p>
+                </div>
+
+                <div className="space-y-1">
+                  <div className="font-bold text-slate-950 flex items-center gap-1.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                    <span>Định danh Bác sĩ (E-E-A-T)</span>
+                  </div>
+                  <p className="text-xs text-slate-600 leading-5">Mọi bài viết về Xoang, Amidan, Ù tai hay Giấc ngủ đều gắn liền chữ ký duyệt của 18 bác sĩ chủ chốt với bằng cấp và chứng chỉ y khoa thật.</p>
+                </div>
+
+                <div className="space-y-1">
+                  <div className="font-bold text-slate-950 flex items-center gap-1.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                    <span>Bảng dữ liệu có cấu trúc</span>
+                  </div>
+                  <p className="text-xs text-slate-600 leading-5">Trình bày bảng so sánh kỹ thuật (Plasma vs Dao điện, phân độ AHI trong ngưng thở khi ngủ) để AI đưa vào bảng tổng hợp kết quả.</p>
+                </div>
+
+                <div className="space-y-1">
+                  <div className="font-bold text-slate-950 flex items-center gap-1.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                    <span>Thực thể Song ngữ (Vi/En)</span>
+                  </div>
+                  <p className="text-xs text-slate-600 leading-5">Khai báo Schema thực thể cả tiếng Anh và tiếng Việt, giúp khách nước ngoài và expat tại TP.HCM hỏi AI bằng tiếng Anh vẫn được gợi ý tới bệnh viện.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
 
