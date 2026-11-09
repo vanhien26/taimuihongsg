@@ -569,61 +569,6 @@ export default function ChienLuocTangTruongPage() {
 
             </div>
 
-            {/* Content to Clinical Specialty Alignment Framework */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-4">
-                <div>
-                  <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-700">
-                    <Stethoscope className="h-5 w-5" />
-                    Định hướng chuyển đổi • Liên kết nội dung với chuyên khoa thực tế
-                  </div>
-                  <h3 className="mt-1 text-xl sm:text-2xl font-bold text-slate-950">
-                    Phân luồng nội dung theo danh mục Chuyên khoa Kỹ thuật cao
-                  </h3>
-                </div>
-                <span className="text-sm font-semibold text-slate-600">Định vị chuyên môn Tai Mũi Họng</span>
-              </div>
-
-              <p className="mt-4 text-base text-slate-600 leading-relaxed">
-                Là bệnh viện chuyên khoa, website không nên dàn trải bài viết theo các triệu chứng đại trà (cảm, ho, sốt thông thường) vốn đã bão hòa trên các trang tin đa khoa. Mỗi bài viết y khoa cần có khối thông tin chuyển tiếp rõ ràng, hỗ trợ người bệnh nhận biết mức độ bệnh và kết nối đúng bác sĩ phụ trách chuyên khoa đó.
-              </p>
-
-              <div className="mt-6">
-                <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
-                  Minh họa các nhóm kỹ thuật chuyên sâu trên website hiện hành (Cần phê duyệt từ Ban Giám đốc):
-                </div>
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                  <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-2">
-                    <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Chuyên khoa Mũi Xoang</div>
-                    <div className="font-bold text-slate-900 text-base">Phẫu thuật Nội soi Mũi Xoang (FESS)</div>
-                    <div className="text-sm text-slate-600 leading-relaxed">Điều hướng người bệnh viêm xoang mạn tính, polyp mũi tìm hiểu quy trình phẫu thuật và công nghệ hiện có.</div>
-                  </div>
-
-                  <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-2">
-                    <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Chuyên khoa Họng - Thanh quản</div>
-                    <div className="font-bold text-slate-900 text-base">Cắt Amidan & Nạo VA Plasma</div>
-                    <div className="text-sm text-slate-600 leading-relaxed">Cung cấp thông tin chuẩn y khoa về chỉ định phẫu thuật bằng dao Plasma nhiệt độ thấp cho phụ huynh và người bệnh.</div>
-                  </div>
-
-                  <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-2">
-                    <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Đơn vị Rối loạn Giấc ngủ</div>
-                    <div className="font-bold text-slate-900 text-base">Đo Đa Ký Giấc Ngủ (OSAS)</div>
-                    <div className="text-sm text-slate-600 leading-relaxed">Giúp người bệnh ngáy to, nghi ngờ ngưng thở khi ngủ hiểu rõ quy trình đo đa ký và phương pháp can thiệp.</div>
-                  </div>
-
-                  <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-2">
-                    <div className="text-xs font-bold uppercase tracking-wide text-brand-700">Đơn vị Thính học</div>
-                    <div className="font-bold text-slate-900 text-base">Thính học & Can thiệp Ù tai</div>
-                    <div className="text-sm text-slate-600 leading-relaxed">Hướng dẫn người bệnh tiếp cận phòng đo thính lực buồng cách âm và quy trình thăm khám thính học chuyên sâu.</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-4 rounded-lg bg-amber-50/80 border border-amber-200/80 p-3.5 text-xs text-amber-900 leading-relaxed">
-                <strong>Lưu ý về định hướng kinh doanh:</strong> Báo cáo kỹ thuật không đưa ra nhận định hoặc phỏng đoán về biên lợi nhuận của dịch vụ. Danh mục các chuyên khoa hoặc kỹ thuật ưu tiên truyền thông sẽ do <strong>Ban Giám đốc & Hội đồng Chuyên môn Bệnh viện quyết định</strong> dựa trên kế hoạch phát triển chuyên môn và năng lực tiếp nhận thực tế của các khoa phòng.
-              </div>
-            </div>
-
             {/* Research & Strategy: GEO / AEO in Healthcare */}
             <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-4">
