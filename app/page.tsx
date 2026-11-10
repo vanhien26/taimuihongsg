@@ -16,7 +16,6 @@ import {
   Moon,
   Phone,
   ShieldCheck,
-  Sparkles,
   Stethoscope,
   Users,
   Volume2,
@@ -143,7 +142,6 @@ export default function HomePage({ onOpenBooking }: PageProps) {
           {/* Hero Left Content */}
           <div className="flex flex-col justify-center lg:col-span-7 lg:pr-6">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-bold text-brand-800 shadow-sm">
-              <Sparkles className="h-3.5 w-3.5 text-brand-600" />
               <span>Bệnh Viện Chuyên Khoa Tai Mũi Họng • 19 Năm Uy Tín (2007 - 2026)</span>
             </div>
 
