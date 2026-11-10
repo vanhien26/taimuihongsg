@@ -27,11 +27,11 @@ import {
 export default function ChienLuocTangTruongPage() {
   const [activeTab, setActiveTab] = useState<'overview' | 'pillars' | 'comparison' | 'roadmap' | 'kpis'>('overview')
   const [openFaq, setOpenFaq] = useState<number | null>(null)
-  const [navbarHeight, setNavbarHeight] = useState(105)
+  const [navbarHeight, setNavbarHeight] = useState(100)
 
   useEffect(() => {
     const updateNavbarHeight = () => {
-      const header = document.querySelector('header')
+      const header = document.getElementById('site-header') || document.querySelector('header')
       if (header) {
         setNavbarHeight(header.offsetHeight)
       }
@@ -41,7 +41,10 @@ export default function ChienLuocTangTruongPage() {
 
     const sections = ['overview', 'pillars', 'comparison', 'roadmap', 'kpis']
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200
+      const header = document.getElementById('site-header') || document.querySelector('header')
+      const currentHeight = header ? header.offsetHeight : 100
+      const scrollPosition = window.scrollY + currentHeight + 80
+
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId)
         if (el) {
@@ -71,7 +74,15 @@ export default function ChienLuocTangTruongPage() {
     setActiveTab(tabId as any)
     const element = document.getElementById(tabId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      const header = document.getElementById('site-header') || document.querySelector('header')
+      const offset = (header ? header.offsetHeight : 100) + 55
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
     }
   }
 
@@ -120,7 +131,7 @@ export default function ChienLuocTangTruongPage() {
       </div>
 
       {/* Hero Section - Airy Editorial Header */}
-      <header className="border-b border-slate-100 bg-linear-to-b from-slate-50/70 via-white to-white py-14 sm:py-20">
+      <section aria-label="Tiêu đề báo cáo" className="border-b border-slate-100 bg-gradient-to-b from-slate-50/70 via-white to-white py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl space-y-4">
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-700 shadow-2xs">
@@ -133,14 +144,14 @@ export default function ChienLuocTangTruongPage() {
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal pt-1">
-              Báo cáo tóm tắt dành cho Ban Giám Đốc: Tổng hợp một số điểm cần kiểm tra trên website, các ảnh hưởng có thể xảy ra với hành trình tìm hiểu và đặt khám, cùng các hướng cải thiện nên được ưu tiên xem xét.
+              Báo cáo tóm tắt dành cho Ban Giám Đốc: Nhận diện các điểm nghẽn kỹ thuật, mâu thuẫn nhận diện thương hiệu và giải pháp tái cấu trúc nhằm định vị bệnh viện chuyên khoa Tai Mũi Họng số 1 tại TP.HCM.
             </p>
           </div>
         </div>
-      </header>
+      </section>
 
       {/* Main Content Area */}
-      <main>
+      <div>
         
         {/* ========================================================================= */}
         {/* SECTION 1: EXECUTIVE SUMMARY & AUDIT                                       */}
@@ -332,11 +343,11 @@ export default function ChienLuocTangTruongPage() {
                 </h3>
               </div>
 
-              {/* 3 tầng nhu cầu tìm kiếm */}
+              {/* 3 Tier Market Sizing Metric Cards (TAM - SAM - SOM) */}
               <div className="grid gap-4 sm:grid-cols-3">
                 <div className="rounded-xl border border-slate-200/70 bg-slate-50/70 p-5 space-y-2">
                   <div className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                    Tổng nhu cầu tìm kiếm trên toàn quốc
+                    TAM • Tổng nhu cầu toàn quốc
                   </div>
                   <div className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight">
                     273.740
@@ -348,7 +359,7 @@ export default function ChienLuocTangTruongPage() {
 
                 <div className="rounded-xl border border-brand-200 bg-brand-50/40 p-5 space-y-2">
                   <div className="text-xs font-bold uppercase tracking-wider text-brand-800">
-                    Thị trường phù hợp với bệnh viện
+                    SAM • Thị trường mục tiêu TP.HCM & Lân cận
                   </div>
                   <div className="text-3xl sm:text-4xl font-black text-brand-700 tracking-tight">
                     ~135.000
@@ -360,7 +371,7 @@ export default function ChienLuocTangTruongPage() {
 
                 <div className="rounded-xl border border-emerald-200 bg-emerald-50/40 p-5 space-y-2">
                   <div className="text-xs font-bold uppercase tracking-wider text-emerald-800">
-                    Mục tiêu có thể đạt trong 12 tháng
+                    SOM • Thị phần mục tiêu khả thi (12 tháng)
                   </div>
                   <div className="text-3xl sm:text-4xl font-black text-emerald-700 tracking-tight">
                     25.000 - 35.000
@@ -387,7 +398,7 @@ export default function ChienLuocTangTruongPage() {
                         Khám Tai Mũi Họng & Tìm kiếm Địa phương
                       </div>
                       <span className="font-mono text-xs font-bold text-brand-800 bg-brand-100/70 px-2 py-0.5 rounded">
-                        Nhu cầu phù hợp: ~85.100/tháng
+                        SAM: ~85.100/tháng
                       </span>
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed">
@@ -421,7 +432,7 @@ export default function ChienLuocTangTruongPage() {
                         Bệnh lý Mũi Xoang & Phẫu thuật Xoang
                       </div>
                       <span className="font-mono text-xs font-bold text-sky-800 bg-sky-100/70 px-2 py-0.5 rounded">
-                        Nhu cầu phù hợp: ~148.200/tháng
+                        SAM: ~148.200/tháng
                       </span>
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed">
@@ -455,7 +466,7 @@ export default function ChienLuocTangTruongPage() {
                         Cắt Amidan, Nạo VA & Công nghệ Plasma
                       </div>
                       <span className="font-mono text-xs font-bold text-purple-800 bg-purple-100/70 px-2 py-0.5 rounded">
-                        Nhu cầu phù hợp: ~22.200/tháng
+                        SAM: ~22.200/tháng
                       </span>
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed">
@@ -489,7 +500,7 @@ export default function ChienLuocTangTruongPage() {
                         Khám Răng Hàm Mặt & Nha khoa Gia đình
                       </div>
                       <span className="font-mono text-xs font-bold text-emerald-800 bg-emerald-100/70 px-2 py-0.5 rounded">
-                        Nhu cầu phù hợp: ~17.100/tháng
+                        SAM: ~17.100/tháng
                       </span>
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed">
@@ -528,38 +539,6 @@ export default function ChienLuocTangTruongPage() {
                 </p>
               </div>
 
-            </div>
-
-            {/* SEO/GEO User Flow */}
-            <div className="rounded-2xl border border-brand-100 bg-white p-6 shadow-xs sm:p-8">
-              <div className="max-w-3xl">
-                <div className="text-xs font-bold uppercase tracking-widest text-brand-700">User Flow SEO/GEO</div>
-                <h3 className="mt-2 text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
-                  Từ nhu cầu tìm kiếm đến lịch hẹn của người bệnh
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  SEO giúp người bệnh tìm thấy bệnh viện. GEO giúp nội dung được hiểu và được giới thiệu đúng ngữ cảnh. Hai phần cùng dẫn về một mục tiêu: người bệnh liên hệ và đặt khám.
-                </p>
-              </div>
-
-              <div className="mt-6 divide-y divide-slate-100 border-y border-slate-100">
-                {[
-                  ['01', 'Người bệnh phát sinh nhu cầu', 'Có triệu chứng, cần tìm bác sĩ, dịch vụ hoặc cơ sở gần mình.'],
-                  ['02', 'Tìm kiếm hoặc hỏi công cụ AI', 'Tìm trên Google, Google Maps hoặc đặt câu hỏi bằng ngôn ngữ tự nhiên.'],
-                  ['03', 'Website được tìm thấy và hiểu đúng', 'Trang bệnh viện, bác sĩ, dịch vụ và nội dung y khoa xuất hiện đúng nhu cầu.'],
-                  ['04', 'Nội dung tạo niềm tin', 'Thông tin rõ ràng, có bác sĩ phụ trách, chuyên khoa, địa chỉ và hướng dẫn phù hợp.'],
-                  ['05', 'Đi đến hành động', 'Người bệnh xem dịch vụ, gọi tổng đài hoặc gửi form đặt lịch khám.'],
-                  ['06', 'Đo và cải thiện', 'Đối chiếu lượt tìm kiếm, cuộc gọi, form và số người thực tế đến khám.'],
-                ].map(([number, title, description]) => (
-                  <div key={number} className="flex gap-4 py-4 sm:items-center sm:gap-6">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-50 text-xs font-black text-brand-700">{number}</span>
-                    <div className="min-w-0 sm:flex sm:items-baseline sm:gap-5">
-                      <h4 className="text-sm font-bold text-slate-950 sm:w-64 sm:shrink-0">{title}</h4>
-                      <p className="mt-1 text-sm leading-6 text-slate-600 sm:mt-0">{description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* Deep Technical Audit Bottlenecks - Sleek Warning Panel */}
@@ -814,12 +793,7 @@ export default function ChienLuocTangTruongPage() {
             </div>
 
             {/* Research & Strategy: GEO / AEO in Healthcare */}
-            <details className="rounded-2xl border border-slate-200 bg-white shadow-xs group">
-              <summary className="cursor-pointer list-none px-6 py-5 text-base font-bold text-slate-900 marker:hidden sm:px-8">
-                <span className="text-purple-700">Thông tin tham khảo:</span> Vì sao nội dung dễ hiểu hơn sẽ được Google và công cụ AI ưu tiên?
-                <span className="float-right text-sm font-semibold text-slate-500 group-open:rotate-180 transition-transform">⌄</span>
-              </summary>
-              <div className="space-y-6 border-t border-slate-100 p-6 sm:p-8">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs space-y-6">
               <div className="border-b border-slate-100 pb-4">
                 <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-purple-700">
                   Nghiên cứu công nghệ tìm kiếm • Chiến lược GEO & AEO trong Y tế
@@ -913,8 +887,7 @@ export default function ChienLuocTangTruongPage() {
                   </div>
                 </div>
               </div>
-              </div>
-            </details>
+            </div>
 
           </div>
         </section>
@@ -941,97 +914,71 @@ export default function ChienLuocTangTruongPage() {
             </div>
 
             {/* Comparison Table Ledger */}
-            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xs">
-              <div className="grid grid-cols-1 divide-y divide-slate-200 md:grid-cols-12 md:divide-x md:divide-y-0">
-                
-                {/* Header column */}
-                <div className="hidden bg-slate-50/80 p-5 text-sm font-bold uppercase tracking-wider text-slate-600 md:col-span-3 md:block">
-                  Hạng mục
-                </div>
-                <div className="bg-rose-50/50 p-5 text-sm font-bold uppercase tracking-wider text-rose-800 md:col-span-4">
-                  Hiện trạng cũ (Cần sửa)
-                </div>
-                <div className="bg-emerald-50/50 p-5 text-sm font-bold uppercase tracking-wider text-emerald-800 md:col-span-5">
-                  Sau khi sửa (Chuẩn mới)
-                </div>
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+              {/* Table Header (Desktop) */}
+              <div className="hidden md:grid md:grid-cols-12 border-b border-slate-200 bg-slate-50 font-bold text-xs uppercase tracking-wider text-slate-700">
+                <div className="p-4 md:col-span-3">Hạng mục</div>
+                <div className="p-4 md:col-span-4 text-rose-800 bg-rose-50/60 border-l border-slate-200">Hiện trạng cũ (Cần sửa)</div>
+                <div className="p-4 md:col-span-5 text-emerald-800 bg-emerald-50/60 border-l border-slate-200">Sau khi sửa (Chuẩn mới)</div>
+              </div>
 
-                {/* Row 1: Brand & Entity */}
-                <div className="p-5 font-bold text-slate-900 md:col-span-3 bg-slate-50/40 text-base">
-                  1. Tên bệnh viện
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-600 md:col-span-4">
-                  Lẫn lộn giữa Phòng khám Đa khoa và Bệnh viện; thông tin trên Google chưa thống nhất.
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-800 md:col-span-5 font-medium bg-emerald-50/20">
-                  Thống nhất duy nhất tên <strong>Bệnh Viện Tai Mũi Họng Sài Gòn</strong> trên toàn bộ website và bản đồ.
-                </div>
-
-                {/* Row 2: Doctors Profile */}
-                <div className="p-5 font-bold text-slate-900 md:col-span-3 bg-slate-50/40 text-base">
-                  2. Hồ sơ Bác sĩ
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-600 md:col-span-4">
-                  Hồ sơ bị gộp chung hoặc trỏ nhầm link; thiếu bằng cấp và lịch khám rõ ràng.
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-800 md:col-span-5 font-medium bg-emerald-50/20">
-                  Mỗi bác sĩ có <strong>trang hồ sơ riêng</strong>, hiển thị đầy đủ chuyên khoa, kinh nghiệm và nút đặt lịch trực tiếp.
-                </div>
-
-                {/* Row 3: Content Structure */}
-                <div className="p-5 font-bold text-slate-900 md:col-span-3 bg-slate-50/40 text-base">
-                  3. Bài viết y khoa
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-600 md:col-span-4">
-                  1.517 bài hỏi đáp ngắn nằm rời rạc; chưa ghi rõ bác sĩ nào duyệt nội dung.
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-800 md:col-span-5 font-medium bg-emerald-50/20">
-                  Gom theo <strong>6 nhóm chuyên khoa</strong>; 100% bài viết có <strong>tên bác sĩ kiểm duyệt</strong> và đoạn tóm tắt dễ hiểu ở đầu bài.
-                </div>
-
-                {/* Row 4: International Patients */}
-                <div className="p-5 font-bold text-slate-900 md:col-span-3 bg-slate-50/40 text-base">
-                  4. Trang tiếng Anh
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-600 md:col-span-4">
-                  Chỉ có vài bài dịch sơ sài, menu vẫn tiếng Việt, thiếu thông tin bảo lãnh bảo hiểm.
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-800 md:col-span-5 font-medium bg-emerald-50/20">
-                  <strong>Trang tiếng Anh riêng biệt</strong>, hướng dẫn quy trình đón tiếp và danh sách hơn 35 hãng bảo hiểm hỗ trợ trực tiếp.
-                </div>
-
-                {/* Row 5: Booking & Conversion */}
-                <div className="p-5 font-bold text-slate-900 md:col-span-3 bg-slate-50/40 text-base">
-                  5. Đặt hẹn và đo lường
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-600 md:col-span-4">
-                  Chưa biết bài viết nào mang lại cuộc gọi và lịch khám; form đặt hẹn chưa gợi ý chuyên khoa.
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-800 md:col-span-5 font-medium bg-emerald-50/20">
-                  Đo được từ lúc người bệnh xem bài đến số ca khám thực tế; form gợi ý đúng bác sĩ phù hợp với triệu chứng.
-                </div>
-
-                {/* Row 6: Soft 404 & Sitemap */}
-                <div className="p-5 font-bold text-slate-900 md:col-span-3 bg-slate-50/40 text-base">
-                  6. Link hỏng & Sitemap XML
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-600 md:col-span-4">
-                  Link gãy/sai bị tự động ép redirect về trang đặt hẹn gây Soft 404; sitemap chậm cập nhật bài mới từ 2023.
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-800 md:col-span-5 font-medium bg-emerald-50/20">
-                  Xóa bỏ redirect ép buộc, trả mã <strong>404 chuẩn kèm thanh tìm kiếm</strong>; sitemap XML tự động cập nhật bài mới tức thì.
-                </div>
-
-                {/* Row 7: Server & Performance */}
-                <div className="p-5 font-bold text-slate-900 md:col-span-3 bg-slate-50/40 text-base">
-                  7. Hạ tầng & Bộ nhớ đệm
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-600 md:col-span-4">
-                  Máy chủ xử lý từng request đơn lẻ (chưa bật cache), ảnh thô nặng 7.8MB khiến điện thoại tải chậm quá 3 giây.
-                </div>
-                <div className="p-5 text-sm sm:text-base leading-relaxed text-slate-800 md:col-span-5 font-medium bg-emerald-50/20">
-                  Bật <strong>bộ nhớ đệm toàn cầu</strong>, nén ảnh tự động chuẩn WebP, mở trang <strong>dưới 1 giây</strong> trên điện thoại.
-                </div>
-
+              {/* Rows */}
+              <div className="divide-y divide-slate-200">
+                {[
+                  {
+                    category: '1. Tên bệnh viện',
+                    before: 'Lẫn lộn giữa Phòng khám Đa khoa và Bệnh viện; thông tin trên Google chưa thống nhất.',
+                    after: <>Thống nhất duy nhất tên <strong>Bệnh Viện Tai Mũi Họng Sài Gòn</strong> trên toàn bộ website và bản đồ.</>,
+                  },
+                  {
+                    category: '2. Hồ sơ Bác sĩ',
+                    before: 'Hồ sơ bị gộp chung hoặc trỏ nhầm link; thiếu bằng cấp và lịch khám rõ ràng.',
+                    after: <>Mỗi bác sĩ có <strong>trang hồ sơ riêng</strong>, hiển thị đầy đủ chuyên khoa, kinh nghiệm và nút đặt lịch trực tiếp.</>,
+                  },
+                  {
+                    category: '3. Bài viết y khoa',
+                    before: '1.517 bài hỏi đáp ngắn nằm rời rạc; chưa ghi rõ bác sĩ nào duyệt nội dung.',
+                    after: <>Gom theo <strong>6 nhóm chuyên khoa</strong>; 100% bài viết có <strong>tên bác sĩ kiểm duyệt</strong> và đoạn tóm tắt dễ hiểu ở đầu bài.</>,
+                  },
+                  {
+                    category: '4. Trang tiếng Anh',
+                    before: 'Chỉ có vài bài dịch sơ sài, menu vẫn tiếng Việt, thiếu thông tin bảo lãnh bảo hiểm.',
+                    after: <><strong>Trang tiếng Anh riêng biệt</strong>, hướng dẫn quy trình đón tiếp và danh sách hơn 35 hãng bảo hiểm hỗ trợ trực tiếp.</>,
+                  },
+                  {
+                    category: '5. Đặt hẹn và đo lường',
+                    before: 'Chưa biết bài viết nào mang lại cuộc gọi và lịch khám; form đặt hẹn chưa gợi ý chuyên khoa.',
+                    after: <>Đo được từ lúc người bệnh xem bài đến số ca khám thực tế; form gợi ý đúng bác sĩ phù hợp với triệu chứng.</>,
+                  },
+                  {
+                    category: '6. Link hỏng & Sitemap XML',
+                    before: 'Link gãy/sai bị tự động ép redirect về trang đặt hẹn gây Soft 404; sitemap chậm cập nhật bài mới từ 2023.',
+                    after: <>Xóa bỏ redirect ép buộc, trả mã <strong>404 chuẩn kèm thanh tìm kiếm</strong>; sitemap XML tự động cập nhật bài mới tức thì.</>,
+                  },
+                  {
+                    category: '7. Hạ tầng & Bộ nhớ đệm',
+                    before: 'Máy chủ xử lý từng request đơn lẻ (chưa bật cache), ảnh thô nặng 7.8MB khiến điện thoại tải chậm quá 3 giây.',
+                    after: <>Bật <strong>bộ nhớ đệm toàn cầu</strong>, nén ảnh tự động chuẩn WebP, mở trang <strong>dưới 1 giây</strong> trên điện thoại.</>,
+                  },
+                ].map((row) => (
+                  <div key={row.category} className="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+                    <div className="p-4 md:p-5 font-bold text-slate-900 md:col-span-3 bg-slate-50/40 text-sm sm:text-base flex items-center">
+                      {row.category}
+                    </div>
+                    <div className="p-4 md:p-5 text-sm sm:text-base leading-relaxed text-slate-600 md:col-span-4 bg-white">
+                      <span className="md:hidden inline-block text-xs font-bold uppercase tracking-wider text-rose-700 bg-rose-50 px-2 py-0.5 rounded mb-1.5">
+                        Hiện trạng cũ:
+                      </span>
+                      <p>{row.before}</p>
+                    </div>
+                    <div className="p-4 md:p-5 text-sm sm:text-base leading-relaxed text-slate-800 md:col-span-5 font-medium bg-emerald-50/20">
+                      <span className="md:hidden inline-block text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded mb-1.5">
+                        Sau khi sửa:
+                      </span>
+                      <p>{row.after}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -1151,12 +1098,7 @@ export default function ChienLuocTangTruongPage() {
             </div>
 
             {/* RACI Coordination Framework */}
-            <details className="rounded-2xl border border-slate-200 bg-white shadow-xs group">
-              <summary className="cursor-pointer list-none px-6 py-5 text-base font-bold text-slate-900 marker:hidden sm:px-8">
-                <span className="text-brand-700">Thông tin tham khảo:</span> Ai phối hợp để triển khai kế hoạch?
-                <span className="float-right text-sm font-semibold text-slate-500 group-open:rotate-180 transition-transform">⌄</span>
-              </summary>
-              <div className="space-y-6 border-t border-slate-100 p-6 sm:p-8">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-4">
                 <div>
                   <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-700">
@@ -1234,8 +1176,7 @@ export default function ChienLuocTangTruongPage() {
                   </div>
                 </div>
               </div>
-              </div>
-            </details>
+            </div>
 
           </div>
         </section>
@@ -1653,7 +1594,7 @@ export default function ChienLuocTangTruongPage() {
           </div>
         </section>
 
-      </main>
+      </div>
 
       {/* Footer Note */}
       <footer className="mx-auto max-w-7xl px-4 py-12 text-center text-sm text-slate-500 sm:px-6 lg:px-8 print:hidden">

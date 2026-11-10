@@ -64,7 +64,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
   ]
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <header id="site-header" className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
       {/* Top emergency & info bar */}
       <div className="bg-navy-900 text-slate-200 text-xs py-2 px-4">
         <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-2 md:flex-row md:items-center md:justify-between">

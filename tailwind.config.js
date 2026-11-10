@@ -29,6 +29,13 @@ module.exports = {
           700: '#0f766e',
         }
       },
+      boxShadow: {
+        'xs': '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+        '2xs': '0 1px rgb(0 0 0 / 0.05)',
+      },
+      fontSize: {
+        '2xs': ['0.625rem', { lineHeight: '0.75rem' }],
+      },
     },
   },
   plugins: [],
