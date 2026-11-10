@@ -92,11 +92,11 @@ export default function ChienLuocTangTruongPage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <nav className="flex space-x-2 overflow-x-auto py-3 no-scrollbar" aria-label="Mục lục báo cáo">
             {[
-              { id: 'overview', label: '1. Overview' },
-              { id: 'pillars', label: '2. Problem Statement' },
-              { id: 'comparison', label: '3. Opportunity' },
-              { id: 'roadmap', label: '4. Action Plan' },
-              { id: 'kpis', label: '5. Measuring' },
+              { id: 'overview', label: '1. Tổng quan & Hiện trạng' },
+              { id: 'pillars', label: '2. Trụ cột Tăng trưởng' },
+              { id: 'comparison', label: '3. Đối chiếu Trước - Sau' },
+              { id: 'roadmap', label: '4. Lộ trình Phân kỳ' },
+              { id: 'kpis', label: '5. Khung Đo lường' },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -185,24 +185,24 @@ export default function ChienLuocTangTruongPage() {
             {/* 1-page financial ask */}
             <div className="bg-slate-900 text-white p-6 sm:p-8 rounded-2xl shadow-lg">
               <div className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
-                Tóm tắt nguồn lực & Timeline (12 tháng)
+                Tóm tắt nguồn lực & Khung thời gian triển khai
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div className="space-y-2">
                   <div className="text-3xl sm:text-4xl font-black text-brand-400">~3 tháng</div>
-                  <div className="text-sm text-slate-300">Timeline core implementation</div>
+                  <div className="text-sm text-slate-300">Triển khai cốt lõi (Core Implementation)</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-3xl sm:text-4xl font-black text-emerald-400">3 Phase</div>
-                  <div className="text-sm text-slate-300">Foundation → Content → Optimization</div>
+                  <div className="text-3xl sm:text-4xl font-black text-emerald-400">3 Giai đoạn</div>
+                  <div className="text-sm text-slate-300">Nền tảng → Nội dung → Mở rộng</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-3xl sm:text-4xl font-black text-sky-400">3 Team</div>
-                  <div className="text-sm text-slate-300">Technical + Medical + CS</div>
+                  <div className="text-3xl sm:text-4xl font-black text-sky-400">12 tháng</div>
+                  <div className="text-sm text-slate-300">Mục tiêu tăng trưởng (100-120K traffic)</div>
                 </div>
                 <div className="space-y-2">
                   <div className="text-3xl sm:text-4xl font-black text-amber-400">TBD</div>
-                  <div className="text-sm text-slate-300">Budget estimate (để tính sau khi approve scope)</div>
+                  <div className="text-sm text-slate-300">Ngân sách (xác định sau khi duyệt scope)</div>
                 </div>
               </div>
             </div>
@@ -454,7 +454,7 @@ export default function ChienLuocTangTruongPage() {
                         Khám Tai Mũi Họng & Tìm kiếm Địa phương
                       </div>
                       <span className="font-mono text-xs font-bold text-brand-800 bg-brand-100/70 px-2 py-0.5 rounded">
-                        SAM: ~85.100/tháng
+                        TAM: 85.100 • SAM TP.HCM: ~42.000/tháng
                       </span>
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed">
@@ -488,7 +488,7 @@ export default function ChienLuocTangTruongPage() {
                         Bệnh lý Mũi Xoang & Phẫu thuật Xoang
                       </div>
                       <span className="font-mono text-xs font-bold text-sky-800 bg-sky-100/70 px-2 py-0.5 rounded">
-                        SAM: ~148.200/tháng
+                        TAM: 148.200 • SAM TP.HCM: ~73.000/tháng
                       </span>
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed">
@@ -519,10 +519,10 @@ export default function ChienLuocTangTruongPage() {
                     <div className="flex items-center justify-between border-b border-slate-200/60 pb-2.5">
                       <div className="font-bold text-slate-950 text-base flex items-center gap-2">
                         <span className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-100 text-purple-800 text-2xs font-bold">3</span>
-                        Cắt Amidan, Nạo VA & Công nghệ Plasma
+                        Cắt Amidan, Nạo VA & Công nghệ Plasma Coblator
                       </div>
                       <span className="font-mono text-xs font-bold text-purple-800 bg-purple-100/70 px-2 py-0.5 rounded">
-                        SAM: ~22.200/tháng
+                        TAM: 22.200 • SAM TP.HCM: ~11.000/tháng
                       </span>
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed">
@@ -556,7 +556,7 @@ export default function ChienLuocTangTruongPage() {
                         Khám Răng Hàm Mặt & Nha khoa Gia đình
                       </div>
                       <span className="font-mono text-xs font-bold text-emerald-800 bg-emerald-100/70 px-2 py-0.5 rounded">
-                        SAM: ~17.100/tháng
+                        TAM: 17.100 • SAM TP.HCM: ~9.000/tháng
                       </span>
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed">
@@ -792,7 +792,7 @@ export default function ChienLuocTangTruongPage() {
                     <ul className="space-y-2.5 text-slate-700">
                       <li className="flex items-start gap-2.5">
                         <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span>Xây dựng cổng tiếng Anh chuẩn tại <strong>/english</strong> phục vụ cộng đồng Expat tại Q.1, Q.2, Q.7 và khách du lịch y tế.</span>
+                        <span>Xây dựng <strong>Cổng Thông Tin Bệnh Nhân Quốc Tế (English Portal)</strong> tại <strong>/english</strong> phục vụ cộng đồng Expat tại Q.1, Q.2, Q.7 và khách du lịch y tế.</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
@@ -835,7 +835,7 @@ export default function ChienLuocTangTruongPage() {
                     <ul className="space-y-2.5 text-slate-700">
                       <li className="flex items-start gap-2.5">
                         <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span>Nén ảnh để mở trang dưới 1 giây trên điện thoại 4G/5G.</span>
+                        <span>Tối ưu đạt chuẩn Xanh Core Web Vitals của Google (LCP dưới 2.0s, tương tác tức thì INP &lt; 200ms).</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
@@ -999,7 +999,7 @@ export default function ChienLuocTangTruongPage() {
                   {
                     category: '4. Trang tiếng Anh',
                     before: 'Chỉ có vài bài dịch sơ sài, menu vẫn tiếng Việt, thiếu thông tin bảo lãnh bảo hiểm.',
-                    after: <><strong>Trang tiếng Anh riêng biệt</strong>, hướng dẫn quy trình đón tiếp và danh sách hơn 35 hãng bảo hiểm hỗ trợ trực tiếp.</>,
+                    after: <><strong>Cổng Thông Tin Bệnh Nhân Quốc Tế (English Portal)</strong> riêng biệt, hướng dẫn quy trình đón tiếp và danh sách hơn 35 hãng bảo hiểm bảo lãnh trực tiếp.</>,
                   },
                   {
                     category: '5. Đặt hẹn và đo lường',
@@ -1014,7 +1014,7 @@ export default function ChienLuocTangTruongPage() {
                   {
                     category: '7. Hạ tầng & Bộ nhớ đệm',
                     before: 'Máy chủ xử lý từng request đơn lẻ (chưa bật cache), ảnh thô nặng 7.8MB khiến điện thoại tải chậm quá 3 giây.',
-                    after: <>Bật <strong>bộ nhớ đệm toàn cầu</strong>, nén ảnh tự động chuẩn WebP, mở trang <strong>dưới 1 giây</strong> trên điện thoại.</>,
+                    after: <>Bật <strong>bộ nhớ đệm toàn cầu</strong>, nén ảnh tự động chuẩn WebP, đạt <strong>chuẩn Xanh Core Web Vitals (LCP &lt; 2.0s)</strong> trên điện thoại.</>,
                   },
                 ].map((row) => (
                   <div key={row.category} className="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-slate-200">
@@ -1110,7 +1110,7 @@ export default function ChienLuocTangTruongPage() {
                   </div>
                   <div className="flex items-start gap-2.5">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Nén ảnh để trang mở nhanh trên điện thoại (dưới 1 giây).</span>
+                    <span>Nén ảnh và tối ưu mã nguồn để đạt chuẩn Xanh Core Web Vitals (LCP &lt; 2.0s).</span>
                   </div>
                 </div>
 
@@ -1201,7 +1201,7 @@ export default function ChienLuocTangTruongPage() {
               </div>
 
               <div className="mt-4 rounded-lg bg-white p-4 text-sm text-slate-600 leading-relaxed border border-slate-200">
-                <strong className="text-slate-900">Lưu ý:</strong> Mục tiêu 100-120K lượt truy cập dựa trên việc tiếp cận thêm 30-50K lượt từ thị trường mục tiêu 135K. Số bệnh nhân đến khám thực tế sẽ được đo lường sau khi kết nối dữ liệu website và hệ thống khám bệnh. Đây là mô hình kinh doanh để Ban Giám Đốc đánh giá quy mô cơ hội.
+                <strong className="text-slate-900">Lưu ý:</strong> Mục tiêu 100-120K lượt truy cập dựa trên việc tiếp cận thêm 30-50K lượt từ thị trường mục tiêu 135K (trong đó 25-35K từ tìm kiếm tự nhiên SOM và phần còn lại từ Cổng tiếng Anh English Portal, Google Maps và bảo lãnh bảo hiểm). Số bệnh nhân đến khám thực tế sẽ được đo lường sau khi kết nối dữ liệu website và hệ thống khám bệnh. Đây là mô hình kinh doanh để Ban Giám Đốc đánh giá quy mô cơ hội.
               </div>
             </div>
 
@@ -1429,7 +1429,7 @@ export default function ChienLuocTangTruongPage() {
                       <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Theo dõi cuộc gọi</span>
                     </div>
                     <p className="text-slate-600 text-sm leading-relaxed">
-                      Cài đặt mã theo dõi sự kiện bấm gọi số 028 38.213.456 và số cấp cứu 090 3123381 trên cả giao diện di động và máy tính.
+                      Cài đặt mã theo dõi sự kiện bấm gọi tổng đài tư vấn (028) 38.213.456 và hotline cấp cứu/hỗ trợ 0989 777 456 trên cả giao diện di động và máy tính.
                     </p>
                   </div>
 
@@ -1475,11 +1475,11 @@ export default function ChienLuocTangTruongPage() {
                 <div className="divide-y divide-slate-100 text-sm">
                   <div className="py-3.5 first:pt-0 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
-                      <span className="font-bold text-slate-950">Dịch vụ Đo đa ký giấc ngủ & Kỹ thuật cao</span>
+                      <span className="font-bold text-slate-950">Đo Đa Ký Giấc Ngủ (PSG) & Kỹ thuật cao</span>
                       <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Theo dõi dịch vụ</span>
                     </div>
                     <p className="text-slate-600 text-sm leading-relaxed">
-                      Theo dõi số lượt tìm hiểu và yêu cầu tư vấn các dịch vụ đặc thù (ngưng thở khi ngủ, phẫu thuật xoang, đo thính lực buồng cách âm).
+                      Theo dõi số lượt tìm hiểu và yêu cầu tư vấn các dịch vụ chuyên sâu: tầm soát Hội chứng Ngưng thở khi ngủ do Tắc nghẽn (OSAS), phẫu thuật xoang FESS, đo thính lực buồng cách âm.
                     </p>
                   </div>
 
@@ -1629,7 +1629,7 @@ export default function ChienLuocTangTruongPage() {
                   className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-white/10"
                 >
                   <Globe2 className="h-4 w-4 text-sky-400" />
-                  <span>Xem mẫu phân hệ tiếng Anh</span>
+                  <span>Xem mẫu English Portal</span>
                 </Link>
               </div>
             </div>
