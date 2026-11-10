@@ -1199,22 +1199,10 @@ export default function ChienLuocTangTruongPage() {
                   <span className="text-sm text-slate-700">Target 12 tháng (capture thêm)</span>
                   <span className="font-bold text-emerald-700">Tăng lên 100-120K/tháng</span>
                 </div>
-                <div className="flex items-center justify-between py-2 border-b border-brand-100/60">
-                  <span className="text-sm text-slate-700">Tỷ lệ chuyển đổi (booking form submission)</span>
-                  <span className="font-bold text-slate-900">~2-3% (industry avg healthcare)</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-brand-100/60">
-                  <span className="text-sm text-slate-700">Show-up rate (bệnh nhân đến khám thực)</span>
-                  <span className="font-bold text-slate-900">~60-70% (industry avg)</span>
-                </div>
-                <div className="flex items-center justify-between py-3 bg-white p-4 rounded-xl border border-brand-200">
-                  <span className="text-sm font-bold text-slate-900">Bệnh nhân mới đến khám (12 tháng)</span>
-                  <span className="font-black text-brand-700 text-xl">~1.440-2.520 ca</span>
-                </div>
               </div>
 
               <div className="mt-4 rounded-lg bg-white p-4 text-xs text-slate-600 leading-relaxed border border-slate-200">
-                <strong className="text-slate-900">Lưu ý:</strong> Target 100-120K organic traffic dựa trên việc capture thêm 30-50K lượt từ SAM 135K. Với conversion rate 2-3% và show-up rate 60-70%, ước tính 1.440-2.520 bệnh nhân mới/năm. Con số thực tế sẽ được đối soát sau khi kết nối GA4 + HIS. Đây không phải cam kết KPI mà là business model để Ban Giám Đốc đánh giá opportunity size.
+                <strong className="text-slate-900">Lưu ý:</strong> Target 100-120K organic traffic dựa trên việc capture thêm 30-50K lượt từ SAM 135K. Số bệnh nhân đến khám thực tế sẽ được đo lường sau khi kết nối GA4 + HIS. Đây không phải cam kết KPI mà là business model để Ban Giám Đốc đánh giá opportunity size.
               </div>
             </div>
 
