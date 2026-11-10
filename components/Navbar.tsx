@@ -102,23 +102,23 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
       </div>
 
       {/* Main navigation */}
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <Link href="/" className="flex shrink-0 items-center gap-3 group">
-          <div className="w-11 h-11 xl:w-12 xl:h-12 shrink-0 overflow-hidden rounded-lg bg-white border border-slate-200 flex items-center justify-center group-hover:border-brand-600 transition-colors">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 sm:gap-4 px-4 py-3 sm:px-6">
+        <Link href="/" className="flex shrink-0 items-center gap-2.5 sm:gap-3 group">
+          <div className="w-10 h-10 sm:w-11 sm:h-11 xl:w-12 xl:h-12 shrink-0 overflow-hidden rounded-lg bg-white border border-slate-200 flex items-center justify-center group-hover:border-brand-600 transition-colors">
             <img src="https://taimuihongsg.com/wp-content/uploads/2018/06/logo-taimuihongsg.jpg" alt="Logo Bệnh Viện Tai Mũi Họng Sài Gòn" className="h-full w-full object-contain" />
           </div>
           <div className="min-w-0">
-            <div className="text-sm font-extrabold leading-snug tracking-tight text-slate-900 group-hover:text-brand-700 transition-colors sm:text-base xl:text-lg whitespace-nowrap">
+            <div className="text-xs sm:text-base xl:text-lg font-black leading-tight tracking-tight text-slate-900 group-hover:text-brand-700 transition-colors">
               BỆNH VIỆN TAI MŨI HỌNG SÀI GÒN
             </div>
-            <div className="text-[9px] font-semibold leading-tight tracking-[0.08em] text-slate-500 uppercase xl:text-[10px]">
-              Saigon ENT Specialist Hospital • Est. 2007
+            <div className="text-[8px] sm:text-[9px] font-semibold leading-tight tracking-[0.08em] text-slate-500 uppercase xl:text-[10px]">
+              Y Đức - Chất Lượng - Thân Thiện
             </div>
           </div>
         </Link>
 
         {/* Desktop links & CTA cluster */}
-        <div className="hidden lg:flex items-center gap-1 xl:gap-3 shrink-0">
+        <div className="hidden lg:flex items-center gap-1 xl:gap-2 shrink-0">
           <nav className="flex items-center text-xs xl:text-sm font-semibold text-slate-700" aria-label="Điều hướng chính">
             {navGroups.map((group) => (
               <div key={group.label} className="relative" onMouseEnter={() => setOpenMenu(group.label)} onMouseLeave={() => setOpenMenu(null)}>
@@ -127,10 +127,10 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
                   onClick={() => setOpenMenu(openMenu === group.label ? null : group.label)}
                   aria-expanded={openMenu === group.label}
                   aria-haspopup="menu"
-                  className="inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-2 py-2 hover:bg-slate-50 hover:text-brand-700 xl:px-2.5"
+                  className="inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-2 py-1.5 hover:bg-slate-50 hover:text-brand-700 xl:px-2.5 xl:py-2"
                 >
                   {group.label}
-                  <ChevronDown className={`h-3.5 w-3.5 transition-transform ${openMenu === group.label ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-3 w-3 xl:h-3.5 xl:w-3.5 transition-transform ${openMenu === group.label ? 'rotate-180' : ''}`} />
                 </button>
                 {openMenu === group.label && (
                   <div className="absolute left-0 top-full z-50 mt-1 w-64 border border-slate-200 bg-white p-2 shadow-xl rounded-xl" role="menu">
@@ -143,13 +143,6 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
                 )}
               </div>
             ))}
-            <Link
-              href="/tac-hai-khong-danh-rang-ban-dem" 
-              className="hidden 2xl:inline-flex whitespace-nowrap items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-800 transition-all hover:bg-emerald-100 ml-1"
-            >
-              <Activity className="w-3.5 h-3.5 text-emerald-600" />
-              Chuyên Đề Scrollytelling
-            </Link>
           </nav>
 
           <button
