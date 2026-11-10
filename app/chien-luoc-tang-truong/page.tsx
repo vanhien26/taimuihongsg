@@ -92,11 +92,11 @@ export default function ChienLuocTangTruongPage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <nav className="flex space-x-2 overflow-x-auto py-3 no-scrollbar" aria-label="Mục lục báo cáo">
             {[
-              { id: 'overview', label: '1. Tóm tắt Audit' },
-              { id: 'pillars', label: '2. 4 Việc cần làm' },
-              { id: 'comparison', label: '3. So sánh trước & sau' },
-              { id: 'roadmap', label: '4. Lộ trình triển khai' },
-              { id: 'kpis', label: '5. Khung đo lường' },
+              { id: 'overview', label: '1. Overview' },
+              { id: 'pillars', label: '2. Problem Statement' },
+              { id: 'comparison', label: '3. Opportunity' },
+              { id: 'roadmap', label: '4. Action Plan' },
+              { id: 'kpis', label: '5. Measuring' },
             ].map((tab) => (
               <button
                 key={tab.id}
