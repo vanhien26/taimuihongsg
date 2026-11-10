@@ -12,12 +12,10 @@ import {
   ChevronUp,
   Activity,
   Compass,
-  Clock,
   HelpCircle,
   Globe2,
   AlertTriangle,
-  TrendingUp,
-  FileCheck
+  TrendingUp
 } from 'lucide-react'
 
 export default function ChienLuocTangTruongPage() {
@@ -1600,112 +1598,6 @@ export default function ChienLuocTangTruongPage() {
           </div>
         </section>
 
-
-        {/* ========================================================================= */}
-        {/* NEXT STEPS & DECISION GATES (P0)                                          */}
-        {/* ========================================================================= */}
-        <section className="border-t border-slate-200 bg-white py-14 sm:py-20">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="space-y-3 mb-8">
-              <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-700">
-                <FileCheck className="h-5 w-5" />
-                Bước tiếp theo & Quyết định cần có từ Ban Giám Đốc
-              </div>
-              <h2 className="text-2xl font-black tracking-tight text-slate-950 sm:text-3xl">
-                Cần Ban Giám Đốc phê duyệt để triển khai kế hoạch
-              </h2>
-              <p className="max-w-3xl text-base leading-relaxed text-slate-600">
-                3 quyết định cần được đưa ra trong meeting này để tiến trình bắt đầu:
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {/* Decision 1 */}
-              <div className="rounded-2xl border-2 border-brand-500 bg-brand-50 p-6 sm:p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-brand-700 text-white px-3 py-1.5 rounded-lg text-sm font-bold">DECISION 1</span>
-                  <span className="font-bold text-slate-900 text-lg">Phê duyệt phạm vi công việc (Scope)</span>
-                </div>
-                <p className="text-base text-slate-700 mb-6 leading-relaxed">
-                  Ban Giám Đốc có đồng ý triển khai <strong>3 giai đoạn</strong> (Foundation → Content → Optimization) theo roadmap được đề xuất không?
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  <div className="inline-flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-brand-200">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600" />
-                    <span className="font-bold text-slate-900 text-sm">Foundation: Sửa lỗi kỹ thuật + thống nhất thương hiệu</span>
-                  </div>
-                  <div className="inline-flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-brand-200">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600" />
-                    <span className="font-bold text-slate-900 text-sm">Content: Tái cấu trúc bài viết + Cổng tiếng Anh</span>
-                  </div>
-                  <div className="inline-flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-brand-200">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600" />
-                    <span className="font-bold text-slate-900 text-sm">Optimization: Local SEO + Đo lường hiệu quả</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Decision 2 */}
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-2xs">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-slate-700 text-white px-3 py-1.5 rounded-lg text-sm font-bold">DECISION 2</span>
-                  <span className="font-bold text-slate-900 text-lg">Phân bổ nguồn lực (Resource)</span>
-                </div>
-                <p className="text-base text-slate-700 mb-6 leading-relaxed">
-                  Sắp xếp <strong>3 team phối hợp</strong>: Technical (website), Medical Board (review), CS (call back). Ban Giám Đốc cần chỉ định PIC cho từng team.
-                </p>
-                <div className="grid gap-3 text-sm sm:text-base">
-                  <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-100 text-brand-700 font-bold">T</span>
-                    <div>
-                      <strong className="text-slate-900">Technical Team:</strong>
-                      <span className="text-slate-600 ml-2">[Chỉ định tên PIC]</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-700 font-bold">M</span>
-                    <div>
-                      <strong className="text-slate-900">Medical Board:</strong>
-                      <span className="text-slate-600 ml-2">[Chỉ định tên PIC]</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-700 font-bold">C</span>
-                    <div>
-                      <strong className="text-slate-900">CS/Reception:</strong>
-                      <span className="text-slate-600 ml-2">[Chỉ định tên PIC]</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Decision 3 */}
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-2xs">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-slate-700 text-white px-3 py-1.5 rounded-lg text-sm font-bold">DECISION 3</span>
-                  <span className="font-bold text-slate-900 text-lg">Kết nối dữ liệu đo lường (Data Access)</span>
-                </div>
-                <p className="text-base text-slate-700 mb-6 leading-relaxed">
-                  Cấp quyền truy cập: <strong>Google Search Console, GA4</strong>, và dữ liệu HIS (số bệnh nhân đến khám thực) để đối soát hiệu quả.
-                </p>
-                <div className="rounded-xl bg-slate-50 p-4 text-sm text-slate-600">
-                  <strong className="text-slate-900">IT team cần setup data pipeline trong 1 tuần</strong> sau khi được cấp quyền để bắt đầu đo lường baseline.
-                </div>
-              </div>
-
-              {/* Timeline commitment */}
-              <div className="rounded-2xl border border-brand-200 bg-brand-50/50 p-6 sm:p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Clock className="h-6 w-6 text-brand-700" />
-                  <span className="font-bold text-slate-900 text-lg">Timeline cam kết</span>
-                </div>
-                <p className="text-base text-slate-700 leading-relaxed">
-                  Sau khi Ban Giám Đốc phê duyệt scope và chỉ định PIC, Web Growth team sẽ submit <strong>chi tiết timeline + milestone cụ thể</strong> trong <strong>3 ngày làm việc</strong>.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* ========================================================================= */}
         {/* SECTION 7: SUMMARY & SCOPE                                                */}
