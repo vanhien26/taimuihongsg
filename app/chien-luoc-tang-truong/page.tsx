@@ -1208,58 +1208,87 @@ export default function ChienLuocTangTruongPage() {
 
             {/* Closed-loop Patient Telemetry Flow (Luồng đo lường khép kín) */}
             <div className="rounded-2xl border border-slate-200/90 bg-slate-50/70 p-6 sm:p-8">
-              <div className="mb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-200/80 pb-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-700">
-                  Mô hình đo lường khép kín • Từ Tìm kiếm trực tuyến đến Bệnh nhân thực tế
-                </span>
-                <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200/60">
-                  Data Pipeline: Web → Phone/Form → HIS Phòng khám
-                </span>
+              <div className="mb-6">
+                <h3 className="text-lg font-bold text-slate-950">Luồng đo lường từ Tìm kiếm đến Khám thực tế</h3>
+                <p className="text-sm text-slate-600 mt-1">Theo dõi hành trình người bệnh từ lúc tìm kiếm đến khi đến khám</p>
               </div>
-              
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <div className="space-y-1.5 rounded-xl border border-slate-200/60 bg-white p-4 shadow-2xs">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-400">
-                    <span>TẦNG 1</span>
-                    <span className="text-purple-600 font-semibold">GSC / AI / Maps</span>
-                  </div>
-                  <div className="font-bold text-slate-950 text-base">Hiện diện tìm kiếm</div>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Đo lượt hiển thị và nhấp chuột tự nhiên từ người tìm triệu chứng bệnh & địa chỉ viện.
-                  </p>
-                </div>
 
-                <div className="space-y-1.5 rounded-xl border border-slate-200/60 bg-white p-4 shadow-2xs">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-400">
-                    <span>TẦNG 2</span>
-                    <span className="text-brand-600 font-semibold">Google Analytics 4</span>
-                  </div>
-                  <div className="font-bold text-slate-950 text-base">Tương tác nội dung</div>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Theo dõi thời gian đọc bài, tỷ lệ thoát trang và luồng di chuyển vào từng chuyên khoa.
-                  </p>
-                </div>
+              <div className="relative">
+                {/* Flow Line Desktop */}
+                <div className="hidden lg:block absolute top-12 left-16 right-16 h-0.5 bg-gradient-to-r from-purple-500 via-brand-500 via-emerald-500 to-sky-500"></div>
 
-                <div className="space-y-1.5 rounded-xl border border-slate-200/60 bg-white p-4 shadow-2xs">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-400">
-                    <span>TẦNG 3</span>
-                    <span className="text-emerald-600 font-semibold">GA4 Events / DataLayer</span>
+                <div className="grid gap-6 lg:grid-cols-4">
+                  {/* Step 1 */}
+                  <div className="relative">
+                    <div className="flex items-center justify-center mb-4">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100 text-purple-700 font-bold text-lg relative z-10">
+                        1
+                      </div>
+                    </div>
+                    <div className="rounded-xl border border-purple-200 bg-white p-5 shadow-sm">
+                      <div className="font-bold text-slate-950 text-base mb-2">Người bệnh tìm kiếm</div>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        Tìm triệu chứng bệnh hoặc địa chỉ bệnh viện trên Google
+                      </p>
+                      <div className="mt-3 text-xs font-semibold text-purple-700 bg-purple-50 px-2 py-1 rounded inline-block">
+                        Google Search / Maps
+                      </div>
+                    </div>
                   </div>
-                  <div className="font-bold text-slate-950 text-base">Chuyển đổi trực tuyến</div>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Ghi nhận sự kiện bấm gọi hotline cấp cứu và số lượt gửi form đặt lịch khám thành công.
-                  </p>
-                </div>
 
-                <div className="space-y-1.5 rounded-xl border border-slate-200/60 bg-white p-4 shadow-2xs">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-400">
-                    <span>TẦNG 4</span>
-                    <span className="text-sky-600 font-semibold">HIS Viện & Tiếp tân</span>
+                  {/* Step 2 */}
+                  <div className="relative">
+                    <div className="flex items-center justify-center mb-4">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-brand-700 font-bold text-lg relative z-10">
+                        2
+                      </div>
+                    </div>
+                    <div className="rounded-xl border border-brand-200 bg-white p-5 shadow-sm">
+                      <div className="font-bold text-slate-950 text-base mb-2">Đọc thông tin</div>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        Xem bài viết chuyên khoa, hồ sơ bác sĩ, dịch vụ điều trị
+                      </p>
+                      <div className="mt-3 text-xs font-semibold text-brand-700 bg-brand-50 px-2 py-1 rounded inline-block">
+                        Website analytics
+                      </div>
+                    </div>
                   </div>
-                  <div className="font-bold text-slate-950 text-base">Khám thực tế tại viện</div>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Đối soát tỷ lệ người bệnh thực tế đến khám tại 1-3 & 6-8 Trịnh Văn Cấn (Show-up rate).
-                  </p>
+
+                  {/* Step 3 */}
+                  <div className="relative">
+                    <div className="flex items-center justify-center mb-4">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-emerald-700 font-bold text-lg relative z-10">
+                        3
+                      </div>
+                    </div>
+                    <div className="rounded-xl border border-emerald-200 bg-white p-5 shadow-sm">
+                      <div className="font-bold text-slate-950 text-base mb-2">Liên hệ đặt hẹn</div>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        Gọi hotline hoặc gửi form đặt lịch khám online
+                      </p>
+                      <div className="mt-3 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded inline-block">
+                        Theo dõi cuộc gọi / form
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Step 4 */}
+                  <div className="relative">
+                    <div className="flex items-center justify-center mb-4">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-sky-100 text-sky-700 font-bold text-lg relative z-10">
+                        4
+                      </div>
+                    </div>
+                    <div className="rounded-xl border border-sky-200 bg-white p-5 shadow-sm">
+                      <div className="font-bold text-slate-950 text-base mb-2">Đến khám thực tế</div>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        Người bệnh đến làm thủ tục và khám tại bệnh viện
+                      </p>
+                      <div className="mt-3 text-xs font-semibold text-sky-700 bg-sky-50 px-2 py-1 rounded inline-block">
+                        Hệ thống khám bệnh
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
