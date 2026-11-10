@@ -2,24 +2,20 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { 
-  Building2, 
-  Target, 
-  CheckCircle2, 
-  ArrowRight, 
-  Printer, 
-  ChevronDown, 
-  ChevronUp, 
-  Activity, 
-  Compass, 
-  Clock, 
+import {
+  Building2,
+  Target,
+  CheckCircle2,
+  ArrowRight,
+  Printer,
+  ChevronDown,
+  ChevronUp,
+  Activity,
+  Compass,
+  Clock,
   HelpCircle,
   Globe2,
   AlertTriangle,
-  Server,
-  Stethoscope,
-  Users,
-  ShieldCheck,
   TrendingUp,
   FileCheck
 } from 'lucide-react'
@@ -1156,87 +1152,6 @@ export default function ChienLuocTangTruongPage() {
             {/* Disclaimer note */}
             <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm leading-relaxed text-slate-600">
               <strong className="text-slate-900 font-bold">Lưu ý về tiến độ:</strong> Đây là <em>lộ trình phân kỳ theo thứ tự ưu tiên logic</em>. Thời gian triển khai chi tiết cho từng giai đoạn sẽ được xây dựng và thống nhất sau khi Ban Giám Đốc phê duyệt phạm vi công việc cùng nguồn lực phối hợp của các phòng ban.
-            </div>
-
-            {/* RACI Coordination Framework */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs space-y-6">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-4">
-                <div>
-                  <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-700">
-                    <Users className="h-5 w-5" />
-                    Cơ chế vận hành • Mô hình phối hợp 3 bên (RACI Framework)
-                  </div>
-                  <h3 className="mt-1 text-xl sm:text-2xl font-bold text-slate-950">
-                    Phân định rõ trách nhiệm để triển khai kế hoạch đúng tiến độ
-                  </h3>
-                </div>
-                <span className="text-sm font-semibold text-slate-600">Phối hợp liên phòng ban</span>
-              </div>
-
-              <div className="grid gap-6 md:grid-cols-3 text-sm leading-relaxed">
-                <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-3">
-                  <div className="flex items-center gap-2 text-base font-bold text-brand-700">
-                    <Server className="h-5 w-5" />
-                    1. Bộ phận Kỹ thuật & Website
-                  </div>
-                  <div className="space-y-2 text-slate-700">
-                    <div className="flex items-start gap-2">
-                      <span className="text-brand-600 font-bold">•</span>
-                      <span>Sửa triệt để lỗi sitemap, canonical và schema thực thể Bệnh viện.</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-brand-600 font-bold">•</span>
-                      <span>Tối ưu tốc độ tải trang dưới 1 giây và bật bộ nhớ đệm CDN.</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-brand-600 font-bold">•</span>
-                      <span>Cài đặt công cụ đo lường chuyển đổi (Search Console, GA4, Hotline).</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-3">
-                  <div className="flex items-center gap-2 text-base font-bold text-purple-700">
-                    <Stethoscope className="h-5 w-5" />
-                    2. Hội đồng Y khoa & Bác sĩ
-                  </div>
-                  <div className="space-y-2 text-slate-700">
-                    <div className="flex items-start gap-2">
-                      <span className="text-purple-600 font-bold">•</span>
-                      <span>Rà soát và ký duyệt chuyên môn các bài viết chuyên khoa trọng điểm theo từng đợt (chuẩn E-E-A-T).</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-purple-600 font-bold">•</span>
-                      <span>Cung cấp bằng cấp, chứng chỉ và lịch khám định kỳ chính xác của 18 bác sĩ.</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-purple-600 font-bold">•</span>
-                      <span>Thẩm định bảng gợi ý chuyên khoa theo triệu chứng bệnh trong form đặt hẹn.</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 space-y-3">
-                  <div className="flex items-center gap-2 text-base font-bold text-emerald-700">
-                    <ShieldCheck className="h-5 w-5" />
-                    3. Tiếp tân & Chăm sóc Khách hàng
-                  </div>
-                  <div className="space-y-2 text-slate-700">
-                    <div className="flex items-start gap-2">
-                      <span className="text-emerald-600 font-bold">•</span>
-                      <span>Cam kết gọi lại xác nhận lịch hẹn trực tuyến trong vòng 15 phút.</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-emerald-600 font-bold">•</span>
-                      <span>Nắm rõ quy trình tiếp đón có nhân sự tiếng Anh cho bệnh nhân quốc tế.</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-emerald-600 font-bold">•</span>
-                      <span>Tư vấn rõ ràng chính sách bảo lãnh viện phí cho hơn 35 hãng bảo hiểm liên kết.</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
 
           </div>
