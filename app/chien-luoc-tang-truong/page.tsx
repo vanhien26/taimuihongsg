@@ -1347,6 +1347,16 @@ export default function ChienLuocTangTruongPage() {
 
                   <div className="py-3.5 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-slate-950">Vị trí từ khóa mục tiêu</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Google Console</span>
+                    </div>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Theo dõi vị trí từ khóa quan trọng như "khám tai mũi họng", "viêm xoang", "cắt amidan" trên kết quả tìm kiếm Google.
+                    </p>
+                  </div>
+
+                  <div className="py-3.5 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
                       <span className="font-bold text-slate-950">Tần suất trích dẫn trên AI</span>
                       <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">ChatGPT / Google AI</span>
                     </div>
