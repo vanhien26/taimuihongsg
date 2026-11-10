@@ -93,9 +93,9 @@ export default function ChienLuocTangTruongPage() {
           <nav className="flex space-x-2 overflow-x-auto py-3 no-scrollbar" aria-label="Mục lục báo cáo">
             {[
               { id: 'overview', label: '1. Tóm tắt Audit' },
-              { id: 'pillars', label: '2. Đề xuất Growth Plan' },
-              { id: 'comparison', label: '3. Hiện trạng & Đề xuất' },
-              { id: 'roadmap', label: '4. Lộ trình đề xuất' },
+              { id: 'pillars', label: '2. 4 Việc cần làm' },
+              { id: 'comparison', label: '3. So sánh trước & sau' },
+              { id: 'roadmap', label: '4. Lộ trình triển khai' },
               { id: 'kpis', label: '5. Khung đo lường' },
             ].map((tab) => (
               <button
