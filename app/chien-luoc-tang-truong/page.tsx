@@ -12,6 +12,7 @@ import {
   ChevronUp,
   Activity,
   Compass,
+  Clock,
   HelpCircle,
   Globe2,
   AlertTriangle,
