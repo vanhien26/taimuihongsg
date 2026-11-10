@@ -162,23 +162,23 @@ export default function ChienLuocTangTruongPage() {
             {/* 3 Key Takeaways */}
             <div className="grid gap-4 mb-8">
               <div className="bg-white p-5 rounded-xl border-l-4 border-rose-500 shadow-2xs">
-                <div className="text-xs font-bold uppercase tracking-wider text-rose-700 mb-2">Hiện trạng</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-rose-700 mb-2">Hiện trạng</div>
                 <p className="text-base text-slate-700 leading-relaxed">
-                  Website có <strong>2.212 bài viết</strong> và <strong>18 bác sĩ chuyên khoa</strong>, nhưng brand bị lẫn lộn với phòng khám đa khoa, người bệnh khó đặt hẹn, traffic thấp <strong>3-5x</strong> so với đối thủ.
+                  Website có <strong>2.212 bài viết</strong> và <strong>18 bác sĩ chuyên khoa</strong>, nhưng thương hiệu bị lẫn lộn với phòng khám đa khoa, người bệnh khó đặt hẹn, lượt truy cập thấp <strong>3-5x</strong> so với đối thủ.
                 </p>
               </div>
 
               <div className="bg-white p-5 rounded-xl border-l-4 border-emerald-500 shadow-2xs">
-                <div className="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-2">Giải pháp</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-emerald-700 mb-2">Giải pháp</div>
                 <p className="text-base text-slate-700 leading-relaxed">
-                  Thống nhất thương hiệu <strong>Bệnh Viện Tai Mũi Họng Sài Gòn</strong>, tái cấu trúc nội dung theo chuyên khoa, xây dựng cổng tiếng Anh cho expat, tối ưu tốc độ tải trang và thiết lập hệ thống đo lường hiệu quả thực tế.
+                  Thống nhất thương hiệu <strong>Bệnh Viện Tai Mũi Họng Sài Gòn</strong>, tái cấu trúc nội dung theo chuyên khoa, xây dựng cổng tiếng Anh cho người nước ngoài, tối ưu tốc độ tải trang và thiết lập hệ thống đo lường hiệu quả thực tế.
                 </p>
               </div>
 
               <div className="bg-white p-5 rounded-xl border-l-4 border-brand-500 shadow-2xs">
-                <div className="text-xs font-bold uppercase tracking-wider text-brand-700 mb-2">Kết quả kỳ vọng</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-brand-700 mb-2">Kết quả kỳ vọng</div>
                 <p className="text-base text-slate-700 leading-relaxed">
-                  Tăng organic traffic từ <strong>~69K lên 100-120K/tháng</strong> (capture thêm từ SAM 135K), giảm friction patient journey, sẵn sàng cho AI search era với GEO/AEO chuẩn.
+                  Tăng lượt truy cập từ <strong>~69K lên 100-120K/tháng</strong> (tiếp cận thêm từ thị trường mục tiêu 135K), giảm rào cản cho người bệnh đặt khám, sẵn sàng cho tìm kiếm bằng AI.
                 </p>
               </div>
             </div>
@@ -1188,21 +1188,21 @@ export default function ChienLuocTangTruongPage() {
 
               <div className="space-y-3">
                 <div className="flex items-center justify-between py-2 border-b border-brand-100/60">
-                  <span className="text-sm text-slate-700">Organic traffic hiện tại (estimate)</span>
+                  <span className="text-base text-slate-700">Lượt truy cập hiện tại (ước tính)</span>
                   <span className="font-bold text-slate-900">~69.2K/tháng</span>
                 </div>
                 <div className="flex items-center justify-between py-2 border-b border-brand-100/60">
-                  <span className="text-sm text-slate-700">SAM (thị trường mục tiêu TP.HCM & lân cận)</span>
+                  <span className="text-base text-slate-700">Thị trường mục tiêu (TP.HCM & lân cận)</span>
                   <span className="font-bold text-slate-900">~135K/tháng</span>
                 </div>
                 <div className="flex items-center justify-between py-2 border-b border-brand-100/60">
-                  <span className="text-sm text-slate-700">Target 12 tháng (capture thêm)</span>
+                  <span className="text-base text-slate-700">Mục tiêu 12 tháng</span>
                   <span className="font-bold text-emerald-700">Tăng lên 100-120K/tháng</span>
                 </div>
               </div>
 
-              <div className="mt-4 rounded-lg bg-white p-4 text-xs text-slate-600 leading-relaxed border border-slate-200">
-                <strong className="text-slate-900">Lưu ý:</strong> Target 100-120K organic traffic dựa trên việc capture thêm 30-50K lượt từ SAM 135K. Số bệnh nhân đến khám thực tế sẽ được đo lường sau khi kết nối GA4 + HIS. Đây không phải cam kết KPI mà là business model để Ban Giám Đốc đánh giá opportunity size.
+              <div className="mt-4 rounded-lg bg-white p-4 text-sm text-slate-600 leading-relaxed border border-slate-200">
+                <strong className="text-slate-900">Lưu ý:</strong> Mục tiêu 100-120K lượt truy cập dựa trên việc tiếp cận thêm 30-50K lượt từ thị trường mục tiêu 135K. Số bệnh nhân đến khám thực tế sẽ được đo lường sau khi kết nối dữ liệu website và hệ thống khám bệnh. Đây là mô hình kinh doanh để Ban Giám Đốc đánh giá quy mô cơ hội.
               </div>
             </div>
 
@@ -1288,9 +1288,9 @@ export default function ChienLuocTangTruongPage() {
                   <div className="py-3.5 first:pt-0 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-bold text-slate-950">Đồng bộ thương hiệu Bệnh viện</span>
-                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Schema / GSC</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Google / Dữ liệu định danh</span>
                     </div>
-                    <p className="text-slate-600 text-xs leading-relaxed">
+                    <p className="text-slate-600 text-sm leading-relaxed">
                       Sửa dứt điểm tình trạng hiển thị nhầm lẫn sang phòng khám đa khoa trên Google Knowledge Panel và kết quả tìm kiếm.
                     </p>
                   </div>
@@ -1298,20 +1298,20 @@ export default function ChienLuocTangTruongPage() {
                   <div className="py-3.5 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-bold text-slate-950">Kiểm duyệt Y khoa bài viết</span>
-                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Medical Review Tag</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Bác sĩ duyệt</span>
                     </div>
-                    <p className="text-slate-600 text-xs leading-relaxed">
-                      Rà soát và bổ sung tên bác sĩ chuyên khoa kiểm duyệt cho các bài viết chuyên khoa trọng điểm theo chuẩn y tế YMYL.
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Rà soát và bổ sung tên bác sĩ chuyên khoa kiểm duyệt cho các bài viết chuyên khoa trọng điểm theo chuẩn y tế.
                     </p>
                   </div>
 
                   <div className="py-3.5 last:pb-0 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-bold text-slate-950">Định danh Hồ sơ 18 Bác sĩ</span>
-                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Screaming Frog / GSC</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Công cụ kiểm tra / Google</span>
                     </div>
-                    <p className="text-slate-600 text-xs leading-relaxed">
-                      Tách trang hồ sơ bác sĩ độc lập, sửa triệt để lỗi thẻ canonical trỏ nhầm về trang chủ, index đầy đủ chuyên khoa công tác.
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Tách trang hồ sơ bác sĩ độc lập, sửa triệt để lỗi thẻ định danh trỏ nhầm về trang chủ, hiển thị đầy đủ chuyên khoa công tác.
                     </p>
                   </div>
                 </div>
@@ -1338,29 +1338,29 @@ export default function ChienLuocTangTruongPage() {
                   <div className="py-3.5 first:pt-0 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-bold text-slate-950">Lưu lượng tìm kiếm tự nhiên</span>
-                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Google Search Console</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Google Console</span>
                     </div>
-                    <p className="text-slate-600 text-xs leading-relaxed">
-                      Theo dõi số lượt hiển thị (Impressions) và nhấp chuột (Clicks) thực tế từ Google (đối soát với mốc tham khảo bên thứ ba ~69K/tháng).
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Theo dõi số lượt hiển thị và nhấp chuột thực tế từ Google (đối soát với mốc tham khảo ~69K/tháng).
                     </p>
                   </div>
 
                   <div className="py-3.5 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
-                      <span className="font-bold text-slate-950">Tần suất trích dẫn trên AI (AEO)</span>
-                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">AI Overviews / ChatGPT</span>
+                      <span className="font-bold text-slate-950">Tần suất trích dẫn trên AI</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">ChatGPT / Google AI</span>
                     </div>
-                    <p className="text-slate-600 text-xs leading-relaxed">
-                      Theo dõi định kỳ tỷ lệ website được các cỗ máy AI (Google Gemini, AI Overviews, Perplexity) chọn làm nguồn trích dẫn y khoa đáng tin cậy.
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Theo dõi định kỳ tỷ lệ website được các công cụ AI chọn làm nguồn trích dẫn y khoa đáng tin cậy.
                     </p>
                   </div>
 
                   <div className="py-3.5 last:pb-0 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-bold text-slate-950">Hiệu quả Bản đồ Google Maps</span>
-                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Google Business Profile</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Google Maps</span>
                     </div>
-                    <p className="text-slate-600 text-xs leading-relaxed">
+                    <p className="text-slate-600 text-sm leading-relaxed">
                       Đo lường số lượt xem vị trí, yêu cầu chỉ đường và cuộc gọi điện trực tiếp từ người bệnh ở Quận 1 và khu vực trung tâm TP.HCM.
                     </p>
                   </div>
@@ -1388,9 +1388,9 @@ export default function ChienLuocTangTruongPage() {
                   <div className="py-3.5 first:pt-0 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-bold text-slate-950">Bấm gọi Hotline & Cấp cứu</span>
-                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">GA4 Event: click_hotline</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Theo dõi cuộc gọi</span>
                     </div>
-                    <p className="text-slate-600 text-xs leading-relaxed">
+                    <p className="text-slate-600 text-sm leading-relaxed">
                       Cài đặt mã theo dõi sự kiện bấm gọi số 028 38.213.456 và số cấp cứu 090 3123381 trên cả giao diện di động và máy tính.
                     </p>
                   </div>
@@ -1398,20 +1398,20 @@ export default function ChienLuocTangTruongPage() {
                   <div className="py-3.5 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-bold text-slate-950">Gửi form đặt hẹn trực tuyến</span>
-                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">GA4 Event: booking_submit</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Theo dõi form</span>
                     </div>
-                    <p className="text-slate-600 text-xs leading-relaxed">
-                      Đo số lượt gửi phiếu đăng ký khám hoàn tất mỗi tuần; theo dõi tỷ lệ rớt ở từng bước điền thông tin (Form Abandonment Rate).
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Đo số lượt gửi phiếu đăng ký khám hoàn tất mỗi tuần; theo dõi tỷ lệ rớt ở từng bước điền thông tin.
                     </p>
                   </div>
 
                   <div className="py-3.5 last:pb-0 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-bold text-slate-950">Đối soát Bệnh nhân đến khám</span>
-                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">HIS & Báo cáo Tiếp tân</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Hệ thống khám bệnh</span>
                     </div>
-                    <p className="text-slate-600 text-xs leading-relaxed">
-                      Đối chiếu định kỳ giữa danh sách đăng ký qua web với số bệnh nhân thực tế đến làm thủ tục tại viện để tính tỷ lệ đến khám thực (Show-up rate).
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Đối chiếu định kỳ giữa danh sách đăng ký qua web với số bệnh nhân thực tế đến làm thủ tục tại viện để tính tỷ lệ đến khám thực.
                     </p>
                   </div>
                 </div>
@@ -1438,29 +1438,29 @@ export default function ChienLuocTangTruongPage() {
                   <div className="py-3.5 first:pt-0 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-bold text-slate-950">Dịch vụ Đo đa ký giấc ngủ & Kỹ thuật cao</span>
-                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">GA4 Specialty Funnel</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Theo dõi dịch vụ</span>
                     </div>
-                    <p className="text-slate-600 text-xs leading-relaxed">
-                      Theo dõi số lượt tìm hiểu và yêu cầu tư vấn các dịch vụ đặc thù (ngưng thở khi ngủ OSAS, phẫu thuật xoang, đo thính lực buồng cách âm).
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Theo dõi số lượt tìm hiểu và yêu cầu tư vấn các dịch vụ đặc thù (ngưng thở khi ngủ, phẫu thuật xoang, đo thính lực buồng cách âm).
                     </p>
                   </div>
 
                   <div className="py-3.5 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-bold text-slate-950">Lưu lượng Bệnh nhân Quốc tế</span>
-                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">GA4 Geo / English Portal</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Cổng tiếng Anh</span>
                     </div>
-                    <p className="text-slate-600 text-xs leading-relaxed">
-                      Theo dõi lượng truy cập và liên hệ từ người nước ngoài qua khu vực tiếng Anh (/english) và người dùng tìm kiếm tại khu vực Quận 1.
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Theo dõi lượng truy cập và liên hệ từ người nước ngoài qua khu vực tiếng Anh và người dùng tìm kiếm tại khu vực Quận 1.
                     </p>
                   </div>
 
                   <div className="py-3.5 last:pb-0 space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-bold text-slate-950">Tương tác Bảo lãnh Viện phí</span>
-                      <span className="text-2xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">GA4 Event: view_insurance</span>
+                      <span className="text-xs font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Theo dõi bảo hiểm</span>
                     </div>
-                    <p className="text-slate-600 text-xs leading-relaxed">
+                    <p className="text-slate-600 text-sm leading-relaxed">
                       Đo lường số lượt tra cứu danh sách 35 hãng bảo hiểm liên kết, thời gian xem quy trình thanh toán trực tiếp viện phí.
                     </p>
                   </div>
