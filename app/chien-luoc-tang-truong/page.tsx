@@ -1184,9 +1184,6 @@ export default function ChienLuocTangTruongPage() {
                 <span className="text-xs font-bold uppercase tracking-wider text-brand-700">
                   Ước tính Business Impact • Model 12 tháng
                 </span>
-                <span className="text-xs font-semibold text-brand-800 bg-brand-100 px-2.5 py-1 rounded-md border border-brand-200/60">
-                  Dựa trên industry benchmark, không phải cam kết KPI
-                </span>
               </div>
 
               <div className="space-y-3">
